@@ -124,7 +124,7 @@ def title_lines(d,title,width,slot_rows):
         if len(lines)==2:return size,lines
     # Three-line fallback intentionally uses a smaller uniform size and
     # a stable optical baseline. Never render a 126px third row into footer.
-    for size in (102,96,90):
+    for size in (84,78):
         try:lines=split_lines(d,title.upper(),size,width,'display',3)
         except ValueError:continue
         if len(lines)==3:return size,lines
@@ -175,9 +175,9 @@ def cover(story,idx):
     textbox(d,(100,829),'CADERNA  /  '+('FATO' if story['kind']=='headline' else 'EXPLICA'),20,'bold',INK,(97,824,307,854),reg,'kicker')
     size,lines=title_lines(d,story['headline'],910,3)
     # top-aligned single column, fixed line gap and unified font size.
-    stride=size+31
+    stride=size+54
     if len(lines)==2:start=900
-    else:start=875
+    else:start=861
     boxes=[]
     for i,line in enumerate(lines):
         y=start+i*stride
