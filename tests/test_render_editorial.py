@@ -23,6 +23,13 @@ class RenderTests(unittest.TestCase):
                 q=module.render(a,Path(t))
                 self.assertEqual(q['jpeg_count'],1)
                 with Image.open(Path(t)/(a['id']+'-01.jpg')) as im:self.assertEqual(im.size,(1080,1350))
+    def test_three_line_headline_fits_editorial_grid(self):
+        a=example('headline')
+        a['headline']='BULL E SCHWARZ DIGITS FIRMAM ACORDO PARA IA EUROPEIA'
+        with tempfile.TemporaryDirectory() as t:
+            result=module.render(a,Path(t))
+            self.assertEqual(len(result['qa'][0]['headline_lines']),3)
+            self.assertEqual(result['jpeg_count'],1)
     def test_carousel_four_slides(self):
         with tempfile.TemporaryDirectory() as t:
             q=module.render(example(),Path(t))
