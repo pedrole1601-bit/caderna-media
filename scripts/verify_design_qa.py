@@ -5,6 +5,17 @@ from PIL import Image
 import json,sys
 W,H=1080,1350
 
+def luminance(hexcolor):
+    h=hexcolor.strip('#')
+    require(len(h)==6,'invalid color token')
+    c=[int(h[i:i+2],16)/255 for i in (0,2,4)]
+    c=[x/12.92 if x<=0.04045 else ((x+0.055)/1.055)**2.4 for x in c]
+    return 0.2126*c[0]+0.7152*c[1]+0.0722*c[2]
+
+def contrast(a,b):
+    x,y=sorted((luminance(a),luminance(b)))
+    return (y+0.05)/(x+0.05)
+
 class VisualGateError(Exception): pass
 
 def require(condition,message):
@@ -16,6 +27,13 @@ def validate(qa,media_dir):
     require(qa.get('human_approved') is False,'machine cannot approve editor')
     require(qa.get('published_to_instagram') is False,'art-only job cannot publish')
     require(qa.get('logo')=='assets/logo-horizontal-inverse-v01.svg','logo must be canonical')
+    tokens=qa.get('color_tokens') or {}
+    require(tokens.get('ink')=='#101C2E' and tokens.get('paper')=='#F5F3ED'
+        and tokens.get('coral')=='#EA674D','invalid canonical brand colors')
+    require(contrast(tokens['ink'],tokens['paper'])>=4.5,'headline contrast below 4.5:1')
+    require(contrast(tokens['coral'],tokens['ink'])>=4.5,'accent on navy contrast below 4.5:1')
+    require(contrast(tokens.get('muted','#888888'),tokens['paper'])>=4.5,
+        'small source metadata has insufficient WCAG contrast')
     blocks=qa.get('text_blocks',[])
     require(isinstance(blocks,list) and len(blocks)>=9,'text content insufficient')
     require(len({x['label'] for x in blocks})==len(blocks),'duplicate text ID')
@@ -53,7 +71,9 @@ def validate(qa,media_dir):
         require(im.getpixel((5,180))==(16,28,46),'hero color changed')
         require(im.getpixel((5,830))==(245,243,237),'editorial paper changed')
     return {'result':'PASS_TECHNICAL_ONLY','headlines':2,'headline_gap':headline[1]['bbox'][1]-headline[0]['bbox'][3],
-            'mobile_preview':True,'editor_approval':False}
+            'mobile_preview':True,'editor_approval':False,'contrast_ratios':{
+       'muted_paper':round(contrast(tokens['muted'],tokens['paper']),2),
+       'coral_ink':round(contrast(tokens['coral'],tokens['ink']),2)}}
 
 if __name__=='__main__':
     base=Path(__file__).resolve().parents[1]/'media'
