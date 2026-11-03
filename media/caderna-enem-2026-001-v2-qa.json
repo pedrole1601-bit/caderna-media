@@ -162,12 +162,12 @@
     },
     {
       "label": "source",
-      "text": "FONTE: INEP  •  03.11.2026",
+      "text": "FONTE: INEP/MEC",
       "bbox": [
         94,
         1310,
-        300,
-        1323
+        240,
+        1325
       ],
       "size": 17,
       "font": "bold",
