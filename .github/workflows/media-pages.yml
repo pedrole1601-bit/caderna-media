@@ -1,12 +1,15 @@
-name: CADERNA — gerar arte e publicar mídia estática
+name: CADERNA — arte 001 v0.7 + QA visual + GitHub Pages
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
       - 'scripts/render_enem_001.py'
-      - '.github/workflows/media-pages.yml'
+      - 'scripts/verify_design_qa.py'
+      - 'tests/test_visual_qa.py'
+      - 'assets/logo-horizontal-inverse-v01.svg'
       - 'index.html'
+      - '.github/workflows/media-pages.yml'
 permissions:
   contents: write
   pages: write
@@ -15,63 +18,67 @@ concurrency:
   group: caderna-media-pages
   cancel-in-progress: false
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - name: Instalar fontes abertas e Pillow
+      - name: Instalar tipografia livre e renderização SVG/Pillow
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq fonts-noto-core fonts-inter fonts-lato
-          python -m pip install --disable-pip-version-check 'Pillow>=10,<13'
-      - name: Renderizar edição 001 com gate de colisões
+          python -m pip install --disable-pip-version-check 'Pillow>=10,<13' 'CairoSVG>=2.7,<3'
+      - name: Gate 01 — render com identidade canônica e caixas verificadas
         env:
           CADERNA_OUTPUT_DIR: media
         run: python scripts/render_enem_001.py
-      - name: Validar exportação, arte e arquivo para Meta
+      - name: Gate 02 — hierarquia, margens, contraste básico e tamanho móvel
+        run: python scripts/verify_design_qa.py
+      - name: Gate 03 — testes negativos (colisão/hierarquia/legenda)
+        run: python -m unittest discover -s tests -p 'test_visual_qa.py' -v
+      - name: Gate 04 — skill e guia de revisão obrigatórios
         run: |
-          python - <<'PY'
-          from PIL import Image
-          from pathlib import Path
-          import json
-          p=Path('media')
-          image=p/'caderna-enem-2026-001.jpg'
-          assert image.exists() and image.stat().st_size<8_000_000
-          with Image.open(image) as im:
-              assert im.format=='JPEG' and im.mode=='RGB'
-              assert im.size==(1080,1350)
-          with Image.open(p/'caderna-enem-2026-001.png') as im:
-              assert im.format=='PNG' and im.size==(1080,1350)
-          with Image.open(p/'caderna-enem-2026-001-mobile.png') as im:
-              assert im.size==(320,400)
-          qa=json.loads((p/'caderna-enem-2026-001-qa.json').read_text())
-          assert qa['no_text_overlap'] and qa['published_to_instagram'] is False
-          print('PASS: Meta-compatible JPEG + PNG + mobile preview + no overlap. Not published to Instagram.')
-          PY
-      - name: Versionar imagens publicamente sem postar no Instagram
+          test -f .agents/skills/caderna-editorial-design/SKILL.md
+          test -f docs/CRITICA-EDITORIAL-001-v07.md
+          grep -q 'DESIGN_QA_PASS_TECHNICAL_ONLY' docs/CRITICA-EDITORIAL-001-v07.md
+          grep -q 'Ainda não publicado no Instagram' docs/CRITICA-EDITORIAL-001-v07.md
+      - name: Salvar arquivos raster corrigidos no repositório
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add media/
+          git add media/caderna-enem-2026-001-v2*
           if ! git diff --cached --quiet; then
-            git commit -m "media: exporta CADERNA Enem 2026 edição 001"
+            git commit -m "media(v0.7): versão corrigida capa ENEM com relatório QA"
+            git pull --rebase
             git push
           fi
-      - name: Configurar GitHub Pages, caso habilitado no repositório
-        id: pages_config
+      - name: Preparar acervo público sem fontes internos e sem credenciais
+        run: |
+          mkdir -p site/media
+          cp index.html site/index.html
+          cp media/caderna-enem-2026-001-v2.jpg site/media/
+          cp media/caderna-enem-2026-001-v2.png site/media/
+          cp media/caderna-enem-2026-001-v2-mobile.png site/media/
+          touch site/.nojekyll
+      - name: Configurar GitHub Pages já ativado
         uses: actions/configure-pages@v5
-        continue-on-error: true
-      - name: Empacotar site (somente se GitHub Pages estiver habilitado)
-        if: steps.pages_config.outcome == 'success'
+      - name: Publicar somente o site e as mídias no Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
-      - name: Deploy do acervo público
-        if: steps.pages_config.outcome == 'success'
+          path: site
+      - name: Deploy da mídia no Pages (NÃO Instagram)
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Orientar caso Pages ainda esteja desligado
-        if: steps.pages_config.outcome != 'success'
-        run: |
-          echo "::notice::Ative Settings > Pages > Build and deployment > Source: GitHub Actions. A mídia JPEG já foi commitada ao repo, mas o Pages ainda não está habilitado."
+      - name: QA preview disponível como artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: caderna-enem-001-qa-v07
+          path: |
+            media/caderna-enem-2026-001-v2.png
+            media/caderna-enem-2026-001-v2-mobile.png
+            media/caderna-enem-2026-001-v2-qa.json
+          if-no-files-found: error
+# NOTE: website hosting only. Never invoke the Instagram publisher from this repo.
