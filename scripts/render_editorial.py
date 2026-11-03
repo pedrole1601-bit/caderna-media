@@ -46,6 +46,25 @@ def assert_story(m):
         hosts.add(p.hostname)
     if len(hosts)<2:raise ValueError('Require distinct source hostnames for cross-check')
     if not isinstance(m.get('source_label'),str) or len(m['source_label'])>44:raise ValueError('Source credit missing')
+    v=m.get('visual')
+    if v is not None:
+        if not isinstance(v,dict) or v.get('kind')!='metric_split':
+            raise ValueError('Unknown infographic visual')
+        total=v.get('total')
+        entries=v.get('entries')
+        if not isinstance(total,int) or not 1<=total<=9999 or not isinstance(entries,list) or len(entries)!=2:
+            raise ValueError('Metric must be numeric with exactly two locations')
+        if any(not isinstance(e,dict) or not isinstance(e.get('value'),int) or
+               not 1<=e['value']<=total or not isinstance(e.get('name'),str) or
+               not 3<=len(e['name'])<=18 for e in entries):
+            raise ValueError('Invalid source-anchored metric entry')
+        if sum(e['value'] for e in entries)!=total:
+            raise ValueError('Graphic arithmetic must sum to its headline total')
+        if not isinstance(v.get('note'),str) or not 24<=len(v['note'])<=105:
+            raise ValueError('Graphic needs evidence-oriented qualification')
+    for slide in m.get('slides',[]):
+        if 'highlight' in slide and (not isinstance(slide['highlight'],str) or not 3<=len(slide['highlight'])<=28):
+            raise ValueError('Highlight must be a concise fact')
     if m['kind']!='headline':
         slides=m.get('slides')
         if not isinstance(slides,list) or len(slides)!=3:raise ValueError('Carousel requires exactly three informative inner slides')
@@ -123,14 +142,31 @@ def cover(story,idx):
     d.rectangle((68,221,74,263),fill=CORAL)
     reg=[]
     textbox(d,(90,222),story['section'].upper(),26,'bold',contrast,(88,210,900,265),reg,'section')
-    # CADERNA-specific motif: two nested editorial rails and offset number
-    d.ellipse((581,218,1060,695),outline=BLUE if theme=='ink' else '#C8D5E9',width=23)
-    d.arc((632,267,1014,651),30,290,fill=CORAL,width=15)
-    d.line((674,284,939,551),fill=BLUE if theme=='ink' else INK,width=14)
-    d.ellipse((869,475,919,525),fill=CORAL)
-    textbox(d,(79,320),'C',286,'serif',contrast,(70,306,550,641),reg,'editorial_motif')
-    d.rectangle((85,702,982,707),fill=CORAL)
-    textbox(d,(88,726),'INFORMAÇÃO  /  CONTEXTO',25,'bold',contrast,(85,718,720,778),reg,'hero_subtitle')
+    v=story.get('visual')
+    if v and v.get('kind')=='metric_split':
+        # A real metric is the hero. No decorative 'C' or fictitious chart values.
+        total=str(v['total'])
+        textbox(d,(87,315),total,270,'serif',contrast,(80,305,605,610),reg,'hero_metric_total')
+        textbox(d,(94,604),'VAGAS / 2027',31,'bold',contrast,(90,590,530,658),reg,'hero_metric_label')
+        d.rectangle((624,292,628,585),fill=CORAL)
+        for i,item in enumerate(v['entries']):
+            row_y=315+i*154
+            textbox(d,(652,row_y),item['name'].upper(),24,'bold',contrast,(646,row_y-3,998,row_y+38),reg,'metric_label_'+str(i))
+            textbox(d,(655,row_y+37),str(item['value']),66,'display',contrast,(650,row_y+30,840,row_y+115),reg,'metric_value_'+str(i))
+            bar_w=round(325*item['value']/v['total'])
+            d.rectangle((650,row_y+114,650+bar_w,row_y+128),fill=CORAL if i==0 else BLUE)
+            d.rectangle((650+bar_w,row_y+114,975,row_y+128),fill='#C7CFD7' if theme=='cream' else '#40516A')
+        d.rectangle((84,686,992,690),fill=CORAL)
+        textbox(d,(90,722),v['note'],20,'bold',contrast,(85,710,999,778),reg,'metric_qualification')
+    else:
+        # Generic motif only for stories without a verified focal number.
+        d.ellipse((581,218,1060,695),outline=BLUE if theme=='ink' else '#C8D5E9',width=23)
+        d.arc((632,267,1014,651),30,290,fill=CORAL,width=15)
+        d.line((674,284,939,551),fill=BLUE if theme=='ink' else INK,width=14)
+        d.ellipse((869,475,919,525),fill=CORAL)
+        textbox(d,(79,320),'C',286,'serif',contrast,(70,306,550,641),reg,'editorial_motif')
+        d.rectangle((85,702,982,707),fill=CORAL)
+        textbox(d,(88,726),'INFORMAÇÃO  /  CONTEXTO',25,'bold',contrast,(85,718,720,778),reg,'hero_subtitle')
     panel=INK if theme=='cream' else PAPER
     ink=PAPER if theme=='cream' else INK
     muted='#CAD2D9' if theme=='cream' else MUTED
@@ -193,6 +229,11 @@ def inside(story,idx):
         textbox(d,(90,current),line,size,'reg',fg,(88,700,991,1176),reg,'body_'+str(li))
         current+=size+23
     if current>1185:raise ValueError('Too much body copy')
+    if info.get('highlight'):
+        if current>1075:raise ValueError('Highlight requires sufficient negative space')
+        d.rectangle((90,1106,990,1197),outline=CORAL,width=3)
+        d.rectangle((90,1106,102,1197),fill=CORAL)
+        textbox(d,(124,1126),info['highlight'].upper(),39,'bold',fg,(120,1117,969,1181),reg,'highlight')
     d.rectangle((90,1234,990,1238),fill=CORAL)
     textbox(d,(90,1264),'FONTE: '+story['source_label'].upper()[:40],20,'bold',fg,(88,1257,810,1305),reg,'source')
     textbox(d,(888,1264),f'{idx+1}/4',23,'bold',fg,(885,1258,990,1310),reg,'pagination')
