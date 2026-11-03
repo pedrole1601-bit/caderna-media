@@ -73,6 +73,23 @@ jobs:
       - name: Deploy da mídia no Pages (NÃO Instagram)
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Gate 05 — confirmar HTTPS público do GitHub Pages
+        run: |
+          set -euo pipefail
+          PUBLIC_URL="https://pedrole1601-bit.github.io/caderna-media/media/caderna-enem-2026-001-v2.jpg"
+          PAGE_URL="https://pedrole1601-bit.github.io/caderna-media/"
+          code=000
+          for n in 1 2 3 4 5 6 7 8 9 10; do
+            code=$(curl -sSL -o /dev/null -w '%{http_code}' --max-time 20 "$PUBLIC_URL" || true)
+            if [ "$code" = 200 ]; then break; fi
+            echo "Pages propagation: HTTP $code; retry $n"
+            sleep 6
+          done
+          test "$code" = 200 || { echo "::error::Mídia não acessível sem login (HTTP $code)"; exit 1; }
+          curl -fsSL --max-time 30 "$PUBLIC_URL" -o /tmp/caderna-publication-v2.jpg
+          cmp /tmp/caderna-publication-v2.jpg media/caderna-enem-2026-001-v2.jpg
+          curl -fsSL --max-time 30 "$PAGE_URL" | grep -q 'CADERNA'
+          echo 'PASS: GitHub Pages responde 200, JPEG corresponde byte a byte ao artefato local, página pública disponível.'
       - name: QA preview disponível como artifact
         uses: actions/upload-artifact@v4
         with:
