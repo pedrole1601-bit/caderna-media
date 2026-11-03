@@ -197,7 +197,7 @@ def cover(story,idx):
     # top-aligned single column, fixed line gap and unified font size.
     stride=size+54
     if len(lines)==2:start=900
-    else:start=861
+    else:start=875  # Three-line glyphs must start inside the verified headline grid.
     boxes=[]
     for i,line in enumerate(lines):
         y=start+i*stride
