@@ -362,5 +362,11 @@
   "source_links": [
     "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-2026-participantes-ja-podem-conferir-os-locais-de-prova/",
     "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/menos-de-uma-semana-para-o-enem-2026-mec-da-dicas-aos-participantes"
-  ]
+  ],
+  "sha256_jpegs": {
+    "2026-11-03-enem-carrossel-teste-01.jpg": "817a91139ad3abcf09e2c669fbaa23c4e31252c66061e6ca0646a923455590fa",
+    "2026-11-03-enem-carrossel-teste-02.jpg": "0d7080acd5c74da0713d272b213fc9d1ceb272b8022e87654c4adf76ad3011e0",
+    "2026-11-03-enem-carrossel-teste-03.jpg": "c236c56d6e5c787cfb355767930601184acb4b24e22f7e816c7691fa2427b37a",
+    "2026-11-03-enem-carrossel-teste-04.jpg": "90f370e79dc29a7a7868158b38c2effcbcb7f62d46bbfb4ac54470d60110cd34"
+  }
 }
