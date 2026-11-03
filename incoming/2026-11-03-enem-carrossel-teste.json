@@ -1,0 +1,33 @@
+{
+  "id": "2026-11-03-enem-carrossel-teste",
+  "kind": "carousel",
+  "theme": "cream",
+  "risk": "low",
+  "example_only": true,
+  "publication_authorized": false,
+  "section": "EDUCAÇÃO",
+  "headline": "Enem 2026 terá provas em 8 e 15 de novembro",
+  "deck": "O Inep já disponibilizou o Cartão de Confirmação com o local de aplicação para consulta.",
+  "sources": [
+    "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-2026-participantes-ja-podem-conferir-os-locais-de-prova/",
+    "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/menos-de-uma-semana-para-o-enem-2026-mec-da-dicas-aos-participantes"
+  ],
+  "source_label": "INEP / AGÊNCIA BRASIL",
+  "event_date": "2026-11-08",
+  "verified_at": "2026-11-03",
+  "caption": "A primeira etapa do Enem 2026 será realizada em 8 de novembro. A segunda está prevista para o dia 15. O Inep confirma a disponibilidade dos locais de prova na Página do Participante. Confira as informações essenciais nos quatro quadros desta edição. Fontes: Inep e Agência Brasil, outubro e novembro de 2026.",
+  "slides": [
+    {
+      "title": "O primeiro dia",
+      "body": "No domingo, 8 de novembro, os participantes fazem as provas de Linguagens, Ciências Humanas e Redação. As outras duas áreas do conhecimento ficam para o domingo seguinte."
+    },
+    {
+      "title": "O cartão já está disponível",
+      "body": "O Cartão de Confirmação pode ser consultado na Página do Participante, com acesso pelo gov.br. O documento informa o endereço do local de prova e o horário da aplicação."
+    },
+    {
+      "title": "Os horários da prova",
+      "body": "Os portões abrem às 12h e fecham às 13h, pelo horário de Brasília. As provas começam às 13h30. O candidato deve apresentar um documento oficial de identificação com foto."
+    }
+  ]
+}
