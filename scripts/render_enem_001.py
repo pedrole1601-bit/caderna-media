@@ -1,119 +1,120 @@
 #!/usr/bin/env python3
-"""CADERNA edição 001 — arte editorial original para o Enem 2026.
-
-Fonte factual: Inep 27–29/10/2026. Sem fotografia de terceiro e SEM publicação no Instagram.
-Reprodução: CADERNA_OUTPUT_DIR=media python scripts/render_enem_001.py
+"""CADERNA v0.7 — edição 001. Design auditável e sem postagem no Instagram.
+Foco editorial: um só bloco de manchete, alinhamento óptico e teste mobile.
+Aprovado tecnicamente != aprovado pelo editor.
 """
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image,ImageDraw,ImageFont
 from pathlib import Path
-import os, json
+import io,cairosvg,os,json
+ROOT=Path(__file__).resolve().parents[1]
+OUT=Path(os.getenv('CADERNA_OUTPUT_DIR',str(ROOT/'media')))
 W,H=1080,1350
-INK='#101C2E'; PAPER='#F5F3ED'; CORAL='#EA674D'; BLUE='#3356EA'
-MUTED='#9CAABB'; PALEBLUE='#DFE8F5'
-base=Image.new('RGB',(W,H),PAPER)
-d=ImageDraw.Draw(base)
-fontdir=Path('/usr/share/fonts')
-candidates={
- 'cond':['truetype/noto/NotoSansDisplay-ExtraCondensedBlack.ttf','truetype/noto/NotoSansDisplay-CondensedBlack.ttf','truetype/dejavu/DejaVuSansCondensed-Bold.ttf'],
- 'heavy':['opentype/inter/InterDisplay-Black.otf','opentype/inter/InterDisplay-Bold.otf','truetype/lato/Lato-Heavy.ttf'],
- 'regular':['opentype/inter/InterDisplay-Regular.otf','truetype/lato/Lato-Regular.ttf'],
- 'bold':['opentype/inter/InterDisplay-Bold.otf','truetype/lato/Lato-Bold.ttf'],
- 'serif':['truetype/noto/NotoSerifDisplay-CondensedBlackItalic.ttf','truetype/noto/NotoSerif-CondensedBlackItalic.ttf','truetype/dejavu/DejaVuSerifCondensed-BoldItalic.ttf']
+INK='#101C2E'; PAPER='#F5F3ED'; CORAL='#EA674D'
+MUTED='#667487'; SOFT='#D5DDE4'
+FONT={
+  'display':'/usr/share/fonts/truetype/noto/NotoSansDisplay-ExtraCondensedBlack.ttf',
+  'serif':'/usr/share/fonts/truetype/noto/NotoSerifDisplay-CondensedBlackItalic.ttf',
+  'bold':'/usr/share/fonts/opentype/inter/InterDisplay-Bold.otf',
+  'heavy':'/usr/share/fonts/opentype/inter/InterDisplay-Black.otf',
+  'reg':'/usr/share/fonts/opentype/inter/InterDisplay-Regular.otf'
 }
-fontpaths={k:next((fontdir/f for f in names if (fontdir/f).exists()),None) for k,names in candidates.items()}
-if any(f is None for f in fontpaths.values()):raise RuntimeError('Missing free fonts: '+str(fontpaths))
-def font(size,face='regular'):return ImageFont.truetype(str(fontpaths[face]),size)
-boxes=[]
-def text(x,y,msg,size,fill,face='regular',maxright=1008,limitbottom=1340):
-    f=font(size,face)
-    bb=d.textbbox((x,y),msg,font=f,anchor='lt')
-    if bb[0]<0 or bb[2]>maxright or bb[3]>limitbottom:
-        raise ValueError(f'TEXT GRID FAIL {msg!r}: {bb}')
-    for other,prev in boxes:
-        if min(bb[2],prev[2])-max(bb[0],prev[0])>3 and min(bb[3],prev[3])-max(bb[1],prev[1])>3:
-            raise ValueError(f'TEXT OVERLAP: {msg!r} & {other!r}')
-    boxes.append((msg,bb))
-    d.text((x,y),msg,font=f,fill=fill,anchor='lt')
+for name,path in FONT.items():
+    if not Path(path).exists(): raise RuntimeError('Missing free font '+name)
+def font(f,s):return ImageFont.truetype(FONT[f],s)
+im=Image.new('RGB',(W,H),INK)
+d=ImageDraw.Draw(im)
+blocks=[]
+def put(label,x,y,message,size,face,color,rect):
+    if not message:raise ValueError('Empty text: '+label)
+    f=font(face,size)
+    bb=d.textbbox((x,y),message,font=f,anchor='lt')
+    x0,y0,x1,y1=rect
+    if not (bb[0]>=x0-2 and bb[1]>=y0-2 and bb[2]<=x1+2 and bb[3]<=y1+2):
+        raise ValueError('BLOCK OUT OF SAFE GRID '+label+' '+str(bb))
+    for other in blocks:
+        a=other['bbox']
+        if min(bb[2],a[2])-max(bb[0],a[0])>3 and min(bb[3],a[3])-max(bb[1],a[1])>3:
+            raise ValueError('TEXT COLLISION: '+label+' and '+other['label'])
+    d.text((x,y),message,font=f,fill=color,anchor='lt')
+    blocks.append(dict(label=label,text=message,bbox=bb,size=size,font=face,anchor_x=x,anchor_y=y))
     return bb
 
-def fit(x,y,s,preferred,minimum,fill,face='cond',right=1008,bottom=1340):
-    for size in range(preferred,minimum-1,-1):
-        if d.textbbox((x,y),s,font=font(size,face),anchor='lt')[2]<=right:
-            return text(x,y,s,size,fill,face,maxright=right,limitbottom=bottom)
-    raise ValueError('Headline does not fit: '+s)
+# Brand header: uses OFFICIAL CADERNA SVG; never redraws logo as lookalike.
+d.rectangle((0,0,W,155),fill=INK)
+d.rectangle((0,0,W,9),fill=CORAL)
+svg=ROOT/'assets/logo-horizontal-inverse-v01.svg'
+if not svg.is_file():raise RuntimeError('Canonical CADERNA logo missing')
+logo=Image.open(io.BytesIO(cairosvg.svg2png(url=str(svg),output_width=444,output_height=94))).convert('RGBA')
+im.paste(logo,(63,30),logo)
+d=ImageDraw.Draw(im)
+d.rectangle((817,48,822,110),fill=CORAL)
+put('issue',849,53,'EDIÇÃO / 001',23,'bold',PAPER,(844,49,1030,80))
+put('edition_date',852,91,'03 NOV 2026',18,'reg',SOFT,(846,87,1030,112))
 
-# Cabeçalho: assinatura CADERNA v0.4, azul profundo e coral.
-d.rectangle((0,0,1080,165),fill=INK)
-d.rectangle((0,0,1080,9),fill=CORAL)
-d.rounded_rectangle((59,31,159,131),radius=22,fill=PAPER)
-d.line((126,51,98,51,85,63,85,94,98,108,126,108),fill=INK,width=11,joint='curve')
-for y,end in [(69,135),(81,128),(94,135)]:d.line((101,y,end,y),fill=INK,width=7)
-d.rounded_rectangle((137,78,144,94),radius=2,fill=CORAL)
-text(183,44,'CADERNA',63,PAPER,'heavy',maxright=733)
-text(188,111,'J O R N A L   D I G I T A L',13,PALEBLUE,'bold',maxright=764)
-d.rectangle((826,46,831,119),fill=CORAL)
-text(849,51,'EDIÇÃO / 001',24,PAPER,'bold')
-text(853,91,'03 NOV 2026',21,MUTED,'regular')
-
-# Campo editorial original, sem fingir fotografia documental.
-d.rectangle((0,165,1080,777),fill=INK)
-for yy in range(198,760,70):d.line((28,yy,1050,yy),fill='#1C2C40',width=2)
-for xx in range(70,1070,95):d.line((xx,179,xx,755),fill='#1A293D',width=1)
-d.ellipse((585,174,1170,752),fill='#223A68')
-d.ellipse((696,256,1155,716),fill=BLUE)
-d.rectangle((64,208,70,255),fill=CORAL)
-text(86,213,'BRASIL  /  EDUCAÇÃO',25,PAPER,'bold',maxright=600)
-fit(63,292,'08',337,275,PAPER,'serif',right=606,bottom=630)
-d.rectangle((74,637,526,641),fill=CORAL)
-text(76,658,'NOVEMBRO',69,CORAL,'cond',maxright=547)
-text(77,722,'DOMINGO',26,PALEBLUE,'bold',maxright=580)
-
-# Elemento gráfico: caderno de respostas ilustrativo, chamado SIMULADO.
-pad=Image.new('RGBA',(440,590),(0,0,0,0))
-p=ImageDraw.Draw(pad)
-p.rounded_rectangle((27,33,414,562),radius=27,fill=(0,0,0,35))
-p.rounded_rectangle((13,12,401,546),radius=20,fill=PAPER)
-p.rectangle((53,57,337,65),fill=INK)
-p.text((53,84),'SIMULADO',font=font(42,'heavy'),fill=INK)
-p.text((53,138),'CADERNO DE RESPOSTAS',font=font(15,'bold'),fill='#637082')
-p.line((53,167,349,167),fill='#BEC6CD',width=3)
-for row in range(7):
-    yy=210+row*42
-    p.text((53,yy-10),f'{row+1:02d}',font=font(19,'bold'),fill='#677485')
+# Hero: one meaningful date + illustration, without gratuitous grid marks.
+d.rectangle((0,155,1080,815),fill=INK)
+d.rectangle((66,212,73,250),fill=CORAL)
+put('section',85,215,'BRASIL   /   EDUCAÇÃO',25,'bold',SOFT,(80,203,505,247))
+put('day',74,283,'08',268,'serif',PAPER,(67,275,550,574))
+d.rectangle((82,612,340,617),fill=CORAL)
+put('month',80,636,'NOV',77,'display',CORAL,(75,631,320,721))
+put('weekday',84,740,'DOMINGO',25,'bold',SOFT,(80,735,470,774))
+paper=Image.new('RGBA',(428,548),(0,0,0,0))
+p=ImageDraw.Draw(paper)
+p.rounded_rectangle((38,37,406,526),radius=18,fill=(0,0,0,60))
+p.rounded_rectangle((20,19,388,510),radius=18,fill=PAPER)
+p.rectangle((58,58,335,63),fill=INK)
+p.text((57,78),'CADERNO DE ESTUDO',font=font('heavy',24),fill=INK)
+p.text((58,120),'ILUSTRAÇÃO EDITORIAL',font=font('bold',15),fill=MUTED)
+p.line((56,154,336,154),fill='#AFB9C2',width=2)
+for row in range(6):
+    yy=199+row*47
+    p.text((59,yy-11),f'{row+1:02d}',font=font('bold',19),fill=MUTED)
     for k in range(4):
-        cx=141+k*56; r=9
-        selected=(row==1 and k==2) or (row==4 and k==0)
-        p.ellipse((cx-r,yy-r,cx+r,yy+r),outline=CORAL if selected else '#92A0AC',width=3)
+        cx=145+k*55;r=10;selected=(row,k) in ((1,2),(4,1))
+        p.ellipse((cx-r,yy-r,cx+r,yy+r),outline=CORAL if selected else '#8EA0AF',width=3)
         if selected:p.ellipse((cx-4,yy-4,cx+4,yy+4),fill=CORAL)
-p.rectangle((52,508,349,512),fill='#D7DFE4')
-rot=pad.rotate(10,Image.Resampling.BICUBIC,expand=True)
-base.paste(rot,(547,191),rot)
-d=ImageDraw.Draw(base)
-d.ellipse((992,666,1018,692),fill=CORAL)
-for i,top in enumerate((730,715,701)):d.rectangle((960+i*15,top,967+i*15,757),fill=BLUE)
+p.rectangle((58,469,334,471),fill='#C9D2DA')
+rot=paper.rotate(9,Image.Resampling.BICUBIC,expand=True)
+im.paste(rot,(542,214),rot)
+d=ImageDraw.Draw(im)
 
-# Título: três linhas auditadas por caixas reais.
-d.rectangle((0,777,1080,1350),fill=PAPER)
-d.rectangle((64,750,303,811),fill=CORAL)
-text(85,769,'ENEM  /  2026',29,INK,'bold',maxright=293)
-fit(73,831,'PRIMEIRA PROVA',138,98,INK,'cond',right=1010,bottom=973)
-fit(73,961,'É NESTE',169,120,INK,'cond',right=1010,bottom=1124)
-fit(73,1128,'DOMINGO',138,123,INK,'cond',right=1010,bottom=1238)
-d.rectangle((55,838,62,1203),fill=CORAL)
-d.rectangle((55,838,85,845),fill=CORAL)
-d.rectangle((64,1243,1016,1247),fill=CORAL)
-text(68,1258,'LOCAL DE PROVA DISPONÍVEL NO CARTÃO DE CONFIRMAÇÃO',23,INK,'bold',maxright=1017,limitbottom=1292)
-text(68,1304,'FONTE: INEP  •  03.11.2026',17,'#657386','bold',maxright=580)
-text(727,1303,'8 E 15 NOVEMBRO',19,INK,'bold',maxright=1018)
-assert len(boxes)>=12
+# Primary headline: one type size, one column, two fixed baselines.
+d.rectangle((0,815,W,H),fill=PAPER)
+d.rectangle((78,847,300,893),fill=CORAL)
+put('kicker',98,855,'ENEM  /  2026',24,'bold',INK,(95,849,292,886))
+x=94
+h1=put('headline_line_1',x,935,'ENEM COMEÇA',126,'display',INK,(92,925,1010,1070))
+h2=put('headline_line_2',x,1096,'NESTE DOMINGO',126,'display',INK,(92,1077,1012,1230))
+d.rectangle((94,1244,1006,1248),fill=CORAL)
+put('dek',94,1260,'LOCAL DE PROVA JÁ DISPONÍVEL NO CARTÃO DE CONFIRMAÇÃO',23,'bold',INK,(80,1256,1008,1300))
+put('source',94,1310,'FONTE: INEP  •  03.11.2026',17,'bold',MUTED,(80,1303,700,1338))
+put('date_range',791,1310,'8 E 15 NOV',19,'bold',INK,(785,1304,1004,1338))
 
-output=Path(os.getenv('CADERNA_OUTPUT_DIR','media'))
-output.mkdir(parents=True,exist_ok=True)
-base.save(output/'caderna-enem-2026-001.png',format='PNG',optimize=True)
-base.save(output/'caderna-enem-2026-001.jpg',format='JPEG',quality=94,subsampling=0,optimize=True)
-base.resize((320,400),Image.Resampling.LANCZOS).save(output/'caderna-enem-2026-001-mobile.png')
-(output/'caderna-enem-2026-001-qa.json').write_text(
-    json.dumps({'size':[1080,1350],'text_blocks':len(boxes),'no_text_overlap':True,
-                'subject':'ENEM 2026','photo_used':False,'published_to_instagram':False},
-                ensure_ascii=False,indent=2),encoding='utf8')
-print('QA PASS | 1080x1350 | '+str(len(boxes))+' boxes | exported JPG/PNG | NO Instagram publication')
+# Strict visual coherence gates; these catch the exact prior failing composition.
+headline=[b for b in blocks if b['label'].startswith('headline_line_')]
+assert len(headline)==2, 'Headlines require exactly 2 balanced lines'
+assert len({b['font'] for b in headline})==1, 'One headline font only'
+assert len({b['size'] for b in headline})==1, 'No arbitrary font-size per row'
+assert max(b['anchor_x'] for b in headline)-min(b['anchor_x'] for b in headline)<=3, 'Anchor misalignment'
+assert min(b['bbox'][0] for b in headline)>=84, 'Headline invades left margin'
+assert max(b['bbox'][2] for b in headline)<=1012, 'Headline invades right margin'
+assert h2[1]-h1[3]>=36, 'Headline line gap under 36px'
+assert min(b['size'] for b in headline)*320/W>=37, 'Illegible mobile headline'
+assert all(b['bbox'][2]<=1030 for b in blocks), 'Text overruns artboard'
+assert h1[3]<h2[1], 'Headline collision'
+
+OUT.mkdir(parents=True,exist_ok=True)
+name='caderna-enem-2026-001-v2'
+im.save(OUT/(name+'.png'),format='PNG',optimize=True)
+im.save(OUT/(name+'.jpg'),format='JPEG',quality=94,subsampling=0,optimize=True)
+im.resize((320,400),Image.Resampling.LANCZOS).save(OUT/(name+'-mobile.png'),format='PNG')
+qa={'schema':'caderna.design.qa.v07','canvas':[W,H],
+    'render_status':'TECHNICAL_PASS_EDITOR_APPROVAL_PENDING','name':name,
+    'headline_x':[b['anchor_x'] for b in headline],
+    'headline_font_sizes':[b['size'] for b in headline],
+    'headline_gap':h2[1]-h1[3],
+    'illustration_not_photograph':True,'logo':'assets/logo-horizontal-inverse-v01.svg',
+    'human_approved':False,'published_to_instagram':False,'text_blocks':blocks}
+(OUT/(name+'-qa.json')).write_text(json.dumps(qa,ensure_ascii=False,indent=2),encoding='utf8')
+print('PASS: strict grid, typography, brand logo, 1080x1350, JPEG/PNG, mobile QA')
