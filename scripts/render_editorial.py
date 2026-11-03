@@ -29,22 +29,41 @@ def assert_story(m):
         raise ValueError('Dated, unique story slug required')
     if m.get('kind') not in ('headline','carousel','explainer'):raise ValueError('Unexpected family')
     if m.get('theme') not in ('ink','cream'):raise ValueError('Choose canonical theme')
-    if m.get('risk')!='low':raise ValueError('Sensitive stories blocked from automatic renderer')
+    if m.get('risk') not in ('low','high'):
+        raise ValueError('Every story must declare low or high risk')
+    high=m.get('risk')=='high'
+    if high:
+        if m.get('editorial_process')!='source-anchored-triple-review':
+            raise ValueError('High impact infographic requires triple-source editorial process')
+        if m.get('claim_status')!='verified' or m.get('disputed_claims') not in ([],None):
+            raise ValueError('Unresolved disputed claim cannot appear in a public render')
+        checks=m.get('review_checks',{})
+        flags=('claims_checked','contradictions_checked','attribution_checked',
+               'editorial_neutrality_checked','primary_source_checked')
+        if not isinstance(checks,dict) or any(checks.get(key) is not True for key in flags):
+            raise ValueError('High impact brief needs documented checks before rendering')
+        if not isinstance(m.get('verification_log'),list) or len(m['verification_log'])<3:
+            raise ValueError('High impact brief needs evidence excerpts from three sources')
     for key,minlen,maxlen in [('headline',22,100),('deck',55,210),('section',5,32)]:
         if not isinstance(m.get(key),str) or not minlen<=len(m[key].strip())<=maxlen:
             raise ValueError(key+' insufficient or too long for journalistic grid')
     bad=r'(?i)\b(elei[çc][ãa]o|fraude|candidatura|partido|presidente|homic[ií]dio|morte|assassin|guerra|crime|tratamento|c[âa]ncer|pandemia|acidente|trag[ée]dia|bomba|conflito armado)\b'
-    if re.search(bad,' '.join([m['headline'],m['deck']])):
-        raise ValueError('Sensitive topic or high-risk terminology: human editor required')
+    if not high and re.search(bad,' '.join([m['headline'],m['deck']])):
+        raise ValueError('Misclassified low-risk headline contains high impact terms')
     sources=m.get('sources')
-    if not isinstance(sources,list) or len(sources)<2:raise ValueError('Two independent source links required')
+    if not isinstance(sources,list) or len(sources)<(3 if high else 2):
+        raise ValueError('High impact needs three source links; other stories need two')
     hosts=set()
     for s in sources:
         if not isinstance(s,str) or not s.startswith('https://'):raise ValueError('HTTPS original evidence links required')
         p=urlparse(s)
         if not p.hostname or p.hostname.endswith('.example.com') or p.username:raise ValueError('Invalid source URL')
         hosts.add(p.hostname)
-    if len(hosts)<2:raise ValueError('Require distinct source hostnames for cross-check')
+    if len(hosts)<(3 if high else 2):
+        raise ValueError('Require distinct source hosts for cross-check')
+    if high and len({entry.get('source_url') for entry in m['verification_log']
+                     if isinstance(entry,dict) and entry.get('source_url') in sources})<3:
+        raise ValueError('Each high-impact source must have an evidence record')
     if not isinstance(m.get('source_label'),str) or len(m['source_label'])>44:raise ValueError('Source credit missing')
     v=m.get('visual')
     if v is not None:
@@ -73,7 +92,8 @@ def assert_story(m):
                 raise ValueError('Inner slide title must be concise and non-empty')
             if not isinstance(x.get('body'),str) or not 90<=len(x['body'])<=350:
                 raise ValueError('Inner slide body needs sourced context, not placeholders')
-            if re.search(bad,x['title']+' '+x['body']):raise ValueError('Sensitive inner slide requires human review')
+            if not high and re.search(bad,x['title']+' '+x['body']):
+                raise ValueError('Sensitive inner slide misclassified low risk')
     if not isinstance(m.get('caption'),str) or not 120<=len(m['caption'])<=2100:raise ValueError('Natural caption missing')
     return m
 
@@ -258,7 +278,8 @@ def render(story,out):
     return {'status':'PASS_TECHNICAL_ONLY','slug':story['id'],'kind':story['kind'],
             'theme':story['theme'],'jpeg_count':count,'qa':qa,
             'editorial_approval':False,'published_to_instagram':False,
-            'source_links':story['sources'],'sha256_jpegs':sha256_jpegs}
+            'source_links':story['sources'],'risk':story['risk'],
+            'sha256_jpegs':sha256_jpegs}
 def main():
     if len(sys.argv)!=2:raise SystemExit('Usage: render_editorial.py incoming/<slug>.json')
     path=Path(sys.argv[1])
