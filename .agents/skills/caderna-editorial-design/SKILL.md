@@ -15,6 +15,10 @@ Esta é uma skill interna **obrigatória** antes de entregar uma peça visual CA
 - [collateral-design](https://github.com/zstvns/design-skills/tree/main/skills/collateral-design) — usar marca canônica, não redesenhar símbolo.
 - [creative-direction](https://github.com/zstvns/design-skills/tree/main/skills/creative-direction) — gramática visual própria e coerente.
 
+## Regra 0 — fotografia obrigatória, antes de qualquer layout
+
+TODAS as capas de notícias e carrosséis devem conter fotografia **real, licenciada, relacionada ao assunto e auditável**, ocupando no mínimo 55% da altura. O elemento principal não pode ser uma inicial, um círculo decorativo, um logo, uma ilustração ou uma imagem de IA. Registrar `photo.image_url`, `source_page`, `author`, `credit`, `license`, `license_url`, `description`, `date_taken`, `context`, `context_note`. Somente considerar foto de arquivo se a própria imagem e a legenda disserem que não registra o evento/instalação. Se não houver foto legal e adequada, reportar BLOCKED_GATE. Verificar JPEG, SHA, QA e mobile antes do manifesto privado.
+
 ## Objetivo e linguagem
 Jornal digital, contexto factual, sem clickbait. 1080×1350 para feed. Azul profundo `#101C2E`, papel `#F5F3ED`, coral `#EA674D` são cores de função, não ornamentais. Foco único (manchete). Elemento de data e arte documental/ilustração com legenda fiel ao seu caráter. Logo oficial sempre de `assets/logo-horizontal-inverse-v01.svg` ou outro arquivo canônico autorizado.
 
