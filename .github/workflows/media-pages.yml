@@ -29,7 +29,8 @@ jobs:
       - name: Instalar tipografia livre e renderização SVG/Pillow
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq fonts-noto-core fonts-inter fonts-lato
+          sudo apt-get install -y -qq fonts-noto-core fonts-noto-extra fonts-inter fonts-lato
+          fc-list | grep -E 'Noto Sans Display|Noto Serif Display|Inter Display' | head -12 || true
           python -m pip install --disable-pip-version-check 'Pillow>=10,<13' 'CairoSVG>=2.7,<3'
       - name: Gate 01 — render com identidade canônica e caixas verificadas
         env:
