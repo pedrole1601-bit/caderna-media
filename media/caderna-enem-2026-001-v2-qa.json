@@ -1,0 +1,192 @@
+{
+  "schema": "caderna.design.qa.v07",
+  "canvas": [
+    1080,
+    1350
+  ],
+  "render_status": "TECHNICAL_PASS_EDITOR_APPROVAL_PENDING",
+  "name": "caderna-enem-2026-001-v2",
+  "headline_x": [
+    94,
+    94
+  ],
+  "headline_font_sizes": [
+    126,
+    126
+  ],
+  "headline_gap": 40,
+  "illustration_not_photograph": true,
+  "logo": "assets/logo-horizontal-inverse-v01.svg",
+  "human_approved": false,
+  "published_to_instagram": false,
+  "text_blocks": [
+    {
+      "label": "issue",
+      "text": "EDIÇÃO / 001",
+      "bbox": [
+        849,
+        53,
+        991,
+        80
+      ],
+      "size": 23,
+      "font": "bold",
+      "anchor_x": 849,
+      "anchor_y": 53
+    },
+    {
+      "label": "edition_date",
+      "text": "03 NOV 2026",
+      "bbox": [
+        852,
+        91,
+        962,
+        105
+      ],
+      "size": 18,
+      "font": "reg",
+      "anchor_x": 852,
+      "anchor_y": 91
+    },
+    {
+      "label": "section",
+      "text": "BRASIL   /   EDUCAÇÃO",
+      "bbox": [
+        85,
+        215,
+        351,
+        245
+      ],
+      "size": 25,
+      "font": "bold",
+      "anchor_x": 85,
+      "anchor_y": 215
+    },
+    {
+      "label": "day",
+      "text": "08",
+      "bbox": [
+        74,
+        283,
+        361,
+        481
+      ],
+      "size": 268,
+      "font": "serif",
+      "anchor_x": 74,
+      "anchor_y": 283
+    },
+    {
+      "label": "month",
+      "text": "NOV",
+      "bbox": [
+        80,
+        636,
+        219,
+        693
+      ],
+      "size": 77,
+      "font": "display",
+      "anchor_x": 80,
+      "anchor_y": 636
+    },
+    {
+      "label": "weekday",
+      "text": "DOMINGO",
+      "bbox": [
+        84,
+        740,
+        204,
+        759
+      ],
+      "size": 25,
+      "font": "bold",
+      "anchor_x": 84,
+      "anchor_y": 740
+    },
+    {
+      "label": "kicker",
+      "text": "ENEM  /  2026",
+      "bbox": [
+        98,
+        855,
+        255,
+        876
+      ],
+      "size": 24,
+      "font": "bold",
+      "anchor_x": 98,
+      "anchor_y": 855
+    },
+    {
+      "label": "headline_line_1",
+      "text": "ENEM COMEÇA",
+      "bbox": [
+        94,
+        935,
+        829,
+        1056
+      ],
+      "size": 126,
+      "font": "display",
+      "anchor_x": 94,
+      "anchor_y": 935
+    },
+    {
+      "label": "headline_line_2",
+      "text": "NESTE DOMINGO",
+      "bbox": [
+        94,
+        1096,
+        940,
+        1188
+      ],
+      "size": 126,
+      "font": "display",
+      "anchor_x": 94,
+      "anchor_y": 1096
+    },
+    {
+      "label": "dek",
+      "text": "LOCAL DE PROVA JÁ DISPONÍVEL NO CARTÃO DE CONFIRMAÇÃO",
+      "bbox": [
+        94,
+        1260,
+        802,
+        1287
+      ],
+      "size": 23,
+      "font": "bold",
+      "anchor_x": 94,
+      "anchor_y": 1260
+    },
+    {
+      "label": "source",
+      "text": "FONTE: INEP  •  03.11.2026",
+      "bbox": [
+        94,
+        1310,
+        300,
+        1323
+      ],
+      "size": 17,
+      "font": "bold",
+      "anchor_x": 94,
+      "anchor_y": 1310
+    },
+    {
+      "label": "date_range",
+      "text": "8 E 15 NOV",
+      "bbox": [
+        791,
+        1310,
+        886,
+        1324
+      ],
+      "size": 19,
+      "font": "bold",
+      "anchor_x": 791,
+      "anchor_y": 1310
+    }
+  ]
+}
