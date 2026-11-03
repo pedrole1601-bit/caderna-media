@@ -1,0 +1,126 @@
+name: CADERNA — novas noticias, capas e carrosseis com QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'incoming/*.json'
+  workflow_dispatch:
+    inputs:
+      story_id:
+        description: "Slug de incoming/<slug>.json"
+        type: string
+        required: true
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: caderna-media-pages
+  cancel-in-progress: false
+jobs:
+  produce-and-host:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Escolher UMA pauta nova por execução
+        id: select
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          STORY_ID: ${{ inputs.story_id }}
+          PREVIOUS: ${{ github.event.before }}
+          CURRENT: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import os,re,subprocess
+          from pathlib import Path
+          if os.environ['EVENT_NAME']=='workflow_dispatch':
+              slug=os.environ['STORY_ID']
+          else:
+              before=os.environ['PREVIOUS']
+              if not re.fullmatch(r'[a-f0-9]{40}',before) or before=='0'*40:
+                  raise SystemExit('Unsafe missing previous commit')
+              changed=subprocess.check_output(['git','diff','--name-only',before,os.environ['CURRENT'],'--','incoming/'],text=True).splitlines()
+              changed=[x for x in changed if x.endswith('.json')]
+              if len(changed)!=1:raise SystemExit('Exactly one incoming story must be committed per run')
+              slug=Path(changed[0]).stem
+          if not re.fullmatch(r'\d{4}-\d{2}-\d{2}-[a-z0-9-]{7,64}',slug):
+              raise SystemExit('Invalid slug')
+          if not Path('incoming',slug+'.json').is_file():raise SystemExit('Missing incoming story')
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('slug='+slug+'\n')
+          PY
+      - name: Instalar apenas ferramentas gratuitas
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-core fonts-noto-extra fonts-inter fonts-lato
+          python -m pip install --disable-pip-version-check 'Pillow>=10,<13' 'CairoSVG>=2.7,<3'
+      - name: Gate 1 — fonte, contexto e render tipografico
+        run: python scripts/render_editorial.py 'incoming/${{ steps.select.outputs.slug }}.json'
+      - name: Gate 2 — testes negativos e qualidade
+        run: |
+          python -m unittest discover -s tests -p test_render_editorial.py -v
+          python - <<'PY'
+          from PIL import Image
+          import json,os
+          from pathlib import Path
+          slug=os.environ['STORY']
+          meta=json.loads(Path('media/auto',slug+'-qa.json').read_text())
+          assert meta['status']=='PASS_TECHNICAL_ONLY'
+          for i in range(1,meta['jpeg_count']+1):
+              f=Path('media/auto',f'{slug}-{i:02d}.jpg')
+              assert f.exists() and 20000<f.stat().st_size<8_000_000
+              with Image.open(f) as im:assert im.format=='JPEG' and im.size==(1080,1350)
+              with Image.open(f.with_name(f.stem+'-mobile.png')) as im:
+                  assert im.size==(320,400)
+          print('CADERNA dynamic art QA passed:',slug,meta['jpeg_count'])
+          PY
+        env:
+          STORY: ${{ steps.select.outputs.slug }}
+      - name: Arquivar imagens no repositorio publico (nao Instagram)
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/auto/
+          if ! git diff --cached --quiet; then
+            git commit -m "media(auto): CADERNA editorial QA-only"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Construir acervo publico
+        run: |
+          mkdir -p site/media
+          cp index.html site/index.html
+          cp -r media/* site/media/
+          touch site/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy Pages (somente arquivo publico)
+        id: deploy
+        uses: actions/deploy-pages@v4
+      - name: Gate 3 — publicacao HTTPS de cada JPEG
+        env:
+          STORY: ${{ steps.select.outputs.slug }}
+        run: |
+          set -euo pipefail
+          count=$(python -c "import json,os;from pathlib import Path;print(json.loads(Path('media/auto',os.environ['STORY']+'-qa.json').read_text())['jpeg_count'])")
+          for i in $(seq -f "%02g" 1 "$count"); do
+            url="https://pedrole1601-bit.github.io/caderna-media/media/auto/$STORY-$i.jpg"
+            code=000
+            for t in 1 2 3 4 5 6 7 8 9 10; do
+              code=$(curl -L -sS -o /tmp/editorial-$i.jpg -w '%{http_code}' --max-time 20 "$url" || true)
+              [ "$code" = 200 ] && break
+              sleep 5
+            done
+            test "$code" = 200
+            cmp "/tmp/editorial-$i.jpg" "media/auto/$STORY-$i.jpg"
+          done
+          echo 'PASS: JPEG publicly accessible and matches exact preview'
+# This workflow CANNOT post to Instagram and has no Meta token.
