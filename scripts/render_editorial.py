@@ -131,7 +131,7 @@ def cover(story,idx):
     muted='#CAD2D9' if theme=='cream' else MUTED
     d.rectangle((0,795,W,H),fill=panel)
     d.rectangle((83,819,308,866),fill=CORAL)
-    textbox(d,(100,829),'CADERNA  /  '+('FATO' if story['kind']=='headline' else 'EXPLICA'),20,'bold',INK,(97,824,302,854),reg,'kicker')
+    textbox(d,(100,829),'CADERNA  /  '+('FATO' if story['kind']=='headline' else 'EXPLICA'),20,'bold',INK,(97,824,307,854),reg,'kicker')
     size,lines=title_lines(d,story['headline'],910,3)
     # top-aligned single column, fixed line gap and unified font size.
     stride=size+31
