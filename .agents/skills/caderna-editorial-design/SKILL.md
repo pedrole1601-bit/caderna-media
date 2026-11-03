@@ -36,3 +36,11 @@ Jornal digital, contexto factual, sem clickbait. 1080×1350 para feed. Azul prof
 
 ## Evidência de uso nesta edição
 Pauta 001: `scripts/render_enem_001.py`, teste `tests/test_visual_qa.py`, relatório `media/caderna-enem-2026-001-v2-qa.json`, crítica `docs/CRITICA-EDITORIAL-001-v07.md`. Todas essas peças devem estar versionadas. 
+
+
+## Templates dinâmicos e alternância
+O `scripts/render_editorial.py` implementa títulos de corpo único em 2 ou 3 linhas, mesma âncora x, respiro medido (tamanho homogêneo), safe zones fixas, SVG oficial e minibanner de origem. Suporta `headline` de imagem única e `carousel`/`explainer` de quatro páginas; temas `ink` e `cream`. O `media/auto/*-qa.json` inclui hashes SHA-256 e o workflow valida cada JPEG em HTTPS antes da aprovação privada.
+
+Usar obrigatoriamente a **skill de voz privada**: `pedrole1601-bit/Caderna/.agents/skills/caderna-guia-de-voz/SKILL.md`. Notícias continuam escritas com contexto e fontes, sem CTA manipulativo; nunca inventar porcentagem de probabilidade de autoria IA.
+
+**Nota de segurança:** a conta Meta não pode ser alcançada deste repositório. O exemplo `2026-11-03-enem-carrossel-teste` é apenas teste de render e jamais deve ser publicado como nova notícia.
