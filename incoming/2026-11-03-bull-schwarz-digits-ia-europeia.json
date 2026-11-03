@@ -17,6 +17,18 @@
   "event_date": "2026-11-03",
   "source_published_at": "2026-11-03T08:07:00-05:00",
   "verified_at": "2026-11-03T20:40:00-03:00",
-  "caption": "A francesa Bull e a alemã Schwarz Digits anunciaram nesta terça-feira (3) um memorando de entendimento para desenvolver infraestrutura europeia de inteligência artificial e nuvem. A STACKIT, da Schwarz Digits, deve fornecer a plataforma de cloud; a Bull contribuiria com servidores e computação de alto desempenho.\n\nO anúncio descreve planos, não um sistema já implantado. Os valores financeiros não foram divulgados. A proposta busca manter dados e operações sob jurisdição europeia.\n\nFontes: Reuters, comunicado Bull e IT Pro, 3 de novembro de 2026. Arte: ilustração editorial CADERNA.\n\n#Tecnologia #InteligenciaArtificial #Europa #Caderna",
-  "editorial_process": "source-anchored-double-review"
+  "caption": "A francesa Bull e a alemã Schwarz Digits anunciaram nesta terça-feira (3) um memorando de entendimento para desenvolver infraestrutura europeia de inteligência artificial e nuvem. A STACKIT, da Schwarz Digits, deve fornecer a plataforma de cloud; a Bull contribuiria com servidores e computação de alto desempenho.\n\nO anúncio descreve planos, não um sistema já implantado. Os valores financeiros não foram divulgados. A proposta busca manter dados e operações sob jurisdição europeia.\n\nFontes: Reuters, comunicado Bull e IT Pro, 3 de novembro de 2026. Foto de arquivo ilustrativa, não representa instalações das empresas: Carl Lender / Wikimedia Commons, CC BY 2.0 (2015), recorte editorial. https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg\n\n#Tecnologia #InteligenciaArtificial #Europa #Caderna",
+  "editorial_process": "source-anchored-double-review",
+  "photo": {
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Datacenter_Server_Racks_%2822370909788%29.jpg/1280px-Datacenter_Server_Racks_%2822370909788%29.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg",
+    "author": "Carl Lender",
+    "credit": "Carl Lender / Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "description": "Fotografia documental de racks em um centro de dados, feita em 4 de novembro de 2015; não é da Bull ou da Schwarz Digits.",
+    "context": "archive_illustrative",
+    "context_note": "Fotografia de arquivo de um datacenter genérico de 2015; não documenta a aliança nem instalações da Bull ou Schwarz Digits.",
+    "date_taken": "2015-11-04"
+  }
 }
