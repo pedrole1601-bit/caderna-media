@@ -1,0 +1,77 @@
+name: CADERNA — gerar arte e publicar mídia estática
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/render_enem_001.py'
+      - '.github/workflows/media-pages.yml'
+      - 'index.html'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: caderna-media-pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar fontes abertas e Pillow
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-core fonts-inter fonts-lato
+          python -m pip install --disable-pip-version-check 'Pillow>=10,<13'
+      - name: Renderizar edição 001 com gate de colisões
+        env:
+          CADERNA_OUTPUT_DIR: media
+        run: python scripts/render_enem_001.py
+      - name: Validar exportação, arte e arquivo para Meta
+        run: |
+          python - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+          import json
+          p=Path('media')
+          image=p/'caderna-enem-2026-001.jpg'
+          assert image.exists() and image.stat().st_size<8_000_000
+          with Image.open(image) as im:
+              assert im.format=='JPEG' and im.mode=='RGB'
+              assert im.size==(1080,1350)
+          with Image.open(p/'caderna-enem-2026-001.png') as im:
+              assert im.format=='PNG' and im.size==(1080,1350)
+          with Image.open(p/'caderna-enem-2026-001-mobile.png') as im:
+              assert im.size==(320,400)
+          qa=json.loads((p/'caderna-enem-2026-001-qa.json').read_text())
+          assert qa['no_text_overlap'] and qa['published_to_instagram'] is False
+          print('PASS: Meta-compatible JPEG + PNG + mobile preview + no overlap. Not published to Instagram.')
+          PY
+      - name: Versionar imagens publicamente sem postar no Instagram
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/
+          if ! git diff --cached --quiet; then
+            git commit -m "media: exporta CADERNA Enem 2026 edição 001"
+            git push
+          fi
+      - name: Configurar GitHub Pages, caso habilitado no repositório
+        id: pages_config
+        uses: actions/configure-pages@v5
+        continue-on-error: true
+      - name: Empacotar site (somente se GitHub Pages estiver habilitado)
+        if: steps.pages_config.outcome == 'success'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - name: Deploy do acervo público
+        if: steps.pages_config.outcome == 'success'
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Orientar caso Pages ainda esteja desligado
+        if: steps.pages_config.outcome != 'success'
+        run: |
+          echo "::notice::Ative Settings > Pages > Build and deployment > Source: GitHub Actions. A mídia JPEG já foi commitada ao repo, mas o Pages ainda não está habilitado."
