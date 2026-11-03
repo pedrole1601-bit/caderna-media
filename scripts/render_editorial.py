@@ -174,13 +174,13 @@ def inside(story,idx):
     d.rectangle((86,202,92,267),fill=CORAL)
     textbox(d,(109,214),f'{idx+1:02d} / 04   •   '+story['section'].upper(),25,'bold',fg,(105,207,990,263),reg,'section')
     d.rectangle((87,329,330,336),fill=CORAL)
-    for size in (103,97,91,85,79):
+    for size in (97,91,85,79):
         try:tl=split_lines(d,info['title'].upper(),size,900,'display',2);break
         except ValueError:continue
     else:raise ValueError('Slide title too long for editorial grid')
     previous=None
     for li,line in enumerate(tl):
-        bb=textbox(d,(89,382+li*(size+30)),line,size,'display',fg,(87,377,990,620),reg,'subheadline_'+str(li))
+        bb=textbox(d,(89,382+li*(size+42)),line,size,'display',fg,(87,377,990,642),reg,'subheadline_'+str(li))
         if previous and bb[1]-previous[3]<22:raise ValueError('Inner headline gap below limit')
         previous=bb
     d.rectangle((90,665,988,668),fill=CORAL)
