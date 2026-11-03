@@ -1,0 +1,113 @@
+{
+  "status": "PASS_TECHNICAL_ONLY",
+  "slug": "2026-11-03-bull-schwarz-digits-ia-europeia",
+  "kind": "headline",
+  "theme": "cream",
+  "jpeg_count": 1,
+  "qa": [
+    {
+      "headline_size": 84,
+      "headline_lines": [
+        "BULL E SCHWARZ DIGITS",
+        "FIRMAM ACORDO PARA IA",
+        "EUROPEIA"
+      ],
+      "boxes": [
+        [
+          "section",
+          [
+            90,
+            222,
+            376,
+            245
+          ]
+        ],
+        [
+          "editorial_motif",
+          [
+            79,
+            320,
+            268,
+            532
+          ]
+        ],
+        [
+          "hero_subtitle",
+          [
+            88,
+            726,
+            422,
+            756
+          ]
+        ],
+        [
+          "kicker",
+          [
+            100,
+            829,
+            270,
+            847
+          ]
+        ],
+        [
+          "headline_0",
+          [
+            90,
+            875,
+            891,
+            937
+          ]
+        ],
+        [
+          "headline_1",
+          [
+            90,
+            1013,
+            963,
+            1075
+          ]
+        ],
+        [
+          "headline_2",
+          [
+            90,
+            1151,
+            427,
+            1213
+          ]
+        ],
+        [
+          "source",
+          [
+            90,
+            1310,
+            353,
+            1325
+          ]
+        ],
+        [
+          "footer",
+          [
+            840,
+            1310,
+            927,
+            1324
+          ]
+        ]
+      ],
+      "theme": "cream",
+      "slide_index": 0
+    }
+  ],
+  "editorial_approval": false,
+  "published_to_instagram": false,
+  "source_links": [
+    "https://www.reuters.com/business/retail-consumer/schwarz-digits-bull-partner-up-build-european-ai-computing-services-2026-11-03/",
+    "https://www.bull.com/fr/communiques-de-presse/bull-and-schwarz-digits-a-franco-german-alliance-for-europes-digital-sovereignty",
+    "https://www.itpro.com/infrastructure/bull-and-schwarz-digits-are-teaming-up-to-create-a-franco-german-foundation-for-sovereign-ai"
+  ],
+  "risk": "low",
+  "sha256_jpegs": {
+    "2026-11-03-bull-schwarz-digits-ia-europeia-01.jpg": "b6c05127b42a1a18a46600a9fb62c0426170697999f1d63a09d85f378244b4e1"
+  }
+}
