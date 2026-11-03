@@ -4,7 +4,7 @@ Run: python scripts/render_editorial.py incoming/<slug>.json
 Only renders supplied editorial copy. Never invents facts or touches Meta.
 """
 from __future__ import annotations
-import io,json,re,sys,os,textwrap,datetime
+import io,json,re,sys,os,textwrap,datetime,hashlib
 from pathlib import Path
 from urllib.parse import urlparse
 from PIL import Image,ImageDraw,ImageFont
@@ -203,10 +203,12 @@ def render(story,out):
     out.mkdir(parents=True,exist_ok=True)
     count=4 if story['kind']!='headline' else 1
     qa=[]
+    sha256_jpegs={}
     for i in range(count):
         image,check=(cover(story,i) if i==0 else inside(story,i))
         stem=f"{story['id']}-{i+1:02d}"
         image.save(out/(stem+'.jpg'),format='JPEG',quality=94,subsampling=0,optimize=True)
+        sha256_jpegs[stem+'.jpg']=hashlib.sha256((out/(stem+'.jpg')).read_bytes()).hexdigest()
         image.save(out/(stem+'.png'),format='PNG',optimize=True)
         image.resize((320,400),Image.Resampling.LANCZOS).save(out/(stem+'-mobile.png'),format='PNG')
         with Image.open(out/(stem+'.jpg')) as v:
@@ -215,7 +217,7 @@ def render(story,out):
     return {'status':'PASS_TECHNICAL_ONLY','slug':story['id'],'kind':story['kind'],
             'theme':story['theme'],'jpeg_count':count,'qa':qa,
             'editorial_approval':False,'published_to_instagram':False,
-            'source_links':story['sources']}
+            'source_links':story['sources'],'sha256_jpegs':sha256_jpegs}
 def main():
     if len(sys.argv)!=2:raise SystemExit('Usage: render_editorial.py incoming/<slug>.json')
     path=Path(sys.argv[1])
