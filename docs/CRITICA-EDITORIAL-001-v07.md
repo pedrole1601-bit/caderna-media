@@ -41,3 +41,9 @@ A checagem detecta métrica e limites geométricos, mas não pode provar sozinha
 
 ## Skills aplicadas como referências de processo
 `social-media-graphic` (safe zone); `graphic-design` (foco); `design-critique` (olhar antes/depois); `collateral-design` (uso correto da marca); `creative-direction` (gramática editorial). Fontes e restrições documentadas em `.agents/skills/caderna-editorial-design/SKILL.md`.
+
+## Revisão de contraste em 03/11/2026
+- Crédito pequeno do rodapé na versão intermediária usava `#667487` sobre papel `#F5F3ED`: contraste calculado **4,29:1**, inferior a 4,5:1 para texto pequeno.
+- Corrigido para `#5C6B7B`, contraste calculado **4,92:1**, acima do mínimo.
+- O contrato `verify_design_qa.py` agora calcula luminância relativa conforme WCAG e rejeita valores abaixo de 4,5:1. Os testes provocam uma falha intencional com a cor antiga para impedir regressão.
+- Esses cálculos não substituem inspeção perceptual da composição, especialmente em telas reais.
