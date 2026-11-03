@@ -10,7 +10,7 @@ ROOT=Path(__file__).resolve().parents[1]
 OUT=Path(os.getenv('CADERNA_OUTPUT_DIR',str(ROOT/'media')))
 W,H=1080,1350
 INK='#101C2E'; PAPER='#F5F3ED'; CORAL='#EA674D'
-MUTED='#667487'; SOFT='#D5DDE4'
+MUTED='#5C6B7B'; SOFT='#D5DDE4'
 FONT={
   'display':'/usr/share/fonts/truetype/noto/NotoSansDisplay-ExtraCondensedBlack.ttf',
   'serif':'/usr/share/fonts/truetype/noto/NotoSerifDisplay-CondensedBlackItalic.ttf',
@@ -115,6 +115,7 @@ qa={'schema':'caderna.design.qa.v07','canvas':[W,H],
     'headline_font_sizes':[b['size'] for b in headline],
     'headline_gap':h2[1]-h1[3],
     'illustration_not_photograph':True,'logo':'assets/logo-horizontal-inverse-v01.svg',
-    'human_approved':False,'published_to_instagram':False,'text_blocks':blocks}
+    'human_approved':False,'published_to_instagram':False,'text_blocks':blocks,
+    'color_tokens':{'ink':INK,'paper':PAPER,'coral':CORAL,'muted':MUTED}}
 (OUT/(name+'-qa.json')).write_text(json.dumps(qa,ensure_ascii=False,indent=2),encoding='utf8')
 print('PASS: strict grid, typography, brand logo, 1080x1350, JPEG/PNG, mobile QA')
