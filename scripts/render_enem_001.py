@@ -88,7 +88,7 @@ h1=put('headline_line_1',x,935,'ENEM COMEÇA',126,'display',INK,(92,925,1010,107
 h2=put('headline_line_2',x,1096,'NESTE DOMINGO',126,'display',INK,(92,1077,1012,1230))
 d.rectangle((94,1244,1006,1248),fill=CORAL)
 put('dek',94,1260,'LOCAL DE PROVA JÁ DISPONÍVEL NO CARTÃO DE CONFIRMAÇÃO',23,'bold',INK,(80,1256,1008,1300))
-put('source',94,1310,'FONTE: INEP  •  03.11.2026',17,'bold',MUTED,(80,1303,700,1338))
+put('source',94,1310,'FONTE: INEP/MEC',17,'bold',MUTED,(80,1303,700,1338))
 put('date_range',791,1310,'8 E 15 NOV',19,'bold',INK,(785,1304,1004,1338))
 
 # Strict visual coherence gates; these catch the exact prior failing composition.
