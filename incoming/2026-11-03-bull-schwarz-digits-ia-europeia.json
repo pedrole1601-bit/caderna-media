@@ -1,0 +1,25 @@
+{
+  "id": "2026-11-03-bull-schwarz-digits-ia-europeia",
+  "kind": "headline",
+  "theme": "cream",
+  "risk": "low",
+  "example_only": false,
+  "publication_authorized": true,
+  "section": "MUNDO / TECNOLOGIA",
+  "headline": "BULL E SCHWARZ DIGITS FIRMAM ACORDO PARA IA EUROPEIA",
+  "deck": "Memorando prevê infraestrutura de nuvem e inteligência artificial sob jurisdição europeia. Ainda não é serviço concluído.",
+  "sources": [
+    "https://www.reuters.com/business/retail-consumer/schwarz-digits-bull-partner-up-build-european-ai-computing-services-2026-11-03/",
+    "https://www.bull.com/fr/communiques-de-presse/bull-and-schwarz-digits-a-franco-german-alliance-for-europes-digital-sovereignty",
+    "https://www.itpro.com/infrastructure/bull-and-schwarz-digits-are-teaming-up-to-create-a-franco-german-foundation-for-sovereign-ai"
+  ],
+  "source_label": "REUTERS / BULL / IT PRO",
+  "event_date": "2026-11-03",
+  "source_published_at": "2026-11-03T08:07:00-05:00",
+  "verified_at": "2026-11-03T20:40:00-03:00",
+  "visual": {
+    "kind": "abstract_technology",
+    "note": "Ilustração editorial de infraestrutura computacional; não representa equipamento instalado"
+  },
+  "caption": "A francesa Bull e a alemã Schwarz Digits anunciaram nesta terça-feira (3) um memorando de entendimento para desenvolver infraestrutura europeia de inteligência artificial e nuvem. A STACKIT, da Schwarz Digits, deve fornecer a plataforma de cloud; a Bull contribuiria com servidores e computação de alto desempenho.\n\nO anúncio descreve planos, não um sistema já implantado. Os valores financeiros não foram divulgados. A proposta busca manter dados e operações sob jurisdição europeia.\n\nFontes: Reuters, comunicado Bull e IT Pro, 3 de novembro de 2026. Arte: ilustração editorial CADERNA.\n\n#Tecnologia #InteligenciaArtificial #Europa #Caderna"
+}
