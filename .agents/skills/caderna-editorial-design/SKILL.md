@@ -32,7 +32,7 @@ Jornal digital, contexto factual, sem clickbait. 1080×1350 para feed. Azul prof
 
 ## Gate de rejeição
 - Manchete com margens diferentes, corpo assimétrico sem intenção editorial formalizada, encaixe por compressão automática, texto cortado, hierarquia indecifrável a 320 px, ilustração confundida com foto real ou ausência de fonte: **FALHA**.
-- A versão aprovada pelo autor ainda precisa de validação editorial e aprovação humana explícita para virar `publish/approved`. Os testes de imagem não autorizam postagens.
+- Este repositório gera mídia, mas não autoriza publicações por si só. Para todas as editorias, o gate privado valida fontes, materiais e autorização permanente v3; temas de alto impacto requerem três provas independentes em vez de uma aprovação humana por pauta.
 
 ## Evidência de uso nesta edição
 Pauta 001: `scripts/render_enem_001.py`, teste `tests/test_visual_qa.py`, relatório `media/caderna-enem-2026-001-v2-qa.json`, crítica `docs/CRITICA-EDITORIAL-001-v07.md`. Todas essas peças devem estar versionadas. 
@@ -44,3 +44,6 @@ O `scripts/render_editorial.py` implementa títulos de corpo único em 2 ou 3 li
 Usar obrigatoriamente a **skill de voz privada**: `pedrole1601-bit/Caderna/.agents/skills/caderna-guia-de-voz/SKILL.md`. Notícias continuam escritas com contexto e fontes, sem CTA manipulativo; nunca inventar porcentagem de probabilidade de autoria IA.
 
 **Nota de segurança:** a conta Meta não pode ser alcançada deste repositório. O exemplo `2026-11-03-enem-carrossel-teste` é apenas teste de render e jamais deve ser publicado como nova notícia.
+
+## V3 — Editorias sensíveis renderizáveis com verificação reforçada
+O proprietário autorizou notícias automáticas de política, guerras, geopolítica, saúde e segurança, desde que a apuração alcance os critérios reforçados do repositório privado. Não bloquear a composição apenas porque a arte menciona assunto sensível; bloquear **risco subdeclarado** ou `risk=high` sem três URLs, três excertos documentais, `review_checks` completos e `claim_status=verified`. O renderer não é verificador de verdade, apenas recebe dados; a publicação continua vedada aqui e controlada pelo GitHub privado.
