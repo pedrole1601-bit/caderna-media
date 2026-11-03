@@ -188,5 +188,11 @@
       "anchor_x": 791,
       "anchor_y": 1310
     }
-  ]
+  ],
+  "color_tokens": {
+    "ink": "#101C2E",
+    "paper": "#F5F3ED",
+    "coral": "#EA674D",
+    "muted": "#5C6B7B"
+  }
 }
