@@ -5,9 +5,11 @@ Only renders supplied editorial copy. Never invents facts or touches Meta.
 """
 from __future__ import annotations
 import io,json,re,sys,os,textwrap,datetime,hashlib
+from urllib.request import Request, urlopen
+from urllib.error import HTTPError, URLError
 from pathlib import Path
 from urllib.parse import urlparse
-from PIL import Image,ImageDraw,ImageFont
+from PIL import Image,ImageDraw,ImageFont,ImageOps
 import cairosvg
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -65,6 +67,7 @@ def assert_story(m):
                      if isinstance(entry,dict) and entry.get('source_url') in sources})<3:
         raise ValueError('Each high-impact source must have an evidence record')
     if not isinstance(m.get('source_label'),str) or len(m['source_label'])>44:raise ValueError('Source credit missing')
+    require_real_photo(m)
     v=m.get('visual')
     if v is not None:
         if not isinstance(v,dict) or v.get('kind')!='metric_split':
@@ -96,6 +99,84 @@ def assert_story(m):
                 raise ValueError('Sensitive inner slide misclassified low risk')
     if not isinstance(m.get('caption'),str) or not 120<=len(m['caption'])<=2100:raise ValueError('Natural caption missing')
     return m
+
+
+PHOTO_LICENSES={
+    'CC BY 2.0':'https://creativecommons.org/licenses/by/2.0/',
+    'CC BY 3.0':'https://creativecommons.org/licenses/by/3.0/',
+    'CC BY 4.0':'https://creativecommons.org/licenses/by/4.0/',
+    'CC BY-SA 3.0':'https://creativecommons.org/licenses/by-sa/3.0/',
+    'CC BY-SA 4.0':'https://creativecommons.org/licenses/by-sa/4.0/',
+    'CC0 1.0':'https://creativecommons.org/publicdomain/zero/1.0/',
+}
+def require_real_photo(story):
+    """Mandatory, source-licensed documentary photograph on every published cover."""
+    p=story.get('photo')
+    if not isinstance(p,dict):raise ValueError('REAL_PHOTO_REQUIRED: every cover must include a documented photograph')
+    for key in ('image_url','source_page','author','credit','license','license_url','description','context','context_note','date_taken'):
+        if not isinstance(p.get(key),str) or not p[key].strip():
+            raise ValueError('REAL_PHOTO_PROVENANCE_REQUIRED: '+key)
+    image=urlparse(p['image_url'])
+    source=urlparse(p['source_page'])
+    if image.scheme!='https' or image.hostname!='upload.wikimedia.org' or not image.path.startswith('/wikipedia/commons/'):
+        raise ValueError('PHOTO_ORIGIN_UNVERIFIED: use an actual Wikimedia Commons photo URL')
+    if source.scheme!='https' or source.hostname!='commons.wikimedia.org' or not source.path.startswith('/wiki/File:'):
+        raise ValueError('PHOTO_SOURCE_PAGE_REQUIRED: Wikimedia Commons file page is mandatory')
+    if p['license'] not in PHOTO_LICENSES or p['license_url']!=PHOTO_LICENSES[p['license']]:
+        raise ValueError('PHOTO_LICENSE_NOT_VERIFIED: source must have an explicitly supported reusable license')
+    if p['context'] not in ('archive_illustrative','event_documentary'):
+        raise ValueError('PHOTO_CONTEXT_REQUIRED: distinguish archive from event photographs')
+    if p['context']=='archive_illustrative' and len(p['context_note'])<35:
+        raise ValueError('PHOTO_ARCHIVE_MUST_NOT_MISLEAD: explain precisely what the file does not depict')
+    if not re.fullmatch(r'\d{4}-\d{2}-\d{2}',p['date_taken']):
+        raise ValueError('PHOTO_CAPTURE_DATE_REQUIRED')
+    if len(p['credit'])>92 or len(p['description'])>220:
+        raise ValueError('PHOTO_CREDIT_TOO_LONG')
+    return p
+
+def acquire_photo(story,out):
+    """Cache one real source photograph; fail closed if fetch or image proof fails."""
+    p=require_real_photo(story)
+    out.mkdir(parents=True,exist_ok=True)
+    image_file=out/(story['id']+'-source-photo.jpg')
+    source_meta=out/(story['id']+'-source-photo-provenance.json')
+    fingerprint=hashlib.sha256(json.dumps(p,sort_keys=True,ensure_ascii=False).encode('utf8')).hexdigest()
+    if image_file.is_file() and source_meta.is_file():
+        try:
+            cached=json.loads(source_meta.read_text(encoding='utf8'))
+            if cached.get('fingerprint')==fingerprint and cached.get('sha256')==hashlib.sha256(image_file.read_bytes()).hexdigest():
+                with Image.open(image_file) as im:return im.convert('RGB').copy(),cached['sha256']
+        except (ValueError,OSError,KeyError):pass
+    req=Request(p['image_url'],headers={
+        'User-Agent':'CadernaNewsroom/1.0 (https://github.com/pedrole1601-bit/caderna-media; photo licensing check)',
+        'Accept':'image/jpeg,image/png,image/webp;q=0.8'})
+    try:
+        with urlopen(req,timeout=28) as response:
+            content_type=response.headers.get('Content-Type','').split(';')[0].lower()
+            if content_type not in ('image/jpeg','image/png','image/webp'):
+                raise ValueError('PHOTO_INVALID_MIME: original source did not return a photograph')
+            raw=response.read(12_000_001)
+    except (HTTPError,URLError,TimeoutError) as exc:
+        raise ValueError('PHOTO_DOWNLOAD_UNAVAILABLE: do not publish without a real image') from exc
+    if not 30000<len(raw)<=12_000_000:raise ValueError('PHOTO_INVALID_DOWNLOAD_SIZE')
+    try:
+        with Image.open(io.BytesIO(raw)) as im:
+            if im.format not in ('JPEG','PNG','WEBP'):raise ValueError('PHOTO_INVALID_FORMAT')
+            im=ImageOps.exif_transpose(im).convert('RGB')
+            if im.width<1000 or im.height<600:
+                raise ValueError('PHOTO_LOW_RESOLUTION: minimum 1000x600')
+            im.thumbnail((2400,1800),Image.Resampling.LANCZOS)
+            im.save(image_file,'JPEG',quality=92,subsampling=0,optimize=True)
+            result=im.copy()
+    except (OSError,ValueError) as exc:raise ValueError('PHOTO_INVALID_IMAGE: '+str(exc)) from exc
+    photo_sha=hashlib.sha256(image_file.read_bytes()).hexdigest()
+    source_meta.write_text(json.dumps({
+        'source_page':p['source_page'],'image_url':p['image_url'],'author':p['author'],
+        'license':p['license'],'license_url':p['license_url'],'credit':p['credit'],
+        'date_taken':p['date_taken'],'context':p['context'],'context_note':p['context_note'],
+        'fingerprint':fingerprint,'sha256':photo_sha
+    },ensure_ascii=False,indent=2),encoding='utf8')
+    return result,photo_sha
 
 def brand_header(im,issue,theme):
     d=ImageDraw.Draw(im)
@@ -150,73 +231,53 @@ def title_lines(d,title,width,slot_rows):
         if len(lines)==3:return size,lines
     raise ValueError('Editorial headline failed: rewrite, do not squash individual lines')
 
-def cover(story,idx):
+
+def cover(story,idx,photo_image):
+    # The photo is the lead element and occupies 56% of the 4:5 cover.
     theme=story['theme']
-    im=Image.new('RGB',(W,H),INK)
-    d=ImageDraw.Draw(im)
-    brand_header(im,story['id'][:10],theme)
-    d=ImageDraw.Draw(im)
-    hero=INK if theme=='ink' else PAPER
-    contrast=PAPER if theme=='ink' else INK
-    d.rectangle((0,158,W,795),fill=hero)
-    d.rectangle((68,221,74,263),fill=CORAL)
-    reg=[]
-    textbox(d,(90,222),story['section'].upper(),26,'bold',contrast,(88,210,900,265),reg,'section')
-    v=story.get('visual')
-    if v and v.get('kind')=='metric_split':
-        # A real metric is the hero. No decorative 'C' or fictitious chart values.
-        total=str(v['total'])
-        textbox(d,(87,315),total,270,'serif',contrast,(80,305,605,610),reg,'hero_metric_total')
-        textbox(d,(94,604),'VAGAS / 2027',31,'bold',contrast,(90,590,530,658),reg,'hero_metric_label')
-        d.rectangle((624,292,628,585),fill=CORAL)
-        for i,item in enumerate(v['entries']):
-            row_y=315+i*154
-            textbox(d,(652,row_y),item['name'].upper(),24,'bold',contrast,(646,row_y-3,998,row_y+38),reg,'metric_label_'+str(i))
-            textbox(d,(655,row_y+37),str(item['value']),66,'display',contrast,(650,row_y+30,840,row_y+115),reg,'metric_value_'+str(i))
-            bar_w=round(325*item['value']/v['total'])
-            d.rectangle((650,row_y+114,650+bar_w,row_y+128),fill=CORAL if i==0 else BLUE)
-            d.rectangle((650+bar_w,row_y+114,975,row_y+128),fill='#C7CFD7' if theme=='cream' else '#40516A')
-        d.rectangle((84,686,992,690),fill=CORAL)
-        textbox(d,(90,722),v['note'],20,'bold',contrast,(85,710,999,778),reg,'metric_qualification')
-    else:
-        # Generic motif only for stories without a verified focal number.
-        d.ellipse((581,218,1060,695),outline=BLUE if theme=='ink' else '#C8D5E9',width=23)
-        d.arc((632,267,1014,651),30,290,fill=CORAL,width=15)
-        d.line((674,284,939,551),fill=BLUE if theme=='ink' else INK,width=14)
-        d.ellipse((869,475,919,525),fill=CORAL)
-        textbox(d,(79,320),'C',286,'serif',contrast,(70,306,550,641),reg,'editorial_motif')
-        d.rectangle((85,702,982,707),fill=CORAL)
-        textbox(d,(88,726),'INFORMAÇÃO  /  CONTEXTO',25,'bold',contrast,(85,718,720,778),reg,'hero_subtitle')
     panel=INK if theme=='cream' else PAPER
     ink=PAPER if theme=='cream' else INK
     muted='#CAD2D9' if theme=='cream' else MUTED
-    d.rectangle((0,795,W,H),fill=panel)
-    d.rectangle((83,819,308,866),fill=CORAL)
-    textbox(d,(100,829),'CADERNA  /  '+('FATO' if story['kind']=='headline' else 'EXPLICA'),20,'bold',INK,(97,824,307,854),reg,'kicker')
-    size,lines=title_lines(d,story['headline'],910,3)
-    # top-aligned single column, fixed line gap and unified font size.
-    stride=size+54
-    if len(lines)==2:start=900
-    else:start=875  # Three-line glyphs must start inside the verified headline grid.
+    im=Image.new('RGB',(W,H),panel)
+    brand_header(im,story['id'][:10],theme)
+    photo_bounds=(0,148,1080,900)
+    photograph=ImageOps.fit(photo_image,(1080,752),method=Image.Resampling.LANCZOS,centering=(0.5,0.5))
+    im.paste(photograph,(0,148))
+    d=ImageDraw.Draw(im)
+    d.rectangle((0,148,1080,158),fill=CORAL)
+    d.rectangle((61,187,715,245),fill=INK)
+    reg=[]
+    textbox(d,(83,202),story['section'].upper(),27,'bold',PAPER,(78,190,690,244),reg,'section')
+    p=story['photo']
+    badge='FOTO REAL DE ARQUIVO · ILUSTRATIVA' if p['context']=='archive_illustrative' else 'FOTO DOCUMENTAL DO FATO'
+    d.rectangle((61,842,1004,896),fill=INK)
+    textbox(d,(84,855),badge,25,'bold',PAPER,(80,849,990,891),reg,'photo_context')
+    d.rectangle((0,899,1080,907),fill=CORAL)
+    size,lines=title_lines(d,story['headline'],905,3)
+    # Keep a single type size and a baseline clear of the photographic panel.
+    if len(lines)==2:
+        start=969
+        stride=size+34
+    else:
+        start=934
+        stride=size+34
     boxes=[]
     for i,line in enumerate(lines):
         y=start+i*stride
-        bb=textbox(d,(90,y),line,size,'display',ink,(88,871,1000,1227),reg,'headline_'+str(i))
+        bb=textbox(d,(90,y),line,size,'display',ink,(88,925,1000,1248),reg,'headline_'+str(i))
         boxes.append(bb)
     for prev,nxt in zip(boxes,boxes[1:]):
-        if nxt[1]-prev[3]<20:raise ValueError('Unacceptable headline interline spacing')
-    if len({x for x in [size]*len(lines)})!=1:raise ValueError('Inconsistent headline sizes')
-    if len(lines)==2:
-        deck=story['deck']
-        d.rectangle((90,1217,988,1221),fill=CORAL)
-        deck_lines=split_lines(d,deck,22,900,'bold',2)
-        for i,line in enumerate(deck_lines):
-            textbox(d,(90,1234+i*28),line,22,'bold',ink,(88,1230,995,1298),reg,'deck_'+str(i))
-    else:
-        d.rectangle((90,1265,988,1269),fill=CORAL)
-    textbox(d,(90,1310),'FONTE: '+story['source_label'].upper()[:40],17,'bold',muted,(88,1305,760,1340),reg,'source')
-    textbox(d,(840,1310),'CADERNA',18,'bold',ink,(835,1307,999,1340),reg,'footer')
-    return im,{"headline_size":size,"headline_lines":lines,"boxes":[(label,list(bb)) for label,bb in reg],"theme":theme,"slide_index":0}
+        if nxt[1]-prev[3]<22:raise ValueError('Unacceptable photo-cover headline spacing')
+    credit='FOTO: '+p['credit']+' · '+p['license']
+    if len(credit)>92:raise ValueError('Photo credit does not fit cover')
+    textbox(d,(90,1264),credit,18,'reg',muted,(87,1258,1000,1294),reg,'photo_credit')
+    d.rectangle((90,1302,990,1305),fill=CORAL)
+    textbox(d,(90,1315),'FONTES: '+story['source_label'].upper()[:40],17,'bold',muted,(88,1307,778,1340),reg,'source')
+    textbox(d,(850,1315),'CADERNA',18,'bold',ink,(844,1307,999,1340),reg,'footer')
+    return im,{'headline_size':size,'headline_lines':lines,
+        'boxes':[(label,list(bb)) for label,bb in reg],
+        'theme':theme,'slide_index':0,'photograph_bounds':list(photo_bounds),
+        'photograph_fraction':752/1350,'photograph_context':p['context']}
 
 def inside(story,idx):
     info=story['slides'][idx-1]
@@ -262,11 +323,12 @@ def inside(story,idx):
 def render(story,out):
     assert_story(story)
     out.mkdir(parents=True,exist_ok=True)
+    photo_image,photo_sha=acquire_photo(story,out)
     count=4 if story['kind']!='headline' else 1
     qa=[]
     sha256_jpegs={}
     for i in range(count):
-        image,check=(cover(story,i) if i==0 else inside(story,i))
+        image,check=(cover(story,i,photo_image) if i==0 else inside(story,i))
         stem=f"{story['id']}-{i+1:02d}"
         image.save(out/(stem+'.jpg'),format='JPEG',quality=94,subsampling=0,optimize=True)
         sha256_jpegs[stem+'.jpg']=hashlib.sha256((out/(stem+'.jpg')).read_bytes()).hexdigest()
@@ -279,7 +341,12 @@ def render(story,out):
             'theme':story['theme'],'jpeg_count':count,'qa':qa,
             'editorial_approval':False,'published_to_instagram':False,
             'source_links':story['sources'],'risk':story['risk'],
-            'sha256_jpegs':sha256_jpegs}
+            'sha256_jpegs':sha256_jpegs,
+            'photograph':{'source_photo_file':story['id']+'-source-photo.jpg',
+              'sha256':photo_sha,'image_url':story['photo']['image_url'],
+              'source_page':story['photo']['source_page'],
+              'license':story['photo']['license'],'author':story['photo']['author'],
+              'context':story['photo']['context'],'photo_fraction':752/1350}}
 def main():
     if len(sys.argv)!=2:raise SystemExit('Usage: render_editorial.py incoming/<slug>.json')
     path=Path(sys.argv[1])
