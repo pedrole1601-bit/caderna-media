@@ -1,3 +1,5 @@
+> **VERSÃO ATIVA: v0.7, 03/11/2026.** A v0.6 do Enem foi rejeitada por hierarquia visual insuficiente. **Nunca** usar `caderna-enem-2026-001.jpg` da v0.6 em publicações. A arte atual é [`caderna-enem-2026-001-v2.jpg`](media/caderna-enem-2026-001-v2.jpg). O Pages está ativo e a mídia JPEG foi verificada por HTTP 200 e igualdade binária no [GitHub Actions](https://github.com/pedrole1601-bit/caderna-media/actions/runs/41697279205). Nada publicado no Instagram.
+
 # CADERNA · Acervo público de mídia
 
 Este repositório **público** hospeda exclusivamente ativos editoriais da [CADERNA](https://github.com/pedrole1601-bit/Caderna) destinados a uso público. O código de autenticação da Meta, fontes internas e tokens continuam no repositório privado.
@@ -8,7 +10,7 @@ Este repositório **público** hospeda exclusivamente ativos editoriais da [CADE
 - Origem dos fatos: Inep, notícias de 27 e 28/10/2026.
 - Arte: ilustração editorial original, sem fotografia de terceiros.
 - Estado: **PRÉVIA EDITORIAL. NÃO PUBLICADA NO INSTAGRAM.** A aprovação de publicação é uma etapa separada.
-- Exportação: `media/caderna-enem-2026-001.jpg` (JPEG), `media/caderna-enem-2026-001.png` (PNG).
+- Exportação: `media/caderna-enem-2026-001-v2.jpg` (JPEG), `media/caderna-enem-2026-001-v2.png` (PNG).
 
 ## Infraestrutura
 GitHub Pages via `.github/workflows/pages.yml`. Ative em **Settings → Pages → Source: GitHub Actions** se a interface exigir. Não use esta pasta para credenciais, documentos não publicados ou material protegido sem licença.
@@ -18,3 +20,8 @@ A geração da primeira peça é reproduzível com `scripts/render_enem_001.py`.
 ## Fonte
 - [Inep — locais de prova já disponíveis](https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-2026-participantes-ja-podem-conferir-os-locais-de-prova/)
 - [Inep — passo a passo do cartão](https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-2026-confira-o-passo-a-passo-para-visualizar-o-local-de-prova/)
+
+## Skills e controles de design
+A skill interna mandatória está em [.agents/skills/caderna-editorial-design/SKILL.md](.agents/skills/caderna-editorial-design/SKILL.md); a direção visual está em [.agents/design-context.md](.agents/design-context.md); a crítica da versão rejeitada e a solução está em [docs/CRITICA-EDITORIAL-001-v07.md](docs/CRITICA-EDITORIAL-001-v07.md). O pipeline rejeita headline com tamanhos diferentes, âncoras divergentes ou interlinha insuficiente, valida mobile, marca vetorial, cores, JPEG, URLs públicas e não pode conceder aprovação editorial. O [AGENTS.md](AGENTS.md) torna essas regras obrigatórias aos futuros agentes.
+
+O [acervo público no GitHub Pages](https://pedrole1601-bit.github.io/caderna-media/) é apenas hospedagem de arquivos. Publicação no Instagram é um processo separado e ainda não aprovado.
