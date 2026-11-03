@@ -25,3 +25,11 @@ A geração da primeira peça é reproduzível com `scripts/render_enem_001.py`.
 A skill interna mandatória está em [.agents/skills/caderna-editorial-design/SKILL.md](.agents/skills/caderna-editorial-design/SKILL.md); a direção visual está em [.agents/design-context.md](.agents/design-context.md); a crítica da versão rejeitada e a solução está em [docs/CRITICA-EDITORIAL-001-v07.md](docs/CRITICA-EDITORIAL-001-v07.md). O pipeline rejeita headline com tamanhos diferentes, âncoras divergentes ou interlinha insuficiente, valida mobile, marca vetorial, cores, JPEG, URLs públicas e não pode conceder aprovação editorial. O [AGENTS.md](AGENTS.md) torna essas regras obrigatórias aos futuros agentes.
 
 O [acervo público no GitHub Pages](https://pedrole1601-bit.github.io/caderna-media/) é apenas hospedagem de arquivos. Publicação no Instagram é um processo separado e ainda não aprovado.
+
+
+## Famílias editoriais dinâmicas
+- **Uma imagem (manchete)** e **carrossel/explicador de 4 quadros**, ambos em temas `ink` e `cream`, são renderizados por [`scripts/render_editorial.py`](scripts/render_editorial.py) sem custo de modelo de imagem.
+- Entradas: [`incoming/`](incoming/). O desenho rejeita título fora da área, fontes indisponíveis, colidências de texto, imagens ruins e pautas de risco elevado. Outputs: `media/auto/<slug>-01.jpg` a `-04.jpg`, PNGs, miniaturas e `<slug>-qa.json` com checksums de cada JPEG.
+- Workflow: [`.github/workflows/editorial-pages.yml`](.github/workflows/editorial-pages.yml). O pipeline faz deploy e checa HTTP 200 + igualdade binária de cada mídia. **A publicação no Instagram nunca ocorre neste repositório**.
+- Primeira amostra: [`incoming/2026-11-03-enem-carrossel-teste.json`](incoming/2026-11-03-enem-carrossel-teste.json), rotulada **exemplo não publicável**. A capa ENEM original já publicada continua em `media/caderna-enem-2026-001-v2.jpg`.
+- Guia de Voz é obrigatório no [repo privado Caderna](https://github.com/pedrole1601-bit/Caderna/blob/main/.agents/skills/caderna-guia-de-voz/SKILL.md); o PDF original foi enviado pelo proprietário e não foi disponibilizado neste repositório público.
