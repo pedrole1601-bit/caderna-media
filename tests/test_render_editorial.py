@@ -28,8 +28,36 @@ class RenderTests(unittest.TestCase):
             q=module.render(example(),Path(t))
             self.assertEqual(q['jpeg_count'],4)
             self.assertEqual(len(q['qa']),4)
-    def test_risk_flag_blocks_sensitive(self):
+    def high_brief(self):
+        a=example()
+        a['risk']='high'
+        a['topic']='politica'
+        a['sources'].append('https://www.reuters.com/world/')
+        a['editorial_process']='source-anchored-triple-review'
+        a['claim_status']='verified'
+        a['disputed_claims']=[]
+        a['review_checks']={
+            'claims_checked':True,'contradictions_checked':True,
+            'attribution_checked':True,'editorial_neutrality_checked':True,
+            'primary_source_checked':True}
+        a['verification_log']=[
+            {'source_url':u,'source_excerpt':'Trecho documental específico, registrado e conferido'}
+            for u in a['sources']]
+        return a
+    def test_high_risk_missing_research_is_blocked(self):
         a=example();a['risk']='high'
+        with self.assertRaises(ValueError):module.assert_story(a)
+    def test_high_risk_verified_story_can_render(self):
+        a=self.high_brief()
+        with tempfile.TemporaryDirectory() as t:
+            q=module.render(a,Path(t))
+            self.assertEqual(q['jpeg_count'],4)
+            self.assertEqual(q['risk'],'high')
+    def test_high_risk_missing_third_quote_blocks(self):
+        a=self.high_brief();a['verification_log']=a['verification_log'][:2]
+        with self.assertRaises(ValueError):module.assert_story(a)
+    def test_high_risk_disputed_claim_blocks(self):
+        a=self.high_brief();a['disputed_claims']=['Número de pessoas afetadas diverge nas fontes']
         with self.assertRaises(ValueError):module.assert_story(a)
     def test_sensitive_keyword_blocks_even_if_mislabeled(self):
         a=example();a['headline']='A eleição presidencial termina neste domingo'
