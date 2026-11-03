@@ -18,6 +18,12 @@ class VisualQaTests(unittest.TestCase):
         x=load();b=next(b for b in x['text_blocks'] if b['label']=='headline_line_2')
         a=b['bbox'];b['bbox']=[a[0],1000,a[2],1090]
         with self.assertRaises(qa.VisualGateError):qa.validate(x,DIR)
+    def test_low_contrast_metadata_is_rejected(self):
+        x=load();x['color_tokens']['muted']='#9CAABB'
+        with self.assertRaises(qa.VisualGateError):qa.validate(x,DIR)
+    def test_contrast_uses_luminance_not_color_names(self):
+        self.assertGreaterEqual(qa.contrast('#5C6B7B','#F5F3ED'),4.5)
+        self.assertLess(qa.contrast('#667487','#F5F3ED'),4.5)
     def test_unapproved_cannot_be_fake_approved(self):
         x=load();x['human_approved']=True
         with self.assertRaises(qa.VisualGateError):qa.validate(x,DIR)
