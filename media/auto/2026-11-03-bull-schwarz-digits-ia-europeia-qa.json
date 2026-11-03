@@ -16,87 +16,86 @@
         [
           "section",
           [
-            90,
-            222,
-            376,
-            245
+            83,
+            202,
+            381,
+            226
           ]
         ],
         [
-          "editorial_motif",
+          "photo_context",
           [
-            79,
-            320,
-            268,
-            532
-          ]
-        ],
-        [
-          "hero_subtitle",
-          [
-            88,
-            726,
-            422,
-            756
-          ]
-        ],
-        [
-          "kicker",
-          [
-            100,
-            829,
-            270,
-            847
+            84,
+            855,
+            547,
+            876
           ]
         ],
         [
           "headline_0",
           [
             90,
-            875,
+            934,
             891,
-            937
+            996
           ]
         ],
         [
           "headline_1",
           [
             90,
-            1013,
+            1052,
             963,
-            1075
+            1114
           ]
         ],
         [
           "headline_2",
           [
             90,
-            1151,
+            1170,
             427,
-            1213
+            1232
+          ]
+        ],
+        [
+          "photo_credit",
+          [
+            90,
+            1264,
+            513,
+            1280
           ]
         ],
         [
           "source",
           [
             90,
-            1310,
-            353,
-            1325
+            1315,
+            364,
+            1330
           ]
         ],
         [
           "footer",
           [
-            840,
-            1310,
-            927,
-            1324
+            850,
+            1315,
+            937,
+            1329
           ]
         ]
       ],
       "theme": "cream",
-      "slide_index": 0
+      "slide_index": 0,
+      "photograph_bounds": [
+        0,
+        148,
+        1080,
+        900
+      ],
+      "photograph_fraction": 0.557037037037037,
+      "photograph_context": "archive_illustrative"
     }
   ],
   "editorial_approval": false,
@@ -108,6 +107,16 @@
   ],
   "risk": "low",
   "sha256_jpegs": {
-    "2026-11-03-bull-schwarz-digits-ia-europeia-01.jpg": "b6c05127b42a1a18a46600a9fb62c0426170697999f1d63a09d85f378244b4e1"
+    "2026-11-03-bull-schwarz-digits-ia-europeia-01.jpg": "d9a016d80ac8aad135fc32540ebb88b9101d508161e6059595af029ddf04a3ed"
+  },
+  "photograph": {
+    "source_photo_file": "2026-11-03-bull-schwarz-digits-ia-europeia-source-photo.jpg",
+    "sha256": "80c30d8291389ea4bbff049eda0aeca6a033521617e4bb89ce135428e1ce18b4",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Datacenter_Server_Racks_%2822370909788%29.jpg/1280px-Datacenter_Server_Racks_%2822370909788%29.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg",
+    "license": "CC BY 2.0",
+    "author": "Carl Lender",
+    "context": "archive_illustrative",
+    "photo_fraction": 0.557037037037037
   }
 }
