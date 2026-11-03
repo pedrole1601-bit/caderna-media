@@ -1,0 +1,53 @@
+{
+  "id": "2026-11-03-impa-tech-150-vagas-gratuitas",
+  "kind": "carousel",
+  "theme": "ink",
+  "risk": "low",
+  "example_only": false,
+  "publication_authorized": true,
+  "section": "BRASIL / EDUCAÇÃO",
+  "headline": "IMPA TECH ABRE INSCRIÇÕES PARA 150 VAGAS",
+  "deck": "O bacharelado é gratuito. O edital prevê 100 vagas no Rio e 50 em Teresina, ainda condicionadas à licença do MEC e a apoios.",
+  "sources": [
+    "https://impa.br/notices/inscricoes-abertas-para-turma-2027-da-graduacao-em-matematica-do-impa/",
+    "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/impa-tech-abre-inscricoes-para-graduacao-em-matematica-nesta-terca",
+    "https://www.pi.gov.br/impa-tech-abre-50-vagas-em-teresina-para-graduacao-em-matematica-tecnologia-e-inovacao-a-partir-de-2027-confira-edital/"
+  ],
+  "source_label": "IMPA / AGÊNCIA BRASIL",
+  "event_date": "2026-11-03",
+  "source_published_at": "2026-11-03T11:53:00-03:00",
+  "verified_at": "2026-11-03T16:53:18-03:00",
+  "visual": {
+    "kind": "metric_split",
+    "total": 150,
+    "entries": [
+      {
+        "name": "Rio de Janeiro",
+        "value": 100
+      },
+      {
+        "name": "Teresina",
+        "value": 50
+      }
+    ],
+    "note": "PI: vagas condicionadas a licença do MEC e apoios públicos"
+  },
+  "slides": [
+    {
+      "title": "100 no Rio, 50 em Teresina",
+      "body": "A seleção prevê 100 vagas no Rio de Janeiro e 50 em Teresina, na primeira turma do IMPA Tech Nordeste. A efetivação das vagas do Piauí depende da licença do MEC e dos apoios previstos.",
+      "highlight": "100 NO RJ  /  50 NO PI"
+    },
+    {
+      "title": "Duas formas de concorrer",
+      "body": "O edital destina até 60% das vagas a medalhistas de cinco olimpíadas científicas. Outros 40% são destinados à modalidade Enem, com notas de Matemática das edições 2024, 2025 ou 2026.",
+      "highlight": "OLIMPÍADAS 60%  /  ENEM 40%"
+    },
+    {
+      "title": "Inscrições até dezembro",
+      "body": "O prazo termina em 23 de dezembro, às 12h, pelo horário de Brasília. O curso é gratuito, presencial e integral. A segunda fase da seleção inclui atividades em grupo e entrevistas on-line.",
+      "highlight": "23 DEZ  /  12H BRASÍLIA"
+    }
+  ],
+  "caption": "O IMPA Tech abriu nesta terça-feira (3) as inscrições para a turma de 2027 do bacharelado em Matemática da Tecnologia e Inovação. O edital prevê 150 vagas: 100 no Rio de Janeiro e 50 em Teresina (PI).\n\nO curso é gratuito, presencial e em tempo integral. A seleção considera medalhas em olimpíadas científicas ou notas da prova de Matemática do Enem, conforme a modalidade escolhida. Para o Enem, valem as edições de 2024, 2025 e 2026.\n\nAs inscrições terminam em 23 de dezembro, às 12h (horário de Brasília), pelo site impatech.edu.br. A seleção também inclui uma segunda fase com atividades em grupo e entrevistas on-line.\n\nUma ressalva do edital: a efetivação das 50 vagas de Teresina depende de licença do MEC e da concretização de apoios públicos.\n\nFontes: IMPA (03/11), Agência Brasil (02/11) e Governo do Piauí (03/11). Arte e gráficos editoriais: CADERNA.\n\n#Educação #IMPATech #Matemática #Caderna"
+}
