@@ -1,4 +1,5 @@
 import unittest,importlib.util,copy,tempfile
+from unittest.mock import patch
 from pathlib import Path
 from PIL import Image
 root=Path(__file__).resolve().parents[1]
@@ -9,30 +10,63 @@ def example(kind='carousel'):
       'section':'EDUCAÇÃO','headline':'Enem 2026 começa neste domingo',
       'deck':'O local de prova pode ser consultado no Cartão de Confirmação, segundo o Inep.',
       'sources':['https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-2026-participantes-ja-podem-conferir-os-locais-de-prova/','https://agenciabrasil.ebc.com.br/educacao/noticia/2026-11/menos-de-uma-semana-para-o-enem-2026-mec-da-dicas-aos-participantes'],
-      'source_label':'INEP / AGENCIA BRASIL','caption':'O Enem 2026 terá a primeira prova em 8 de novembro. O local de aplicação deve ser consultado pelo candidato na Página do Participante. Os portões abrem às 12h e fecham às 13h. Fontes: Inep e Agência Brasil, outubro e novembro de 2026.',
+      'source_label':'INEP / AGENCIA BRASIL',
+      'photo':{
+       'image_url':'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Datacenter_Server_Racks_%2822370909788%29.jpg/1280px-Datacenter_Server_Racks_%2822370909788%29.jpg',
+       'source_page':'https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg',
+       'author':'Carl Lender','credit':'Carl Lender / Wikimedia Commons',
+       'license':'CC BY 2.0','license_url':'https://creativecommons.org/licenses/by/2.0/',
+       'description':'Fotografia real de um data center usada apenas como fixture para testes de layout',
+       'context':'archive_illustrative',
+       'context_note':'Imagem de arquivo; não representa equipamentos ou acontecimentos documentados nesta pauta.',
+       'date_taken':'2015-11-04'},
+      'caption':'O Enem 2026 terá a primeira prova em 8 de novembro. O local de aplicação deve ser consultado pelo candidato na Página do Participante. Os portões abrem às 12h e fecham às 13h. Fontes: Inep e Agência Brasil, outubro e novembro de 2026.',
       'slides':[
          {'title':'Quando são as provas','body':'A primeira prova ocorre em 8 de novembro, com Linguagens, Ciências Humanas e Redação. O segundo dia, em 15 de novembro, terá Matemática e Ciências da Natureza.'},
          {'title':'Onde consultar o local','body':'O Cartão de Confirmação está disponível na Página do Participante, com login gov.br. O Inep recomenda levá-lo aos dois domingos, mas ele não é obrigatório.'},
          {'title':'Horários para se organizar','body':'Os portões abrem ao meio-dia e fecham às 13h, sempre pelo horário de Brasília. A aplicação começa às 13h30. O documento oficial com foto é obrigatório.'}
       ]}
+def render_fixture(story,out):
+    # A simulated bitmap is allowed only in isolated unit tests; never in production.
+    photograph=Image.new('RGB',(1600,900),'#42556A')
+    with patch.object(module,'acquire_photo',return_value=(photograph,'0'*64)):
+        return module.render(story,out)
 class RenderTests(unittest.TestCase):
     def test_both_themes_and_headline(self):
         for theme in ('cream','ink'):
             a=example('headline');a['theme']=theme
             with tempfile.TemporaryDirectory() as t:
-                q=module.render(a,Path(t))
+                q=render_fixture(a,Path(t))
                 self.assertEqual(q['jpeg_count'],1)
                 with Image.open(Path(t)/(a['id']+'-01.jpg')) as im:self.assertEqual(im.size,(1080,1350))
     def test_three_line_headline_fits_editorial_grid(self):
         a=example('headline')
         a['headline']='BULL E SCHWARZ DIGITS FIRMAM ACORDO PARA IA EUROPEIA'
         with tempfile.TemporaryDirectory() as t:
-            result=module.render(a,Path(t))
+            result=render_fixture(a,Path(t))
             self.assertEqual(len(result['qa'][0]['headline_lines']),3)
             self.assertEqual(result['jpeg_count'],1)
+    def test_photo_must_be_real_and_provenanced(self):
+        a=example('headline');del a['photo']
+        with self.assertRaisesRegex(ValueError,'REAL_PHOTO_REQUIRED'):
+            module.assert_story(a)
+    def test_photo_license_without_proof_rejected(self):
+        a=example('headline');a['photo']['license']='ALL RIGHTS RESERVED'
+        with self.assertRaisesRegex(ValueError,'PHOTO_LICENSE_NOT_VERIFIED'):
+            module.assert_story(a)
+    def test_photo_from_unknown_image_host_rejected(self):
+        a=example('headline');a['photo']['image_url']='https://example.com/fake.jpg'
+        with self.assertRaisesRegex(ValueError,'PHOTO_ORIGIN_UNVERIFIED'):
+            module.assert_story(a)
+    def test_photo_dominates_cover(self):
+        a=example('headline')
+        with tempfile.TemporaryDirectory() as t:
+            qa=render_fixture(a,Path(t))
+            self.assertGreater(qa['qa'][0]['photograph_fraction'],0.55)
+            self.assertEqual(qa['photograph']['sha256'],'0'*64)
     def test_carousel_four_slides(self):
         with tempfile.TemporaryDirectory() as t:
-            q=module.render(example(),Path(t))
+            q=render_fixture(example(),Path(t))
             self.assertEqual(q['jpeg_count'],4)
             self.assertEqual(len(q['qa']),4)
     def high_brief(self):
@@ -57,7 +91,7 @@ class RenderTests(unittest.TestCase):
     def test_high_risk_verified_story_can_render(self):
         a=self.high_brief()
         with tempfile.TemporaryDirectory() as t:
-            q=module.render(a,Path(t))
+            q=render_fixture(a,Path(t))
             self.assertEqual(q['jpeg_count'],4)
             self.assertEqual(q['risk'],'high')
     def test_high_risk_missing_third_quote_blocks(self):
