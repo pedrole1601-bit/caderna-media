@@ -99,12 +99,17 @@ def split_lines(d,text,size,maxwidth,face,maxlines):
 
 def title_lines(d,title,width,slot_rows):
     # One font/size for the entire title. Reject if no comfortable fit.
-    for size in (126,120,114,108,102,96,90,84):
-        try:
-            lines=split_lines(d,title.upper(),size,width,'display',slot_rows)
+    for size in (126,120,114,108,102,96):
+        try: lines=split_lines(d,title.upper(),size,width,'display',2)
         except ValueError:continue
-        if len(lines)>=2:return size,lines
-    raise ValueError('Editorial headline failed: rewrite with fewer words rather than squash')
+        if len(lines)==2:return size,lines
+    # Three-line fallback intentionally uses a smaller uniform size and
+    # a stable optical baseline. Never render a 126px third row into footer.
+    for size in (102,96,90):
+        try:lines=split_lines(d,title.upper(),size,width,'display',3)
+        except ValueError:continue
+        if len(lines)==3:return size,lines
+    raise ValueError('Editorial headline failed: rewrite, do not squash individual lines')
 
 def cover(story,idx):
     theme=story['theme']
