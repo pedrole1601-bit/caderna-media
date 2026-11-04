@@ -6,7 +6,7 @@
   "risk": "low",
   "topic": "economia",
   "section": "ECONOMIA / BRASIL",
-  "headline": "COPOM DECIDE HOJE SE CORTA A SELIC DE 13,75%",
+  "headline": "COPOM DECIDE HOJE SE SELIC FICA EM 13,75% OU TEM NOVO CORTE",
   "deck": "Após cinco reduções seguidas, Banco Central avalia manter ou cortar os juros básicos nesta quarta-feira. A decisão ainda não foi divulgada.",
   "source_label": "FOLHA / UOL / BANCO CENTRAL",
   "sources": [
@@ -57,9 +57,9 @@
   "headline_review": {
     "candidates": [
       {
-        "text": "COPOM DECIDE HOJE SE CORTA A SELIC DE 13,75%",
+        "text": "COPOM DECIDE HOJE SE SELIC FICA EM 13,75% OU TEM NOVO CORTE",
         "angle": "numero",
-        "rationale": "Manchete direta com decisão pendente e taxa vigente, sem prometer corte e sem deixar uma única palavra órfã na terceira linha da capa.",
+        "rationale": "Contrasta os dois resultados ainda possíveis da decisão com a taxa atual e mantém a incerteza, sem anunciar corte inexistente.",
         "scores": {
           "precisao": 35,
           "interesse_publico": 24,
@@ -98,7 +98,7 @@
     ],
     "fact_to_emphasize": "O Copom decide na noite de 4 de novembro se mantém ou reduz a Selic, atualmente em 13,75% ao ano após cinco cortes consecutivos.",
     "why_brazilians_care": "A Selic influencia o custo do crédito, os financiamentos e a remuneração de aplicações; o resultado ainda não foi anunciado.",
-    "editorial_reason": "A opção escolhida informa decisão pendente e taxa vigente com precisão e melhor equilíbrio tipográfico, evitando antecipar resultado e linha órfã."
+    "editorial_reason": "A formulação explicita manutenção versus novo corte, com número atual e fato pendente; a versão mais curta não coube no algoritmo de linhas e foi rejeitada pelo render."
   },
-  "visual_review_requested": "2026-11-04-slot_03-rebalance-two-line-headline"
+  "visual_review_requested": "2026-11-04-slot_03-rewrite-after-render-fit-failure"
 }
