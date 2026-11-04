@@ -1,0 +1,105 @@
+{
+  "id": "2026-11-04-bolsa-familia-nis-3-a-0-dia-18",
+  "kind": "headline",
+  "example_only": false,
+  "theme": "cream",
+  "risk": "low",
+  "topic": "servicos",
+  "section": "SERVIÇOS / CIDADANIA",
+  "headline": "BOLSA FAMÍLIA: NIS DE 3 A 0 RECEBE EM 18 DE NOVEMBRO",
+  "deck": "Calendário extraordinário antecipa os depósitos de novembro: NIS final 1 recebe dia 16, final 2 no dia 17 e demais finais no dia 18.",
+  "source_label": "MDS / ISTOÉ DINHEIRO / FOLHA",
+  "sources": [
+    "https://istoedinheiro.com.br/bolsa-familia-novembro-2026-calendario-pagamentos",
+    "https://www.gov.br/mds/pt-br/acesso-a-informacao/legislacao/portaria/portaria-mds-no-1-221-de-16-de-outubro-de-2026",
+    "https://www1.folha.uol.com.br/mercado/2026/11/bolsa-familia-tera-pagamento-antecipado-em-novembro-e-dezembro-veja-novo-calendario.shtml"
+  ],
+  "editorial_process": "source-anchored-double-review",
+  "verification_log": [
+    {
+      "source_url": "https://istoedinheiro.com.br/bolsa-familia-novembro-2026-calendario-pagamentos",
+      "source_excerpt": "Quem tem NIS final 2 recebe no dia 17. Para os demais finais, de 3 a 9 e 0, o depósito será antecipado para 18 de novembro"
+    },
+    {
+      "source_url": "https://www.gov.br/mds/pt-br/acesso-a-informacao/legislacao/portaria/portaria-mds-no-1-221-de-16-de-outubro-de-2026",
+      "source_excerpt": "No contexto dos efeitos das mudanças climáticas, de forma preventiva, disciplina procedimentos extraordinários relativos ao calendário de pagamentos de benefícios do Programa Bolsa Família - PBF."
+    }
+  ],
+  "photo": {
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/17.09.26_-_Presidente_Lula_faz_an%C3%BAncio_de_atualiza%C3%A7%C3%A3o_monet%C3%A1ria_do_Bolsa_Fam%C3%ADlia_%2855532727242%29.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:17.09.26_-_Presidente_Lula_faz_an%C3%BAncio_de_atualiza%C3%A7%C3%A3o_monet%C3%A1ria_do_Bolsa_Fam%C3%ADlia_(55532727242).jpg",
+    "author": "Ricardo Stuckert",
+    "credit": "Ricardo Stuckert / Wikimedia Commons, CC BY-SA 4.0",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "date_taken": "2026-09-17",
+    "description": "Fotografia documental de reunião oficial sobre atualização monetária do Bolsa Família em Brasília em setembro de 2026.",
+    "context": "archive_illustrative",
+    "context_note": "Foto de arquivo de reunião oficial em setembro; não mostra pagamentos nem beneficiários recebendo o Bolsa Família em novembro."
+  },
+  "caption": "O Bolsa Família terá calendário extraordinário em novembro de 2026. Beneficiários com NIS final 1 recebem em 16 de novembro; com final 2, em 17 de novembro; e com finais 3, 4, 5, 6, 7, 8, 9 e 0, em 18 de novembro. A antecipação está prevista na Portaria MDS nº 1.221, de 16 de outubro, publicada em 19 de outubro. A página geral do MDS ainda mostra o calendário original; a norma extraordinária é posterior. Confira também a data nos aplicativos Bolsa Família ou Caixa Tem. Fontes: Portaria MDS 1.221/2026, ISTOÉ Dinheiro (03/11) e Folha de S.Paulo (04/11). Foto de arquivo ilustrativa: reunião de 17/09/2026 sobre atualização do benefício, em Brasília; a imagem não registra os pagamentos de novembro nem mostra beneficiários recebendo valores. Foto: Ricardo Stuckert / Wikimedia Commons, CC BY-SA 4.0, com recorte editorial. #BolsaFamília #Serviços #Caderna",
+  "audience_relevance": {
+    "what_happened": "O calendário extraordinário de novembro antecipa para 18/11 o pagamento dos NIS finais 3 a 0.",
+    "why_it_matters_to_brazilians": "Milhões de famílias beneficiárias podem conferir quando o dinheiro estará disponível e evitar deslocamentos em data errada.",
+    "affected_brazilian_audience": "Famílias beneficiárias do Bolsa Família, responsáveis familiares e profissionais de assistência social.",
+    "concrete_brazil_connection": "Alteração nacional do calendário do programa de transferência de renda brasileiro.",
+    "newsworthiness_score": 91,
+    "rejected_alternatives": [
+      {
+        "topic": "economia",
+        "reason": "Caged já possui tentativa registrada no ledger de idempotência; não repetir."
+      },
+      {
+        "topic": "educacao",
+        "reason": "Enem já foi abordado; nesta janela, calendário do benefício oferece novidade mais concreta."
+      }
+    ]
+  },
+  "headline_review": {
+    "candidates": [
+      {
+        "text": "BOLSA FAMÍLIA: NIS DE 3 A 0 RECEBE EM 18 DE NOVEMBRO",
+        "angle": "impacto brasileiro",
+        "rationale": "Indica diretamente quem recebe e em qual data.",
+        "scores": {
+          "factual_accuracy": 35,
+          "public_interest": 24,
+          "specificity": 20,
+          "mobile_clarity": 14,
+          "originality": 4
+        },
+        "total": 97
+      },
+      {
+        "text": "BOLSA FAMÍLIA TERÁ PAGAMENTOS EM APENAS TRÊS DIAS",
+        "angle": "número/marco/prazo",
+        "rationale": "Expõe a concentração do calendário, mas não identifica o grupo.",
+        "scores": {
+          "factual_accuracy": 35,
+          "public_interest": 23,
+          "specificity": 18,
+          "mobile_clarity": 15,
+          "originality": 3
+        },
+        "total": 94
+      },
+      {
+        "text": "ANTECIPAÇÃO MUDA DATA DO BOLSA FAMÍLIA EM NOVEMBRO",
+        "angle": "mudança/consequência",
+        "rationale": "Mudança verdadeira, porém pouco específica.",
+        "scores": {
+          "factual_accuracy": 35,
+          "public_interest": 22,
+          "specificity": 15,
+          "mobile_clarity": 15,
+          "originality": 3
+        },
+        "total": 90
+      }
+    ],
+    "fact_to_emphasize": "NIS finais 3 a 0 terão depósito em 18 de novembro, segundo o calendário extraordinário.",
+    "why_brazilians_care": "Beneficiários precisam conhecer a data exata de disponibilização do dinheiro.",
+    "editorial_reason": "A alternativa mais específica informa público e prazo sem prometer benefício extra."
+  },
+  "visual_review_requested": "2026-11-04-slot_07-photo-mobile-proof"
+}
