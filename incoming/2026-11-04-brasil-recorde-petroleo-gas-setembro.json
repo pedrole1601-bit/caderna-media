@@ -1,0 +1,57 @@
+{
+  "id": "2026-11-04-brasil-recorde-petroleo-gas-setembro",
+  "kind": "headline",
+  "example_only": false,
+  "theme": "cream",
+  "risk": "low",
+  "topic": "economia",
+  "section": "ENERGIA / BRASIL",
+  "headline": "BRASIL BATE RECORDE DE PRODUÇÃO DE PETRÓLEO E GÁS",
+  "deck": "País produziu 6,12 milhões de barris de óleo equivalente por dia em setembro, segundo a ANP. O pré-sal respondeu por 83,3% do total.",
+  "source_label": "ANP / UOL ECONOMIA",
+  "sources": [
+    "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/producao-de-petroleo-e-gas-natural-bate-novo-recorde-em-setembro",
+    "https://economia.uol.com.br/noticias/redacao/2026/11/03/pre-sal-leva-brasil-a-recorde-de-producao-de-petroleo-e-gas-em-setembro.ghtm"
+  ],
+  "editorial_process": "source-anchored-double-review",
+  "verification_log": [
+    {
+      "source_url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/producao-de-petroleo-e-gas-natural-bate-novo-recorde-em-setembro",
+      "source_excerpt": "Em setembro de 2026, o Brasil produziu 6,120 milhões de barris de óleo equivalente por dia"
+    },
+    {
+      "source_url": "https://economia.uol.com.br/noticias/redacao/2026/11/03/pre-sal-leva-brasil-a-recorde-de-producao-de-petroleo-e-gas-em-setembro.ghtm",
+      "source_excerpt": "A produção nacional de petróleo e gás bateu mais um recorde histórico em setembro deste ano"
+    }
+  ],
+  "photo": {
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Plataforma.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Plataforma.jpg",
+    "author": "Andrevruas",
+    "credit": "Andrevruas / Wikimedia Commons, CC BY 3.0",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "date_taken": "2011-01-05",
+    "description": "Plataforma de petróleo e navio petroleiro fotografados na baía de Guanabara em 2011.",
+    "context": "archive_illustrative",
+    "context_note": "Foto de arquivo de 2011, na baía de Guanabara; não mostra as instalações responsáveis pelo recorde de setembro de 2026."
+  },
+  "caption": "O Brasil registrou em setembro de 2026 uma produção recorde de 6,120 milhões de barris de óleo equivalente por dia, segundo dados divulgados pela Agência Nacional do Petróleo (ANP) em 3 de novembro.\n\nDesse total, 4,711 milhões de barris por dia foram de petróleo. A produção de gás natural chegou a 223,98 milhões de metros cúbicos diários. O pré-sal respondeu por 83,3% do volume total, equivalente a 5,1 milhões de barris de óleo equivalente por dia.\n\nO dado é sobre a produção nacional, não sobre uma redução imediata nos preços dos combustíveis. Fontes: ANP (03/11/2026) e UOL Economia (03/11/2026).\n\nFoto de arquivo: plataforma e navio petroleiro na baía de Guanabara, em 2011. Não retrata os campos ou as instalações que registraram o recorde de setembro de 2026. Fotografia: Andrevruas / Wikimedia Commons (CC BY 3.0). Imagem adaptada por recorte editorial.\n\n#Petróleo #Energia #Economia #Brasil #Caderna",
+  "audience_relevance": {
+    "what_happened": "Produção nacional de petróleo e gás atingiu 6,120 milhões boe/d em setembro de 2026, novo recorde divulgado em 3 de novembro.",
+    "why_it_matters_to_brazilians": "A produção de energia afeta um setor central da economia brasileira, exportações e debate sobre abastecimento, sem implicar redução automática no preço da gasolina.",
+    "affected_brazilian_audience": "Consumidores, trabalhadores do setor de energia, empresas e público interessado na economia brasileira.",
+    "concrete_brazil_connection": "Recorde medido pela ANP em campos brasileiros; 83,3% do volume veio do pré-sal.",
+    "newsworthiness_score": 91,
+    "rejected_alternatives": [
+      {
+        "topic": "educacao",
+        "reason": "Enem já coberto no ledger; evitar duplicação editorial."
+      },
+      {
+        "topic": "mercado",
+        "reason": "Oscilação cambial de um pregão tem menor novidade e contexto que recorde setorial."
+      }
+    ]
+  }
+}
