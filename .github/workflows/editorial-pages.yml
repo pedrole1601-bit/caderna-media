@@ -93,6 +93,14 @@ jobs:
           PY
         env:
           STORY: ${{ steps.select.outputs.slug }}
+      - name: Visual audit thumbnail evidence (PNG 320px, read-only)
+        env:
+          STORY: ${{ steps.select.outputs.slug }}
+        run: |
+          echo "CADERNA_MOBILE_IMAGE_BASE64_BEGIN"
+          base64 -w0 "media/auto/$STORY-01-mobile.png"
+          echo
+          echo "CADERNA_MOBILE_IMAGE_BASE64_END"
       - name: Arquivar imagens no repositorio publico (nao Instagram)
         run: |
           set -euo pipefail
