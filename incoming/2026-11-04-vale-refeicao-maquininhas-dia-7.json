@@ -6,7 +6,7 @@
   "risk": "low",
   "topic": "servicos",
   "section": "TRABALHO / SERVIÇOS",
-  "headline": "VA E VR: PRAZO PARA ACEITAÇÃO CRUZADA TERMINA DIA 7",
+  "headline": "VA E VR: PRAZO DA NOVA REGRA É DIA 7",
   "deck": "Regra prevê cartões de diferentes operadoras nas mesmas maquininhas habilitadas. Setor alerta para dificuldades técnicas.",
   "source_label": "FOLHA / MINISTÉRIO DA FAZENDA",
   "sources": [
@@ -65,9 +65,9 @@
   "headline_review": {
     "candidates": [
       {
-        "text": "VA E VR: PRAZO PARA ACEITAÇÃO CRUZADA TERMINA DIA 7",
+        "text": "VA E VR: PRAZO DA NOVA REGRA É DIA 7",
         "angle": "prazo",
-        "rationale": "Apresenta a data concreta do prazo regulatório sem prometer que a integração tecnológica já funcionará em todos os locais.",
+        "rationale": "Destaca a data de 7/11 para a obrigação de interoperabilidade, sem afirmar que todos os sistemas já estarão integrados; versão curta para manter o grid da capa legível.",
         "scores": {
           "precisao": 35,
           "interesse_publico": 25,
@@ -106,7 +106,7 @@
     ],
     "fact_to_emphasize": "Prazo regulatório de 7/11/2026 para interoperabilidade dos cartões VA e VR, com limitações operacionais reconhecidas.",
     "why_brazilians_care": "Trabalhadores e comerciantes precisam saber o que muda no uso do benefício e por que pode haver falhas iniciais.",
-    "editorial_reason": "A manchete de prazo informa a mudança com precisão e evita tratar uma obrigação legal como integração já concluída."
+    "editorial_reason": "A manchete de prazo, mais curta para o layout mobile, informa a obrigação regulatória sem prometer integração já concluída."
   },
   "visual_review_requested": "2026-11-04-slot_09-mobile-proof"
 }
