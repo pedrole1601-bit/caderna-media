@@ -8,17 +8,16 @@
   "section": "SERVIÇOS / CIDADANIA",
   "headline": "BOLSA FAMÍLIA: NIS DE 3 A 0 RECEBE EM 18 DE NOVEMBRO",
   "deck": "Calendário extraordinário antecipa os depósitos de novembro: NIS final 1 recebe dia 16, final 2 no dia 17 e demais finais no dia 18.",
-  "source_label": "MDS / ISTOÉ DINHEIRO / FOLHA",
+  "source_label": "FOLHA DE S.PAULO / MDS",
   "sources": [
-    "https://istoedinheiro.com.br/bolsa-familia-novembro-2026-calendario-pagamentos",
-    "https://www.gov.br/mds/pt-br/acesso-a-informacao/legislacao/portaria/portaria-mds-no-1-221-de-16-de-outubro-de-2026",
-    "https://www1.folha.uol.com.br/mercado/2026/11/bolsa-familia-tera-pagamento-antecipado-em-novembro-e-dezembro-veja-novo-calendario.shtml"
+    "https://www1.folha.uol.com.br/mercado/2026/11/bolsa-familia-tera-pagamento-antecipado-em-novembro-e-dezembro-veja-novo-calendario.shtml",
+    "https://www.gov.br/mds/pt-br/acesso-a-informacao/legislacao/portaria/portaria-mds-no-1-221-de-16-de-outubro-de-2026"
   ],
   "editorial_process": "source-anchored-double-review",
   "verification_log": [
     {
-      "source_url": "https://istoedinheiro.com.br/bolsa-familia-novembro-2026-calendario-pagamentos",
-      "source_excerpt": "Quem tem NIS final 2 recebe no dia 17. Para os demais finais, de 3 a 9 e 0, o depósito será antecipado para 18 de novembro"
+      "source_url": "https://www1.folha.uol.com.br/mercado/2026/11/bolsa-familia-tera-pagamento-antecipado-em-novembro-e-dezembro-veja-novo-calendario.shtml",
+      "source_excerpt": "Os benefícios serão pagos nos dias 16, 17 e 18 de novembro, conforme o número final do NIS (Número de Identificação Social)."
     },
     {
       "source_url": "https://www.gov.br/mds/pt-br/acesso-a-informacao/legislacao/portaria/portaria-mds-no-1-221-de-16-de-outubro-de-2026",
@@ -37,7 +36,7 @@
     "context": "archive_illustrative",
     "context_note": "Foto de arquivo de reunião oficial em setembro; não mostra pagamentos nem beneficiários recebendo o Bolsa Família em novembro."
   },
-  "caption": "O Bolsa Família terá calendário extraordinário em novembro de 2026. Beneficiários com NIS final 1 recebem em 16 de novembro; com final 2, em 17 de novembro; e com finais 3, 4, 5, 6, 7, 8, 9 e 0, em 18 de novembro. A antecipação está prevista na Portaria MDS nº 1.221, de 16 de outubro, publicada em 19 de outubro. A página geral do MDS ainda mostra o calendário original; a norma extraordinária é posterior. Confira também a data nos aplicativos Bolsa Família ou Caixa Tem. Fontes: Portaria MDS 1.221/2026, ISTOÉ Dinheiro (03/11) e Folha de S.Paulo (04/11). Foto de arquivo ilustrativa: reunião de 17/09/2026 sobre atualização do benefício, em Brasília; a imagem não registra os pagamentos de novembro nem mostra beneficiários recebendo valores. Foto: Ricardo Stuckert / Wikimedia Commons, CC BY-SA 4.0, com recorte editorial. #BolsaFamília #Serviços #Caderna",
+  "caption": "O Bolsa Família terá calendário extraordinário em novembro de 2026. Beneficiários com NIS final 1 recebem em 16 de novembro; com final 2, em 17 de novembro; e com finais 3, 4, 5, 6, 7, 8, 9 e 0, em 18 de novembro. A antecipação está prevista na Portaria MDS nº 1.221, de 16 de outubro, publicada em 19 de outubro. A página geral do MDS ainda mostra o calendário original; a norma extraordinária é posterior. Confira também a data nos aplicativos Bolsa Família ou Caixa Tem. Fontes: Portaria MDS 1.221/2026 (19/10), Folha de S.Paulo (04/11). A reportagem da ISTOÉ Dinheiro (03/11) também foi consultada na apuração. Foto de arquivo ilustrativa: reunião de 17/09/2026 sobre atualização do benefício, em Brasília; a imagem não registra os pagamentos de novembro nem mostra beneficiários recebendo valores. Foto: Ricardo Stuckert / Wikimedia Commons, CC BY-SA 4.0, com recorte editorial. #BolsaFamília #Serviços #Caderna",
   "audience_relevance": {
     "what_happened": "O calendário extraordinário de novembro antecipa para 18/11 o pagamento dos NIS finais 3 a 0.",
     "why_it_matters_to_brazilians": "Milhões de famílias beneficiárias podem conferir quando o dinheiro estará disponível e evitar deslocamentos em data errada.",
