@@ -56,10 +56,17 @@ jobs:
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('slug='+slug+'\n')
           PY
       - name: Instalar apenas ferramentas gratuitas
+        timeout-minutes: 6
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq fonts-noto-core fonts-noto-extra fonts-inter fonts-lato
-          python -m pip install --disable-pip-version-check 'Pillow>=10,<13' 'CairoSVG>=2.7,<3'
+          set -euo pipefail
+          export DEBIAN_FRONTEND=noninteractive
+          echo 'Install diagnostics: apt indexes (max 120s)'
+          timeout 120s sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=20 update -qq
+          echo 'Install diagnostics: required fonts (max 180s)'
+          timeout 180s sudo -E apt-get -o DPkg::Lock::Timeout=45 -o Acquire::Retries=2 -o Acquire::http::Timeout=20 install -y -qq --no-install-recommends fonts-noto-core fonts-noto-extra fonts-inter fonts-lato
+          echo 'Install diagnostics: Python image libraries (max 120s)'
+          timeout 120s python -m pip install --disable-pip-version-check --retries 2 --timeout 20 'Pillow>=10,<13' 'CairoSVG>=2.7,<3'
+          echo 'All editorial dependencies installed successfully'
       - name: Gate 0 — escolher headline com tres angulos e evidencia
         run: |
           python - <<'PY'
