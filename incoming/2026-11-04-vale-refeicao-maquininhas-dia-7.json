@@ -1,0 +1,112 @@
+{
+  "id": "2026-11-04-vale-refeicao-maquininhas-dia-7",
+  "kind": "headline",
+  "example_only": false,
+  "theme": "cream",
+  "risk": "low",
+  "topic": "servicos",
+  "section": "TRABALHO / SERVIÇOS",
+  "headline": "VA E VR: PRAZO PARA ACEITAÇÃO CRUZADA TERMINA DIA 7",
+  "deck": "Regra prevê cartões de diferentes operadoras nas mesmas maquininhas habilitadas. Setor alerta para dificuldades técnicas.",
+  "source_label": "FOLHA / MINISTÉRIO DA FAZENDA",
+  "sources": [
+    "https://www1.folha.uol.com.br/mercado/2026/11/veja-o-que-muda-com-as-novas-regras-para-vale-refeicao-e-alimentacao.shtml",
+    "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2025/novembro/presidente-lula-assina-decreto-que-moderniza-o-programa-de-alimentacao-do-trabalhador"
+  ],
+  "editorial_process": "source-anchored-double-review",
+  "verification_log": [
+    {
+      "source_url": "https://www1.folha.uol.com.br/mercado/2026/11/veja-o-que-muda-com-as-novas-regras-para-vale-refeicao-e-alimentacao.shtml",
+      "source_excerpt": "O trabalhador não precisa tomar nenhuma providência para participar da mudança, e o saldo disponível não será alterado."
+    },
+    {
+      "source_url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2025/novembro/presidente-lula-assina-decreto-que-moderniza-o-programa-de-alimentacao-do-trabalhador",
+      "source_excerpt": "O decreto define limites de taxas, prazos de repasse, abertura de arranjos de pagamento e interoperabilidade entre bandeiras"
+    }
+  ],
+  "photo": {
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Supermarket_in_recife%2C_pernambuco%2C_Brazil_w.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Supermarket_in_recife,_pernambuco,_Brazil_w.jpg",
+    "author": "Wilfredor",
+    "credit": "Wilfredor / Wikimedia Commons, CC BY-SA 4.0",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "date_taken": "2016-12-24",
+    "description": "Fotografia real de prateleiras de alimentos em supermercado do Recife, Pernambuco, feita em 2016.",
+    "context": "archive_illustrative",
+    "context_note": "Foto de arquivo de supermercado em Recife, em 2016; não mostra pagamento com vale-refeição, vale-alimentação ou a implementação da nova regra em 2026."
+  },
+  "caption": "O prazo para a interoperabilidade dos cartões de vale-refeição (VR) e vale-alimentação (VA) está previsto para terminar neste sábado, 7 de novembro de 2026. A regra do Programa de Alimentação do Trabalhador busca permitir que cartões de operadoras diferentes funcionem nas mesmas maquininhas habilitadas para esse tipo de benefício.\n\nIsso não significa que qualquer loja será obrigada a aceitar VA ou VR. O comércio precisa estar habilitado. O trabalhador não precisa trocar de cartão, e a mudança não aumenta automaticamente o saldo. Os benefícios continuam destinados à alimentação.\n\nHá uma ressalva importante: entidades do setor apontam dificuldades na integração tecnológica. Portanto, a entrada em vigor da obrigação não garante que todas as transações funcionem imediatamente.\n\nFontes: Folha de S.Paulo (03/11/2026) e Ministério da Fazenda (decreto divulgado em 11/11/2025, página atualizada em 27/10/2026). Complemento: Agência Brasil (01/11/2026).\n\nFoto real de arquivo ilustrativa: prateleiras de supermercado no Recife em 2016. Não mostra pagamentos com VA/VR nem a implantação da norma. Wilfredor / Wikimedia Commons, CC BY-SA 4.0; recorte editorial.\n\n#ValeRefeição #ValeAlimentação #Trabalho #DireitosDoConsumidor #Caderna",
+  "audience_relevance": {
+    "what_happened": "O prazo normativo de interoperabilidade plena entre cartões VA/VR está previsto para 7 de novembro de 2026.",
+    "why_it_matters_to_brazilians": "Trabalhadores brasileiros que recebem benefícios de alimentação e comerciantes precisam entender onde os cartões poderão ser aceitos e as limitações práticas da mudança.",
+    "affected_brazilian_audience": "Trabalhadores que recebem VA/VR, restaurantes, supermercados e estabelecimentos habilitados.",
+    "concrete_brazil_connection": "Regulamentação federal do Programa de Alimentação do Trabalhador no Brasil.",
+    "newsworthiness_score": 93,
+    "rejected_alternatives": [
+      {
+        "topic": "direitos do consumidor",
+        "reason": "Novas regras do SAC: score 87, suplente caso a foto ou o gate da pauta principal falhe."
+      },
+      {
+        "topic": "servicos sociais",
+        "reason": "Bolsa Família: score 90, suplente que exige nova checagem de fonte e QA por ter sido bloqueada em slot anterior."
+      },
+      {
+        "topic": "economia",
+        "reason": "Dólar: score 70, não há fechamento confirmado com duas fontes nesta triagem."
+      },
+      {
+        "topic": "tecnologia",
+        "reason": "PL de IA e drones: score 78, high impact ainda sem terceiro grupo independente e foto."
+      }
+    ]
+  },
+  "headline_review": {
+    "candidates": [
+      {
+        "text": "VA E VR: PRAZO PARA ACEITAÇÃO CRUZADA TERMINA DIA 7",
+        "angle": "prazo",
+        "rationale": "Apresenta a data concreta do prazo regulatório sem prometer que a integração tecnológica já funcionará em todos os locais.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 25,
+          "especificidade": 20,
+          "clareza": 13,
+          "originalidade": 4
+        },
+        "total": 97
+      },
+      {
+        "text": "VA E VR PODERÃO FUNCIONAR NAS MESMAS MAQUININHAS",
+        "angle": "impacto",
+        "rationale": "Explica o efeito pretendido aos trabalhadores, mas omite o prazo e pode ser interpretada como funcionamento já garantido.",
+        "scores": {
+          "precisao": 32,
+          "interesse_publico": 24,
+          "especificidade": 17,
+          "clareza": 14,
+          "originalidade": 3
+        },
+        "total": 90
+      },
+      {
+        "text": "NOVA REGRA DE VA E VR NÃO ALTERA O SALDO DO CARTÃO",
+        "angle": "consequencia",
+        "rationale": "Esclarece um limite relevante, mas deixa de destacar a interoperabilidade e o prazo regulatório.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 22,
+          "especificidade": 16,
+          "clareza": 14,
+          "originalidade": 3
+        },
+        "total": 90
+      }
+    ],
+    "fact_to_emphasize": "Prazo regulatório de 7/11/2026 para interoperabilidade dos cartões VA e VR, com limitações operacionais reconhecidas.",
+    "why_brazilians_care": "Trabalhadores e comerciantes precisam saber o que muda no uso do benefício e por que pode haver falhas iniciais.",
+    "editorial_reason": "A manchete de prazo informa a mudança com precisão e evita tratar uma obrigação legal como integração já concluída."
+  },
+  "visual_review_requested": "2026-11-04-slot_09-mobile-proof"
+}
