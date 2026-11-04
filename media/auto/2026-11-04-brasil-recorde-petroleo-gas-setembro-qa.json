@@ -1,0 +1,111 @@
+{
+  "status": "PASS_TECHNICAL_ONLY",
+  "slug": "2026-11-04-brasil-recorde-petroleo-gas-setembro",
+  "kind": "headline",
+  "theme": "cream",
+  "jpeg_count": 1,
+  "qa": [
+    {
+      "headline_size": 96,
+      "headline_lines": [
+        "PETRÓLEO E GÁS BATEM",
+        "RECORDE NO BRASIL"
+      ],
+      "boxes": [
+        [
+          "section",
+          [
+            83,
+            202,
+            314,
+            226
+          ]
+        ],
+        [
+          "photo_context",
+          [
+            84,
+            855,
+            547,
+            876
+          ]
+        ],
+        [
+          "headline_0",
+          [
+            90,
+            969,
+            982,
+            1060
+          ]
+        ],
+        [
+          "headline_1",
+          [
+            90,
+            1099,
+            861,
+            1170
+          ]
+        ],
+        [
+          "photo_credit",
+          [
+            90,
+            1264,
+            604,
+            1281
+          ]
+        ],
+        [
+          "source",
+          [
+            90,
+            1315,
+            344,
+            1330
+          ]
+        ],
+        [
+          "footer",
+          [
+            850,
+            1315,
+            937,
+            1329
+          ]
+        ]
+      ],
+      "theme": "cream",
+      "slide_index": 0,
+      "photograph_bounds": [
+        0,
+        148,
+        1080,
+        900
+      ],
+      "photograph_fraction": 0.557037037037037,
+      "photograph_context": "archive_illustrative"
+    }
+  ],
+  "editorial_approval": false,
+  "published_to_instagram": false,
+  "source_links": [
+    "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/producao-de-petroleo-e-gas-natural-bate-novo-recorde-em-setembro",
+    "https://economia.uol.com.br/noticias/redacao/2026/11/03/pre-sal-leva-brasil-a-recorde-de-producao-de-petroleo-e-gas-em-setembro.ghtm"
+  ],
+  "risk": "low",
+  "sha256_jpegs": {
+    "2026-11-04-brasil-recorde-petroleo-gas-setembro-01.jpg": "0a39919c8fd10d41471c3cbfb871c9c32628ec665cc45be5c3685f2bb36c6c1a"
+  },
+  "photograph": {
+    "source_photo_file": "2026-11-04-brasil-recorde-petroleo-gas-setembro-source-photo.jpg",
+    "sha256": "4add8c29673fde1a7ba709958a612948803ebca6686d36e1ce2fc80fd31e536f",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Plataforma.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Plataforma.jpg",
+    "license": "CC BY 3.0",
+    "author": "Andrevruas",
+    "context": "archive_illustrative",
+    "photo_fraction": 0.557037037037037
+  }
+}
