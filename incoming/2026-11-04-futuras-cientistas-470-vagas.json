@@ -8,10 +8,11 @@
   "section": "EDUCAÇÃO / CIÊNCIA",
   "headline": "FUTURAS CIENTISTAS: 470 VAGAS GRATUITAS",
   "deck": "Inscrições vão até 6 de novembro para estudantes do 2º ano do ensino médio e professoras da rede pública estadual.",
-  "source_label": "GOVERNO FEDERAL / AGÊNCIA BRASIL",
+  "source_label": "SECOM / AGÊNCIA BRASIL / FORBES",
   "sources": [
     "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2026/10/programa-futuras-cientistas-tem-inscricoes-prorrogadas-ate-6-de-novembro/",
-    "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/inscricoes-para-o-programa-futuras-cientistas-vao-ate-6-novembro"
+    "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/inscricoes-para-o-programa-futuras-cientistas-vao-ate-6-novembro",
+    "https://forbes.com.br/forbes-mulher/2026/11/inscricoes-para-o-programa-futuras-cientistas-vao-ate-6-novembro/"
   ],
   "editorial_process": "source-anchored-double-review",
   "verification_log": [
@@ -22,6 +23,10 @@
     {
       "source_url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/inscricoes-para-o-programa-futuras-cientistas-vao-ate-6-novembro",
       "source_excerpt": "São oferecidas 470 vagas gratuitas para estudantes e professoras da rede pública estadual participarem de atividades"
+    },
+    {
+      "source_url": "https://forbes.com.br/forbes-mulher/2026/11/inscricoes-para-o-programa-futuras-cientistas-vao-ate-6-novembro/",
+      "source_excerpt": "Foram prorrogadas para o dia 6 de novembro as inscrições para a Imersão Científica 2027 do Programa Futuras Cientistas."
     }
   ],
   "photo": {
@@ -36,7 +41,7 @@
     "context": "archive_illustrative",
     "context_note": "Foto de arquivo de laboratório clínico em 2018; não mostra participantes nem atividades do Programa Futuras Cientistas de 2027."
   },
-  "caption": "O prazo está chegando: as inscrições gratuitas para a Imersão Científica 2027 do Programa Futuras Cientistas vão até 6 de novembro de 2026. São 470 vagas em todo o Brasil: 320 para alunas do 2º ano do ensino médio da rede pública estadual e 150 para professoras da mesma rede.\n\nAs selecionadas poderão conhecer a rotina de pesquisa em laboratórios e universidades. A imersão está prevista para 4 a 29 de janeiro de 2027. Há projetos presenciais e remotos, e a previsão é de auxílio único de R$ 300 às participantes que iniciarem as atividades, conforme regras do programa.\n\nInscrição e edital: plataforma oficial do Programa Futuras Cientistas, vinculada ao Cetene/MCTI. Confira os requisitos e documentos antes de enviar sua candidatura.\n\nFontes: Secretaria de Comunicação Social do Governo Federal (29/10/2026) e Agência Brasil (30/10/2026).\n\nFoto de arquivo ilustrativa: profissional em laboratório de análises clínicas no Brasil, em 2018. A imagem não mostra participantes nem atividades do Futuras Cientistas 2027. Stesoares / Wikimedia Commons, CC BY-SA 4.0. Recorte editorial da fotografia.\n\n#FuturasCientistas #Educação #Ciência #EnsinoMédio #Caderna",
+  "caption": "O prazo está chegando: as inscrições gratuitas para a Imersão Científica 2027 do Programa Futuras Cientistas vão até 6 de novembro de 2026. São 470 vagas em todo o Brasil: 320 para alunas do 2º ano do ensino médio da rede pública estadual e 150 para professoras da mesma rede.\n\nAs selecionadas poderão conhecer a rotina de pesquisa em laboratórios e universidades. A imersão está prevista para 4 a 29 de janeiro de 2027. Há projetos presenciais e remotos, e a previsão é de auxílio único de R$ 300 às participantes que iniciarem as atividades, conforme regras do programa.\n\nInscrição e edital: plataforma oficial do Programa Futuras Cientistas, vinculada ao Cetene/MCTI. Confira os requisitos e documentos antes de enviar sua candidatura.\n\nFontes: Secretaria de Comunicação Social do Governo Federal (29/10/2026), Agência Brasil (30/10/2026) e republicação identificada na Forbes (02/11/2026). A Forbes reproduz a Agência Brasil; não representa apuração independente adicional.\n\nFoto de arquivo ilustrativa: profissional em laboratório de análises clínicas no Brasil, em 2018. A imagem não mostra participantes nem atividades do Futuras Cientistas 2027. Stesoares / Wikimedia Commons, CC BY-SA 4.0. Recorte editorial da fotografia.\n\n#FuturasCientistas #Educação #Ciência #EnsinoMédio #Caderna",
   "audience_relevance": {
     "what_happened": "Inscrições para 470 vagas gratuitas da Imersão Científica 2027 foram prorrogadas até 6 de novembro de 2026.",
     "why_it_matters_to_brazilians": "Alunas do 2º ano do ensino médio estadual e professoras da rede estadual de todo o Brasil têm prazo próximo para acessar experiência científica gratuita com auxílio.",
