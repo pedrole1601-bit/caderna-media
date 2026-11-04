@@ -62,7 +62,7 @@
           [
             90,
             1315,
-            479,
+            457,
             1334
           ]
         ],
@@ -92,11 +92,12 @@
   "published_to_instagram": false,
   "source_links": [
     "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2026/10/programa-futuras-cientistas-tem-inscricoes-prorrogadas-ate-6-de-novembro/",
-    "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/inscricoes-para-o-programa-futuras-cientistas-vao-ate-6-novembro"
+    "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/inscricoes-para-o-programa-futuras-cientistas-vao-ate-6-novembro",
+    "https://forbes.com.br/forbes-mulher/2026/11/inscricoes-para-o-programa-futuras-cientistas-vao-ate-6-novembro/"
   ],
   "risk": "low",
   "sha256_jpegs": {
-    "2026-11-04-futuras-cientistas-470-vagas-01.jpg": "989ced81dd413bcac03bc62ec5bd18c94c181d3eba16714e2b4ab3459a449649"
+    "2026-11-04-futuras-cientistas-470-vagas-01.jpg": "501b7b6aedb84a40472c94d10fe3a9a9e43080c7e5dd91f8f9a002be895529ef"
   },
   "photograph": {
     "source_photo_file": "2026-11-04-futuras-cientistas-470-vagas-source-photo.jpg",
