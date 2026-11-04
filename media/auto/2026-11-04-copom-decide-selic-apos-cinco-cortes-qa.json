@@ -1,0 +1,121 @@
+{
+  "status": "PASS_TECHNICAL_ONLY",
+  "slug": "2026-11-04-copom-decide-selic-apos-cinco-cortes",
+  "kind": "headline",
+  "theme": "cream",
+  "jpeg_count": 1,
+  "qa": [
+    {
+      "headline_size": 84,
+      "headline_lines": [
+        "JUROS EM 13,75%: COPOM",
+        "DECIDE HOJE SE FAZ NOVO",
+        "CORTE"
+      ],
+      "boxes": [
+        [
+          "section",
+          [
+            83,
+            202,
+            344,
+            226
+          ]
+        ],
+        [
+          "photo_context",
+          [
+            84,
+            855,
+            547,
+            876
+          ]
+        ],
+        [
+          "headline_0",
+          [
+            84,
+            934,
+            969,
+            1013
+          ]
+        ],
+        [
+          "headline_1",
+          [
+            90,
+            1052,
+            945,
+            1131
+          ]
+        ],
+        [
+          "headline_2",
+          [
+            90,
+            1170,
+            300,
+            1232
+          ]
+        ],
+        [
+          "photo_credit",
+          [
+            90,
+            1264,
+            489,
+            1282
+          ]
+        ],
+        [
+          "source",
+          [
+            90,
+            1315,
+            425,
+            1330
+          ]
+        ],
+        [
+          "footer",
+          [
+            850,
+            1315,
+            937,
+            1329
+          ]
+        ]
+      ],
+      "theme": "cream",
+      "slide_index": 0,
+      "photograph_bounds": [
+        0,
+        148,
+        1080,
+        900
+      ],
+      "photograph_fraction": 0.557037037037037,
+      "photograph_context": "archive_illustrative"
+    }
+  ],
+  "editorial_approval": false,
+  "published_to_instagram": false,
+  "source_links": [
+    "https://www1.folha.uol.com.br/mercado/2026/11/copom-deve-manter-selic-em-1375-e-interromper-ciclo-de-cortes.shtml",
+    "https://economia.uol.com.br/cotacoes/noticias/redacao/2026/11/04/dolar-e-bolsa-4-de-novembro-de-2026.ghtm"
+  ],
+  "risk": "low",
+  "sha256_jpegs": {
+    "2026-11-04-copom-decide-selic-apos-cinco-cortes-01.jpg": "e44309a81c9f1cb23fc6e02ff47fa13466d1693b10808af05a655477557f3a6f"
+  },
+  "photograph": {
+    "source_photo_file": "2026-11-04-copom-decide-selic-apos-cinco-cortes-source-photo.jpg",
+    "sha256": "b670e0cc04e8c24831f3324d3fd7c8f8d3e2445b436b4577b10cecdc7a2843be",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Edif%C3%ADcio_sede_do_Banco_Central_do_Brasil_%2816011634694%29.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Edif%C3%ADcio_sede_do_Banco_Central_do_Brasil_(16011634694).jpg",
+    "license": "CC BY 2.0",
+    "author": "Jonas Pereira / Agência Senado",
+    "context": "archive_illustrative",
+    "photo_fraction": 0.557037037037037
+  }
+}
