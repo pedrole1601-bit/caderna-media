@@ -60,6 +60,24 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq fonts-noto-core fonts-noto-extra fonts-inter fonts-lato
           python -m pip install --disable-pip-version-check 'Pillow>=10,<13' 'CairoSVG>=2.7,<3'
+      - name: Gate 0 — escolher headline com tres angulos e evidencia
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          slug="${{ steps.select.outputs.slug }}"
+          m=json.loads(Path('incoming',slug+'.json').read_text(encoding='utf8'))
+          h=m.get('headline_review')
+          assert isinstance(h,dict), 'HEADLINE_REVIEW_REQUIRED'
+          candidates=h.get('candidates')
+          assert isinstance(candidates,list) and len(candidates)>=3, 'At least 3 real headline alternatives'
+          chosen=[c for c in candidates if isinstance(c,dict) and c.get('text')==m['headline']]
+          assert len(chosen)==1, 'The rendered headline must be chosen from reviewed candidates'
+          assert isinstance(h.get('fact_to_emphasize'),str) and len(h['fact_to_emphasize'])>=35
+          assert isinstance(h.get('why_brazilians_care'),str) and len(h['why_brazilians_care'])>=35
+          assert isinstance(h.get('editorial_reason'),str) and len(h['editorial_reason'])>=45
+          print('Headline review documented:',len(candidates),'candidates')
+          PY
       - name: Gate 1 — foto real licenciada, contexto e render editorial
         run: python scripts/render_editorial.py 'incoming/${{ steps.select.outputs.slug }}.json'
       - name: Gate 2 — testes negativos e qualidade
