@@ -1,0 +1,104 @@
+{
+  "id": "2026-11-04-copom-decide-selic-apos-cinco-cortes",
+  "kind": "headline",
+  "example_only": false,
+  "theme": "cream",
+  "risk": "low",
+  "topic": "economia",
+  "section": "ECONOMIA / BRASIL",
+  "headline": "JUROS EM 13,75%: COPOM DECIDE HOJE SE FAZ NOVO CORTE",
+  "deck": "Após cinco reduções seguidas, Banco Central avalia manter ou cortar os juros básicos nesta quarta-feira. A decisão ainda não foi divulgada.",
+  "source_label": "FOLHA / UOL / BANCO CENTRAL",
+  "sources": [
+    "https://www1.folha.uol.com.br/mercado/2026/11/copom-deve-manter-selic-em-1375-e-interromper-ciclo-de-cortes.shtml",
+    "https://economia.uol.com.br/cotacoes/noticias/redacao/2026/11/04/dolar-e-bolsa-4-de-novembro-de-2026.ghtm"
+  ],
+  "editorial_process": "source-anchored-double-review",
+  "verification_log": [
+    {
+      "source_url": "https://www1.folha.uol.com.br/mercado/2026/11/copom-deve-manter-selic-em-1375-e-interromper-ciclo-de-cortes.shtml",
+      "source_excerpt": "O Copom (Comitê de Política Monetária) deve interromper nesta quarta-feira (4) o ciclo de redução da taxa básica de juros"
+    },
+    {
+      "source_url": "https://economia.uol.com.br/cotacoes/noticias/redacao/2026/11/04/dolar-e-bolsa-4-de-novembro-de-2026.ghtm",
+      "source_excerpt": "Mercado aguarda definição da taxa básica de juros. As atenções do dia estão direcionadas para a reunião do Copom"
+    }
+  ],
+  "photo": {
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Edif%C3%ADcio_sede_do_Banco_Central_do_Brasil_%2816011634694%29.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Edif%C3%ADcio_sede_do_Banco_Central_do_Brasil_(16011634694).jpg",
+    "author": "Jonas Pereira / Agência Senado",
+    "credit": "Jonas Pereira / Agência Senado",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "date_taken": "2015-02-23",
+    "description": "Sede do Banco Central do Brasil, em Brasília, fotografada em fevereiro de 2015.",
+    "context": "archive_illustrative",
+    "context_note": "Foto de arquivo da sede do Banco Central, feita em 2015; não mostra a reunião do Copom nem a decisão sobre juros de 4 de novembro de 2026."
+  },
+  "caption": "O Comitê de Política Monetária (Copom) do Banco Central decide nesta quarta-feira, 4 de novembro de 2026, se mantém a taxa Selic em 13,75% ao ano ou promove um novo corte. O resultado ainda não foi anunciado no momento desta publicação.\n\nA taxa básica foi reduzida em cinco reuniões consecutivas desde março. Na pesquisa de 29 economistas citada pela Folha, 24 projetam manutenção e cinco esperam corte de 0,25 ponto percentual. São expectativas de analistas, não decisão oficial. O UOL também relata incerteza do mercado quanto ao resultado.\n\nA Selic é referência para os juros da economia e influencia crédito, financiamentos e aplicações, embora as taxas finais cobradas pelos bancos dependam de outros fatores. A decisão está prevista para a noite desta quarta-feira. A CADERNA atualizará o assunto somente após divulgação oficial confirmada.\n\nFontes: Folha de S.Paulo (4/11/2026, 4h), UOL Economia (4/11/2026, 9h05); calendário e histórico do Banco Central consultados como contexto institucional. Não há resultado antecipado.\n\nFoto real de arquivo: sede do Banco Central em Brasília, em 23/02/2015. A fotografia NÃO mostra a reunião do Copom de 04/11/2026 nem a decisão sobre a Selic. Jonas Pereira / Agência Senado, Wikimedia Commons, CC BY 2.0; recorte editorial.\n\n#Selic #Copom #Economia #BancoCentral #Caderna",
+  "audience_relevance": {
+    "what_happened": "Copom se reúne em 4 de novembro para definir se mantém ou altera a Selic após cinco reduções consecutivas.",
+    "why_it_matters_to_brazilians": "Juros básicos orientam o custo do crédito e influenciam financiamentos e aplicações no Brasil; decisão será divulgada nesta noite.",
+    "affected_brazilian_audience": "Famílias com crédito e financiamentos, trabalhadores, empresas e poupadores brasileiros.",
+    "concrete_brazil_connection": "Decisão de política monetária do Banco Central do Brasil, com Selic vigente de 13,75% ao ano.",
+    "newsworthiness_score": 87,
+    "rejected_alternatives": [
+      {
+        "topic": "cultura",
+        "reason": "Funarte abriu R$ 1,464 milhão em editais, mas faltou segundo veículo jornalístico reconhecido independente."
+      },
+      {
+        "topic": "educacao",
+        "reason": "Feira GLOBE encerra prazo hoje, porém não foi localizada cobertura jornalística independente suficiente."
+      }
+    ]
+  },
+  "headline_review": {
+    "candidates": [
+      {
+        "text": "JUROS EM 13,75%: COPOM DECIDE HOJE SE FAZ NOVO CORTE",
+        "angle": "numero",
+        "rationale": "Expõe a taxa vigente e a decisão pendente sem antecipar resultado; interessa a crédito e aplicações no Brasil.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 24,
+          "especificidade": 20,
+          "clareza": 15,
+          "originalidade": 4
+        },
+        "total": 98
+      },
+      {
+        "text": "APÓS CINCO CORTES, COPOM DECIDE HOJE O RUMO DOS JUROS",
+        "angle": "marco",
+        "rationale": "O marco de cinco cortes anteriores explica a dúvida atual, mas omite o valor de referência da taxa Selic.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 23,
+          "especificidade": 17,
+          "clareza": 15,
+          "originalidade": 3
+        },
+        "total": 93
+      },
+      {
+        "text": "COPOM DEFINE HOJE SE SELIC CONTINUA EM 13,75% AO ANO",
+        "angle": "decisao",
+        "rationale": "A decisão é central para o país e a taxa vigente é clara; a frase mantém o resultado em aberto até a noite.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 22,
+          "especificidade": 19,
+          "clareza": 14,
+          "originalidade": 2
+        },
+        "total": 92
+      }
+    ],
+    "fact_to_emphasize": "O Copom decide na noite de 4 de novembro se mantém ou reduz a Selic, atualmente em 13,75% ao ano após cinco cortes consecutivos.",
+    "why_brazilians_care": "A Selic influencia o custo do crédito, os financiamentos e a remuneração de aplicações; o resultado ainda não foi anunciado.",
+    "editorial_reason": "A primeira opção informa taxa vigente e decisão pendente com precisão, evitando apresentar expectativas de analistas como decisão do Banco Central."
+  },
+  "visual_review_requested": "2026-11-04-slot_03-mobile-proof"
+}
