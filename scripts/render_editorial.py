@@ -264,7 +264,7 @@ def cover(story,idx,photo_image):
     boxes=[]
     for i,line in enumerate(lines):
         y=start+i*stride
-        bb=textbox(d,(90,y),line,size,'display',ink,(88,925,1000,1250),reg,'headline_'+str(i))
+        bb=textbox(d,(90,y),line,size,'display',ink,(80,925,1000,1250),reg,'headline_'+str(i))
         boxes.append(bb)
     for prev,nxt in zip(boxes,boxes[1:]):
         if nxt[1]-prev[3]<22:raise ValueError('Unacceptable photo-cover headline spacing')
