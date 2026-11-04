@@ -1,0 +1,122 @@
+{
+  "status": "PASS_TECHNICAL_ONLY",
+  "slug": "2026-11-04-caged-121-mil-menor-setembro-desde-2020",
+  "kind": "headline",
+  "theme": "cream",
+  "jpeg_count": 1,
+  "qa": [
+    {
+      "headline_size": 84,
+      "headline_lines": [
+        "BRASIL CRIA 121 MIL",
+        "VAGAS, MENOR SETEMBRO",
+        "DESDE 2020"
+      ],
+      "boxes": [
+        [
+          "section",
+          [
+            83,
+            202,
+            396,
+            226
+          ]
+        ],
+        [
+          "photo_context",
+          [
+            84,
+            855,
+            547,
+            876
+          ]
+        ],
+        [
+          "headline_0",
+          [
+            90,
+            934,
+            789,
+            996
+          ]
+        ],
+        [
+          "headline_1",
+          [
+            90,
+            1052,
+            976,
+            1125
+          ]
+        ],
+        [
+          "headline_2",
+          [
+            90,
+            1170,
+            473,
+            1232
+          ]
+        ],
+        [
+          "photo_credit",
+          [
+            90,
+            1264,
+            545,
+            1281
+          ]
+        ],
+        [
+          "source",
+          [
+            90,
+            1315,
+            359,
+            1330
+          ]
+        ],
+        [
+          "footer",
+          [
+            850,
+            1315,
+            937,
+            1329
+          ]
+        ]
+      ],
+      "theme": "cream",
+      "slide_index": 0,
+      "photograph_bounds": [
+        0,
+        148,
+        1080,
+        900
+      ],
+      "photograph_fraction": 0.557037037037037,
+      "photograph_context": "archive_illustrative"
+    }
+  ],
+  "editorial_approval": false,
+  "published_to_instagram": false,
+  "source_links": [
+    "https://noticias.uol.com.br/ultimas-noticias/reuters/2026/11/04/brasil-abre-121305-vagas-formais-de-trabalho-em-setembro-abaixo-do-esperado.htm",
+    "https://www1.folha.uol.com.br/mercado/2026/11/brasil-registra-pior-setembro-na-criacao-de-empregos-formais-desde-o-inicio-da-serie-historica-diz-caged.shtml",
+    "https://economia.uol.com.br/noticias/redacao/2026/11/04/caged-setembro-2026.ghtm"
+  ],
+  "risk": "low",
+  "sha256_jpegs": {
+    "2026-11-04-caged-121-mil-menor-setembro-desde-2020-01.jpg": "9551740e78337ce22075563ce1e0466738d36c84e207d1d6babce08aea5d5158"
+  },
+  "photograph": {
+    "source_photo_file": "2026-11-04-caged-121-mil-menor-setembro-desde-2020-source-photo.jpg",
+    "sha256": "fd308dbcaab3f0117eff1a8ed0823556c56f198dac50db3fbf1ea054a613c20c",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Documents_required_to_work_in_Brazil.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Documents_required_to_work_in_Brazil.jpg",
+    "license": "CC0 1.0",
+    "author": "Wilfredor",
+    "context": "archive_illustrative",
+    "photo_fraction": 0.557037037037037
+  }
+}
