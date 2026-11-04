@@ -22,6 +22,10 @@ TODAS as capas de notícias e carrosséis devem conter fotografia **real, licenc
 ## Objetivo e linguagem
 Jornal digital, contexto factual, sem clickbait. 1080×1350 para feed. Azul profundo `#101C2E`, papel `#F5F3ED`, coral `#EA674D` são cores de função, não ornamentais. Foco único (manchete). Elemento de data e arte documental/ilustração com legenda fiel ao seu caráter. Logo oficial sempre de `assets/logo-horizontal-inverse-v01.svg` ou outro arquivo canônico autorizado.
 
+## Escolha editorial ANTES do encaixe visual — 04/11/2026
+
+Nunca compor primeiro uma manchete genérica e tentar salvá-la por tipografia. A pauta nova deve trazer `headline_review` com no mínimo três candidatos de ângulos factuais e um vencedor que exponha um fato distintivo. A redação escolhe o título e o renderer apenas encaixa, sem inventar/fabricar palavras. Manter foto real >=55%, legibilidade 320px e grid. Se o título escolhido não couber, reescrever e reavaliar alternativas, nunca comprimir até o ilegível. O workflow público exige objeto de revisão, e o workflow privado roda `headline_gate.py` antes da Meta.
+
 ## Passagem obrigatória de composição
 1. Ler a pauta factual, corte temporal, fonte original e legenda ANTES de ajustar a arte.
 2. Escrever a manchete em 1–2 linhas completas. Palavras são conteúdo, nunca preencher espaços vagos.
