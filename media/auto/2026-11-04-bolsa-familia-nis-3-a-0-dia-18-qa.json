@@ -1,0 +1,122 @@
+{
+  "status": "PASS_TECHNICAL_ONLY",
+  "slug": "2026-11-04-bolsa-familia-nis-3-a-0-dia-18",
+  "kind": "headline",
+  "theme": "cream",
+  "jpeg_count": 1,
+  "qa": [
+    {
+      "headline_size": 84,
+      "headline_lines": [
+        "BOLSA FAMÍLIA: NIS DE 3 A",
+        "0 RECEBE EM 18 DE",
+        "NOVEMBRO"
+      ],
+      "boxes": [
+        [
+          "section",
+          [
+            83,
+            202,
+            386,
+            228
+          ]
+        ],
+        [
+          "photo_context",
+          [
+            84,
+            855,
+            547,
+            876
+          ]
+        ],
+        [
+          "headline_0",
+          [
+            90,
+            934,
+            984,
+            1013
+          ]
+        ],
+        [
+          "headline_1",
+          [
+            90,
+            1052,
+            698,
+            1114
+          ]
+        ],
+        [
+          "headline_2",
+          [
+            90,
+            1170,
+            485,
+            1232
+          ]
+        ],
+        [
+          "photo_credit",
+          [
+            90,
+            1264,
+            703,
+            1281
+          ]
+        ],
+        [
+          "source",
+          [
+            90,
+            1315,
+            419,
+            1334
+          ]
+        ],
+        [
+          "footer",
+          [
+            850,
+            1315,
+            937,
+            1329
+          ]
+        ]
+      ],
+      "theme": "cream",
+      "slide_index": 0,
+      "photograph_bounds": [
+        0,
+        148,
+        1080,
+        900
+      ],
+      "photograph_fraction": 0.557037037037037,
+      "photograph_context": "archive_illustrative"
+    }
+  ],
+  "editorial_approval": false,
+  "published_to_instagram": false,
+  "source_links": [
+    "https://istoedinheiro.com.br/bolsa-familia-novembro-2026-calendario-pagamentos",
+    "https://www.gov.br/mds/pt-br/acesso-a-informacao/legislacao/portaria/portaria-mds-no-1-221-de-16-de-outubro-de-2026",
+    "https://www1.folha.uol.com.br/mercado/2026/11/bolsa-familia-tera-pagamento-antecipado-em-novembro-e-dezembro-veja-novo-calendario.shtml"
+  ],
+  "risk": "low",
+  "sha256_jpegs": {
+    "2026-11-04-bolsa-familia-nis-3-a-0-dia-18-01.jpg": "a934f23fcd7dda638e6e062ba9b60ef5c843462534f8cda0c3753f7d5427fa1b"
+  },
+  "photograph": {
+    "source_photo_file": "2026-11-04-bolsa-familia-nis-3-a-0-dia-18-source-photo.jpg",
+    "sha256": "20f4e63b00bb8b6ec318b9034f9eba2b8f3439478c43cc0c21c9c3b2adbd8478",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/17.09.26_-_Presidente_Lula_faz_an%C3%BAncio_de_atualiza%C3%A7%C3%A3o_monet%C3%A1ria_do_Bolsa_Fam%C3%ADlia_%2855532727242%29.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:17.09.26_-_Presidente_Lula_faz_an%C3%BAncio_de_atualiza%C3%A7%C3%A3o_monet%C3%A1ria_do_Bolsa_Fam%C3%ADlia_(55532727242).jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Ricardo Stuckert",
+    "context": "archive_illustrative",
+    "photo_fraction": 0.557037037037037
+  }
+}
