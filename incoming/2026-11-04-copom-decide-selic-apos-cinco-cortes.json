@@ -8,10 +8,10 @@
   "section": "ECONOMIA / BRASIL",
   "headline": "COPOM DECIDE HOJE SE SELIC FICA EM 13,75% OU TEM NOVO CORTE",
   "deck": "Após cinco reduções seguidas, Banco Central avalia manter ou cortar os juros básicos nesta quarta-feira. A decisão ainda não foi divulgada.",
-  "source_label": "FOLHA / UOL / BANCO CENTRAL",
+  "source_label": "FOLHA / INFOMONEY / BC",
   "sources": [
     "https://www1.folha.uol.com.br/mercado/2026/11/copom-deve-manter-selic-em-1375-e-interromper-ciclo-de-cortes.shtml",
-    "https://economia.uol.com.br/cotacoes/noticias/redacao/2026/11/04/dolar-e-bolsa-4-de-novembro-de-2026.ghtm"
+    "https://www.infomoney.com.br/mercados/copom-caged-emprego-eua-agenda-04112026/"
   ],
   "editorial_process": "source-anchored-double-review",
   "verification_log": [
@@ -20,8 +20,8 @@
       "source_excerpt": "O Copom (Comitê de Política Monetária) deve interromper nesta quarta-feira (4) o ciclo de redução da taxa básica de juros"
     },
     {
-      "source_url": "https://economia.uol.com.br/cotacoes/noticias/redacao/2026/11/04/dolar-e-bolsa-4-de-novembro-de-2026.ghtm",
-      "source_excerpt": "Mercado aguarda definição da taxa básica de juros. As atenções do dia estão direcionadas para a reunião do Copom"
+      "source_url": "https://www.infomoney.com.br/mercados/copom-caged-emprego-eua-agenda-04112026/",
+      "source_excerpt": "O grande destaque da semana, divulgado nesta quarta-feira (4), é a decisão sobre a política monetária, do Comitê de Política Monetária (Copom)."
     }
   ],
   "photo": {
@@ -36,7 +36,7 @@
     "context": "archive_illustrative",
     "context_note": "Foto de arquivo da sede do Banco Central, feita em 2015; não mostra a reunião do Copom nem a decisão sobre juros de 4 de novembro de 2026."
   },
-  "caption": "O Comitê de Política Monetária (Copom) do Banco Central decide nesta quarta-feira, 4 de novembro de 2026, se mantém a taxa Selic em 13,75% ao ano ou promove um novo corte. O resultado ainda não foi anunciado no momento desta publicação.\n\nA taxa básica foi reduzida em cinco reuniões consecutivas desde março. Na pesquisa de 29 economistas citada pela Folha, 24 projetam manutenção e cinco esperam corte de 0,25 ponto percentual. São expectativas de analistas, não decisão oficial. O UOL também relata incerteza do mercado quanto ao resultado.\n\nA Selic é referência para os juros da economia e influencia crédito, financiamentos e aplicações, embora as taxas finais cobradas pelos bancos dependam de outros fatores. A decisão está prevista para a noite desta quarta-feira. A CADERNA atualizará o assunto somente após divulgação oficial confirmada.\n\nFontes: Folha de S.Paulo (4/11/2026, 4h), UOL Economia (4/11/2026, 9h05); calendário e histórico do Banco Central consultados como contexto institucional. Não há resultado antecipado.\n\nFoto real de arquivo: sede do Banco Central em Brasília, em 23/02/2015. A fotografia NÃO mostra a reunião do Copom de 04/11/2026 nem a decisão sobre a Selic. Jonas Pereira / Agência Senado, Wikimedia Commons, CC BY 2.0; recorte editorial.\n\n#Selic #Copom #Economia #BancoCentral #Caderna",
+  "caption": "O Comitê de Política Monetária (Copom) do Banco Central decide nesta quarta-feira, 4 de novembro de 2026, se mantém a taxa Selic em 13,75% ao ano ou promove um novo corte. O resultado ainda não foi anunciado no momento desta publicação.\n\nA taxa básica foi reduzida em cinco reuniões consecutivas desde março. Na pesquisa de 29 economistas citada pela Folha, 24 projetam manutenção e cinco esperam corte de 0,25 ponto percentual. São expectativas de analistas, não decisão oficial. O InfoMoney registra a decisão como destaque da agenda econômica e atribui ao Itaú a expectativa de manutenção, sem tratá-la como resultado oficial.\n\nA Selic é referência para os juros da economia e influencia crédito, financiamentos e aplicações, embora as taxas finais cobradas pelos bancos dependam de outros fatores. A decisão está prevista para a noite desta quarta-feira. A CADERNA atualizará o assunto somente após divulgação oficial confirmada.\n\nFontes: Folha de S.Paulo (4/11/2026, 4h), InfoMoney (4/11/2026, 6h27); calendário e histórico do Banco Central consultados como contexto institucional. Não há resultado antecipado.\n\nFoto real de arquivo: sede do Banco Central em Brasília, em 23/02/2015. A fotografia NÃO mostra a reunião do Copom de 04/11/2026 nem a decisão sobre a Selic. Jonas Pereira / Agência Senado, Wikimedia Commons, CC BY 2.0; recorte editorial.\n\n#Selic #Copom #Economia #BancoCentral #Caderna",
   "audience_relevance": {
     "what_happened": "Copom se reúne em 4 de novembro para definir se mantém ou altera a Selic após cinco reduções consecutivas.",
     "why_it_matters_to_brazilians": "Juros básicos orientam o custo do crédito e influenciam financiamentos e aplicações no Brasil; decisão será divulgada nesta noite.",
@@ -100,5 +100,5 @@
     "why_brazilians_care": "A Selic influencia o custo do crédito, os financiamentos e a remuneração de aplicações; o resultado ainda não foi anunciado.",
     "editorial_reason": "A formulação explicita manutenção versus novo corte, com número atual e fato pendente; a versão mais curta não coube no algoritmo de linhas e foi rejeitada pelo render."
   },
-  "visual_review_requested": "2026-11-04-slot_03-rewrite-after-render-fit-failure"
+  "visual_review_requested": "2026-11-04-slot_03-source-replaced-after-uol-fetch-failure"
 }
