@@ -62,8 +62,8 @@
           [
             90,
             1315,
-            344,
-            1330
+            390,
+            1334
           ]
         ],
         [
@@ -92,11 +92,11 @@
   "published_to_instagram": false,
   "source_links": [
     "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/producao-de-petroleo-e-gas-natural-bate-novo-recorde-em-setembro",
-    "https://economia.uol.com.br/noticias/redacao/2026/11/03/pre-sal-leva-brasil-a-recorde-de-producao-de-petroleo-e-gas-em-setembro.ghtm"
+    "https://www.infomoney.com.br/brasil/producao-de-petroleo-e-gas-natural-no-brasil-alcanca-novo-recorde-mostra-anp/"
   ],
   "risk": "low",
   "sha256_jpegs": {
-    "2026-11-04-brasil-recorde-petroleo-gas-setembro-01.jpg": "0a39919c8fd10d41471c3cbfb871c9c32628ec665cc45be5c3685f2bb36c6c1a"
+    "2026-11-04-brasil-recorde-petroleo-gas-setembro-01.jpg": "eb327fda485e355f7f6f38efc14a451017b183c8ebf00caedfda299a4fd89a7a"
   },
   "photograph": {
     "source_photo_file": "2026-11-04-brasil-recorde-petroleo-gas-setembro-source-photo.jpg",
