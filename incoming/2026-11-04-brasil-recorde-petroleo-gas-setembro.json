@@ -8,10 +8,10 @@
   "section": "ENERGIA / BRASIL",
   "headline": "PETRÓLEO E GÁS BATEM RECORDE NO BRASIL",
   "deck": "País produziu 6,12 milhões de barris de óleo equivalente por dia em setembro, segundo a ANP. O pré-sal respondeu por 83,3% do total.",
-  "source_label": "ANP / UOL ECONOMIA",
+  "source_label": "ANP / ESTADÃO CONTEÚDO",
   "sources": [
     "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/producao-de-petroleo-e-gas-natural-bate-novo-recorde-em-setembro",
-    "https://economia.uol.com.br/noticias/redacao/2026/11/03/pre-sal-leva-brasil-a-recorde-de-producao-de-petroleo-e-gas-em-setembro.ghtm"
+    "https://www.infomoney.com.br/brasil/producao-de-petroleo-e-gas-natural-no-brasil-alcanca-novo-recorde-mostra-anp/"
   ],
   "editorial_process": "source-anchored-double-review",
   "verification_log": [
@@ -20,8 +20,8 @@
       "source_excerpt": "Em setembro de 2026, o Brasil produziu 6,120 milhões de barris de óleo equivalente por dia"
     },
     {
-      "source_url": "https://economia.uol.com.br/noticias/redacao/2026/11/03/pre-sal-leva-brasil-a-recorde-de-producao-de-petroleo-e-gas-em-setembro.ghtm",
-      "source_excerpt": "A produção nacional de petróleo e gás bateu mais um recorde histórico em setembro deste ano"
+      "source_url": "https://www.infomoney.com.br/brasil/producao-de-petroleo-e-gas-natural-no-brasil-alcanca-novo-recorde-mostra-anp/",
+      "source_excerpt": "O Brasil atingiu um novo marco na produção de petróleo e gás natural em setembro de 2026"
     }
   ],
   "photo": {
@@ -36,7 +36,7 @@
     "context": "archive_illustrative",
     "context_note": "Foto de arquivo de 2011, na baía de Guanabara; não mostra as instalações responsáveis pelo recorde de setembro de 2026."
   },
-  "caption": "O Brasil registrou em setembro de 2026 uma produção recorde de 6,120 milhões de barris de óleo equivalente por dia, segundo dados divulgados pela Agência Nacional do Petróleo (ANP) em 3 de novembro.\n\nDesse total, 4,711 milhões de barris por dia foram de petróleo. A produção de gás natural chegou a 223,98 milhões de metros cúbicos diários. O pré-sal respondeu por 83,3% do volume total, equivalente a 5,1 milhões de barris de óleo equivalente por dia.\n\nO dado é sobre a produção nacional, não sobre uma redução imediata nos preços dos combustíveis. Fontes: ANP (03/11/2026) e UOL Economia (03/11/2026).\n\nFoto de arquivo: plataforma e navio petroleiro na baía de Guanabara, em 2011. Não retrata os campos ou as instalações que registraram o recorde de setembro de 2026. Fotografia: Andrevruas / Wikimedia Commons (CC BY 3.0). Imagem adaptada por recorte editorial.\n\n#Petróleo #Energia #Economia #Brasil #Caderna",
+  "caption": "O Brasil registrou em setembro de 2026 uma produção recorde de 6,120 milhões de barris de óleo equivalente por dia, segundo dados divulgados pela Agência Nacional do Petróleo (ANP) em 3 de novembro.\n\nDesse total, 4,711 milhões de barris por dia foram de petróleo. A produção de gás natural chegou a 223,98 milhões de metros cúbicos diários. O pré-sal respondeu por 83,3% do volume total, equivalente a 5,1 milhões de barris de óleo equivalente por dia.\n\nO dado é sobre a produção nacional, não sobre uma redução imediata nos preços dos combustíveis. Fontes: ANP (03/11/2026) e Estadão Conteúdo via InfoMoney (03/11/2026).\n\nFoto de arquivo: plataforma e navio petroleiro na baía de Guanabara, em 2011. Não retrata os campos ou as instalações que registraram o recorde de setembro de 2026. Fotografia: Andrevruas / Wikimedia Commons (CC BY 3.0). Imagem adaptada por recorte editorial.\n\n#Petróleo #Energia #Economia #Brasil #Caderna",
   "audience_relevance": {
     "what_happened": "Produção nacional de petróleo e gás atingiu 6,120 milhões boe/d em setembro de 2026, novo recorde divulgado em 3 de novembro.",
     "why_it_matters_to_brazilians": "A produção de energia afeta um setor central da economia brasileira, exportações e debate sobre abastecimento, sem implicar redução automática no preço da gasolina.",
