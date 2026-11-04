@@ -8,9 +8,9 @@
     {
       "headline_size": 84,
       "headline_lines": [
-        "JUROS EM 13,75%: COPOM",
-        "DECIDE HOJE SE FAZ NOVO",
-        "CORTE"
+        "COPOM DECIDE HOJE SE",
+        "SELIC FICA EM 13,75% OU",
+        "TEM NOVO CORTE"
       ],
       "boxes": [
         [
@@ -34,9 +34,9 @@
         [
           "headline_0",
           [
-            84,
+            90,
             934,
-            969,
+            859,
             1013
           ]
         ],
@@ -45,8 +45,8 @@
           [
             90,
             1052,
-            945,
-            1131
+            938,
+            1125
           ]
         ],
         [
@@ -54,7 +54,7 @@
           [
             90,
             1170,
-            300,
+            671,
             1232
           ]
         ],
@@ -106,7 +106,7 @@
   ],
   "risk": "low",
   "sha256_jpegs": {
-    "2026-11-04-copom-decide-selic-apos-cinco-cortes-01.jpg": "e44309a81c9f1cb23fc6e02ff47fa13466d1693b10808af05a655477557f3a6f"
+    "2026-11-04-copom-decide-selic-apos-cinco-cortes-01.jpg": "0a7761b4f4b3ccd8363c843a93915ce91f10a18c2128e3121413e8fbf646bbb9"
   },
   "photograph": {
     "source_photo_file": "2026-11-04-copom-decide-selic-apos-cinco-cortes-source-photo.jpg",
