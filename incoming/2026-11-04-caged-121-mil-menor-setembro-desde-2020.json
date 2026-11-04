@@ -1,0 +1,109 @@
+{
+  "id": "2026-11-04-caged-121-mil-menor-setembro-desde-2020",
+  "kind": "headline",
+  "example_only": false,
+  "theme": "cream",
+  "risk": "low",
+  "topic": "economia",
+  "section": "ECONOMIA / TRABALHO",
+  "headline": "BRASIL CRIA 121 MIL VAGAS, MENOR SETEMBRO DESDE 2020",
+  "deck": "Novo Caged registra 121.305 empregos formais líquidos em setembro, 43% abaixo de 2025, mas com mais admissões do que desligamentos.",
+  "source_label": "REUTERS / FOLHA / UOL",
+  "sources": [
+    "https://noticias.uol.com.br/ultimas-noticias/reuters/2026/11/04/brasil-abre-121305-vagas-formais-de-trabalho-em-setembro-abaixo-do-esperado.htm",
+    "https://www1.folha.uol.com.br/mercado/2026/11/brasil-registra-pior-setembro-na-criacao-de-empregos-formais-desde-o-inicio-da-serie-historica-diz-caged.shtml",
+    "https://economia.uol.com.br/noticias/redacao/2026/11/04/caged-setembro-2026.ghtm"
+  ],
+  "editorial_process": "source-anchored-double-review",
+  "verification_log": [
+    {
+      "source_url": "https://noticias.uol.com.br/ultimas-noticias/reuters/2026/11/04/brasil-abre-121305-vagas-formais-de-trabalho-em-setembro-abaixo-do-esperado.htm",
+      "source_excerpt": "O resultado do mês passado foi fruto de 2.214.437 admissões e 2.093.132 desligamentos"
+    },
+    {
+      "source_url": "https://www1.folha.uol.com.br/mercado/2026/11/brasil-registra-pior-setembro-na-criacao-de-empregos-formais-desde-o-inicio-da-serie-historica-diz-caged.shtml",
+      "source_excerpt": "O Brasil gerou 121,3 mil postos de trabalho formais em setembro, uma queda de 43% em comparação com o mesmo mês do ano passado"
+    },
+    {
+      "source_url": "https://economia.uol.com.br/noticias/redacao/2026/11/04/caged-setembro-2026.ghtm",
+      "source_excerpt": "O Brasil abriu 121.305 postos de trabalho com carteira assinada em setembro, mostram dados divulgados hoje (4) pelo Caged"
+    }
+  ],
+  "photo": {
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Documents_required_to_work_in_Brazil.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Documents_required_to_work_in_Brazil.jpg",
+    "author": "Wilfredor",
+    "credit": "Wilfredor / Wikimedia Commons, CC0 1.0",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "date_taken": "2014-08-17",
+    "description": "Fotografia real de carteira de trabalho e documento de estrangeiro no Brasil, produzida em 2014.",
+    "context": "archive_illustrative",
+    "context_note": "Foto de arquivo de documentos de trabalho, feita em 2014; não mostra o levantamento Caged de setembro de 2026 nem pessoas contratadas ou desligadas."
+  },
+  "caption": "O Brasil criou 121.305 empregos com carteira assinada em setembro de 2026, segundo o Novo Caged, divulgado nesta quarta-feira (4). O saldo foi positivo, mas é o menor para um mês de setembro desde o início da série comparável, em 2020.\n\nForam 2.214.437 admissões e 2.093.132 desligamentos. Em comparação com setembro de 2025, o saldo de vagas foi cerca de 43% menor. Serviços lideraram a abertura líquida de postos, com 81.241, enquanto a agropecuária registrou saldo negativo de 4.381.\n\nOs dados mostram o movimento dos empregos formais e podem ser revisados. Não representam, isoladamente, a taxa de desemprego medida pelo IBGE. A comparação com anos anteriores a 2020 exige cautela porque a metodologia mudou.\n\nFontes: Reuters (4/11, 14h32), Folha de S.Paulo (4/11, 15h01) e UOL (4/11, 14h38), com dados atribuídos ao Ministério do Trabalho e Emprego.\n\nFoto ilustrativa de arquivo, feita em 2014: carteira de trabalho e documento brasileiro. A imagem não retrata as contratações de setembro de 2026 nem o levantamento do Caged. Foto: Wilfredor / Wikimedia Commons, CC0 1.0. Recorte editorial.\n\n#Caged #Emprego #Economia #Trabalho #Caderna",
+  "audience_relevance": {
+    "what_happened": "O Novo Caged divulgou saldo de 121.305 empregos formais em setembro de 2026, menor setembro desde 2020.",
+    "why_it_matters_to_brazilians": "Trabalhadores e empregadores brasileiros podem acompanhar o ritmo real de criação de vagas formais, positivo mas em desaceleração.",
+    "affected_brazilian_audience": "Trabalhadores CLT, pessoas procurando emprego, estudantes e empresas brasileiras.",
+    "concrete_brazil_connection": "Indicador nacional de admissões e desligamentos com carteira assinada no Brasil, divulgado pelo MTE.",
+    "newsworthiness_score": 96,
+    "rejected_alternatives": [
+      {
+        "topic": "educacao",
+        "reason": "Corretores do Enem: score 80/100, útil mas menos urgente e já há pautas Enem no ledger."
+      },
+      {
+        "topic": "tecnologia",
+        "reason": "PL de IA e drones ambientais: score 73/100, proposta legislativa ainda não é lei e exige checagem adicional."
+      }
+    ]
+  },
+  "headline_review": {
+    "candidates": [
+      {
+        "text": "BRASIL CRIA 121 MIL VAGAS, MENOR SETEMBRO DESDE 2020",
+        "angle": "contraste",
+        "rationale": "Dá o saldo positivo de vagas e a comparação histórica limitada à série do Novo Caged, evitando sugerir fechamento líquido de empregos.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 25,
+          "especificidade": 20,
+          "clareza": 14,
+          "originalidade": 4
+        },
+        "total": 98
+      },
+      {
+        "text": "EMPREGO FORMAL CAI 43% NO RITMO DE CRIAÇÃO EM SETEMBRO",
+        "angle": "consequencia",
+        "rationale": "Expõe a queda anual do ritmo de criação de vagas, mas pode ser confundida com queda do estoque de empregos e demanda mais contexto.",
+        "scores": {
+          "precisao": 32,
+          "interesse_publico": 23,
+          "especificidade": 17,
+          "clareza": 12,
+          "originalidade": 4
+        },
+        "total": 88
+      },
+      {
+        "text": "SERVIÇOS LIDERAM CRIAÇÃO DE EMPREGOS EM SETEMBRO",
+        "angle": "numero",
+        "rationale": "Aponta o setor com maior saldo líquido de empregos, porém deixa de mostrar o dado mais distintivo da divulgação nacional.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 20,
+          "especificidade": 17,
+          "clareza": 14,
+          "originalidade": 3
+        },
+        "total": 89
+      }
+    ],
+    "fact_to_emphasize": "Saldo líquido positivo de 121.305 empregos CLT em setembro, o menor para o mês na série Novo Caged iniciada em 2020.",
+    "why_brazilians_care": "O ritmo de abertura de empregos com carteira assinada afeta diretamente quem busca trabalho e quem contrata no Brasil.",
+    "editorial_reason": "A versão vencedora combina número concreto e comparação histórica, sem confundir queda do ritmo de contratação com destruição líquida de empregos."
+  },
+  "visual_review_requested": "2026-11-04-slot_06-photo-archive-mobile-320"
+}
