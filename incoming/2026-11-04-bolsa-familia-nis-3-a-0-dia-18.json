@@ -59,40 +59,40 @@
     "candidates": [
       {
         "text": "BOLSA FAMÍLIA: NIS DE 3 A 0 RECEBE EM 18 DE NOVEMBRO",
-        "angle": "impacto brasileiro",
-        "rationale": "Indica diretamente quem recebe e em qual data.",
+        "angle": "impacto",
+        "rationale": "O título informa os oito finais de NIS afetados e o dia preciso de disponibilização do benefício, com relevância direta ao orçamento familiar.",
         "scores": {
-          "factual_accuracy": 35,
-          "public_interest": 24,
-          "specificity": 20,
-          "mobile_clarity": 14,
-          "originality": 4
+          "precisao": 35,
+          "interesse_publico": 24,
+          "especificidade": 20,
+          "clareza": 14,
+          "originalidade": 4
         },
         "total": 97
       },
       {
         "text": "BOLSA FAMÍLIA TERÁ PAGAMENTOS EM APENAS TRÊS DIAS",
-        "angle": "número/marco/prazo",
-        "rationale": "Expõe a concentração do calendário, mas não identifica o grupo.",
+        "angle": "numero",
+        "rationale": "A concentração em três datas é comprovada pelas matérias e pela alteração extraordinária, mas não esclarece de imediato os grupos atendidos.",
         "scores": {
-          "factual_accuracy": 35,
-          "public_interest": 23,
-          "specificity": 18,
-          "mobile_clarity": 15,
-          "originality": 3
+          "precisao": 35,
+          "interesse_publico": 23,
+          "especificidade": 18,
+          "clareza": 15,
+          "originalidade": 3
         },
         "total": 94
       },
       {
         "text": "ANTECIPAÇÃO MUDA DATA DO BOLSA FAMÍLIA EM NOVEMBRO",
-        "angle": "mudança/consequência",
-        "rationale": "Mudança verdadeira, porém pouco específica.",
+        "angle": "mudanca",
+        "rationale": "A mudança do calendário é verdadeira e de interesse prático, porém a redação genérica não apresenta ao leitor a data nem os finais de NIS.",
         "scores": {
-          "factual_accuracy": 35,
-          "public_interest": 22,
-          "specificity": 15,
-          "mobile_clarity": 15,
-          "originality": 3
+          "precisao": 35,
+          "interesse_publico": 22,
+          "especificidade": 15,
+          "clareza": 15,
+          "originalidade": 3
         },
         "total": 90
       }
