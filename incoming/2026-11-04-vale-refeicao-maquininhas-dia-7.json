@@ -66,7 +66,7 @@
     "candidates": [
       {
         "text": "VA E VR: PRAZO DA NOVA REGRA É DIA 7",
-        "angle": "prazo",
+        "angle": "servico",
         "rationale": "Destaca a data de 7/11 para a obrigação de interoperabilidade, sem afirmar que todos os sistemas já estarão integrados; versão curta para manter o grid da capa legível.",
         "scores": {
           "precisao": 35,
