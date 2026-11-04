@@ -1,0 +1,112 @@
+{
+  "id": "2026-11-04-cgu-inscricoes-terminam-18h",
+  "kind": "headline",
+  "example_only": false,
+  "theme": "cream",
+  "risk": "low",
+  "topic": "educacao",
+  "section": "CONCURSOS / SERVIÇO",
+  "headline": "CONCURSO DA CGU: INSCRIÇÕES TERMINAM HOJE ÀS 18H",
+  "deck": "São 60 vagas para auditor federal, com remuneração inicial de R$ 20 mil. Inscrição pelo Cebraspe; confira o edital e os requisitos.",
+  "source_label": "CGU / DIÁRIO DO NORDESTE",
+  "sources": [
+    "https://www.gov.br/cgu/pt-br/assuntos/noticias/2026/defeso-eleitoral/cgu-publica-edital-de-concurso-para-60-vagas-de-auditor-federal-de-financas-e-controle",
+    "https://diariodonordeste.verdesmares.com.br/papo-carreira/concurso-da-cgu-com-60-vagas-e-salario-inicial-de-r-20-mil-encerra-inscricoes-saiba-quando-1.3803246",
+    "https://www.gov.br/cgu/pt-br/acesso-a-informacao/concursos"
+  ],
+  "editorial_process": "source-anchored-double-review",
+  "verification_log": [
+    {
+      "source_url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/2026/defeso-eleitoral/cgu-publica-edital-de-concurso-para-60-vagas-de-auditor-federal-de-financas-e-controle",
+      "source_excerpt": "As inscrições estarão abertas a partir deste sábado (10/10) até 4 de novembro de 2026, pelo site do Cebraspe."
+    },
+    {
+      "source_url": "https://diariodonordeste.verdesmares.com.br/papo-carreira/concurso-da-cgu-com-60-vagas-e-salario-inicial-de-r-20-mil-encerra-inscricoes-saiba-quando-1.3803246",
+      "source_excerpt": "Interessados em se inscrever no concurso público da Controladoria-Geral da União (CGU) têm até o início da noite desta quarta-feira (4) para efetuar a inscrição."
+    },
+    {
+      "source_url": "https://www.gov.br/cgu/pt-br/acesso-a-informacao/concursos",
+      "source_excerpt": "São 60 vagas para o cargo de Auditor Federal de Finanças e Controle (AFFC)"
+    }
+  ],
+  "photo": {
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Sede_da_CGU.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Sede_da_CGU.jpg",
+    "author": "Ascom/CGU",
+    "credit": "Ascom/CGU / Wikimedia Commons, CC BY-SA 4.0",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "date_taken": "2013-03-01",
+    "description": "Sede da CGU, Edifício Darcy Ribeiro, Brasília.",
+    "context": "archive_illustrative",
+    "context_note": "Foto de arquivo de 2013 da sede da CGU; não mostra candidatos nem inscrições do concurso de 2026."
+  },
+  "caption": "O prazo de inscrição no concurso da Controladoria-Geral da União (CGU) termina nesta quarta-feira, 4 de novembro, às 18h, horário de Brasília, segundo o Diário do Nordeste. São 60 vagas para auditor federal de Finanças e Controle, das quais 30 são na especialidade de tecnologia da informação. A remuneração inicial informada pela CGU é de R$ 20 mil.\n\nO edital exige diploma de nível superior, conforme as regras do cargo. A taxa de inscrição é de R$ 170. As provas estão previstas para 13 de dezembro, nas 27 capitais. Consulte o edital e faça a inscrição no site do Cebraspe.\n\nFontes: Controladoria-Geral da União (9/10/2026 e página oficial de concursos); Diário do Nordeste (4/11/2026). Confira o horário-limite diretamente no edital.\n\nFoto ilustrativa de arquivo: sede da CGU em Brasília, 2013. A fotografia não documenta o concurso de 2026. Ascom/CGU / Wikimedia Commons, CC BY-SA 4.0; recorte editorial.\n\n#Concursos #CGU #Caderna",
+  "audience_relevance": {
+    "what_happened": "Inscrições do concurso CGU com 60 vagas terminam em 4 de novembro.",
+    "why_it_matters_to_brazilians": "Prazo de inscrição termina hoje para candidatos a cargos públicos federais.",
+    "affected_brazilian_audience": "Brasileiros com graduação interessados em carreira pública e profissionais de TI.",
+    "concrete_brazil_connection": "Concurso federal com provas nas 27 capitais.",
+    "newsworthiness_score": 91,
+    "rejected_alternatives": [
+      {
+        "topic": "economia",
+        "reason": "Copom ainda sem decisão e tema já abordado no ledger."
+      },
+      {
+        "topic": "educacao",
+        "reason": "Enem tem grande relevância, mas aviso dos locais é de outubro."
+      },
+      {
+        "topic": "agro",
+        "reason": "Feira de MT na China tem efeitos ainda prospectivos."
+      }
+    ]
+  },
+  "headline_review": {
+    "candidates": [
+      {
+        "text": "CONCURSO DA CGU: INSCRIÇÕES TERMINAM HOJE ÀS 18H",
+        "angle": "prazo",
+        "rationale": "Prazo imediato de inscrição",
+        "scores": {
+          "factual_accuracy": 35,
+          "public_interest": 25,
+          "specificity": 20,
+          "mobile_clarity": 15,
+          "originality": 4
+        },
+        "total": 99
+      },
+      {
+        "text": "60 VAGAS NA CGU TÊM INSCRIÇÕES ATÉ ESTA QUARTA",
+        "angle": "número",
+        "rationale": "Número de vagas e data",
+        "scores": {
+          "factual_accuracy": 35,
+          "public_interest": 24,
+          "specificity": 19,
+          "mobile_clarity": 14,
+          "originality": 3
+        },
+        "total": 95
+      },
+      {
+        "text": "CGU OFERECE SALÁRIO INICIAL DE R$ 20 MIL EM CONCURSO",
+        "angle": "remuneração",
+        "rationale": "Remuneração confirmada",
+        "scores": {
+          "factual_accuracy": 35,
+          "public_interest": 23,
+          "specificity": 18,
+          "mobile_clarity": 13,
+          "originality": 3
+        },
+        "total": 92
+      }
+    ],
+    "fact_to_emphasize": "Prazo de inscrição termina em 4/11 às 18h, segundo o Diário do Nordeste.",
+    "why_brazilians_care": "Prazo de concurso federal se encerra hoje.",
+    "editorial_reason": "Prazo imediato é o ângulo de maior utilidade."
+  }
+}
