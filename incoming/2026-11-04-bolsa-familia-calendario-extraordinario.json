@@ -1,0 +1,112 @@
+{
+  "id": "2026-11-04-bolsa-familia-calendario-extraordinario",
+  "kind": "headline",
+  "example_only": false,
+  "theme": "cream",
+  "risk": "low",
+  "topic": "servicos",
+  "section": "SERVIÇOS / CIDADANIA",
+  "headline": "BOLSA FAMÍLIA: NIS DE 3 A 0 RECEBE EM 18 DE NOVEMBRO",
+  "deck": "Calendário extraordinário antecipa os depósitos de novembro: NIS final 1 recebe dia 16, final 2 no dia 17 e demais finais no dia 18.",
+  "source_label": "FOLHA DE S.PAULO / MDS",
+  "sources": [
+    "https://www1.folha.uol.com.br/mercado/2026/11/bolsa-familia-tera-pagamento-antecipado-em-novembro-e-dezembro-veja-novo-calendario.shtml",
+    "https://www.gov.br/mds/pt-br/acesso-a-informacao/legislacao/portaria/portaria-mds-no-1-221-de-16-de-outubro-de-2026"
+  ],
+  "editorial_process": "source-anchored-double-review",
+  "verification_log": [
+    {
+      "source_url": "https://www1.folha.uol.com.br/mercado/2026/11/bolsa-familia-tera-pagamento-antecipado-em-novembro-e-dezembro-veja-novo-calendario.shtml",
+      "source_excerpt": "Os benefícios serão pagos nos dias 16, 17 e 18 de novembro, conforme o número final do NIS (Número de Identificação Social)."
+    },
+    {
+      "source_url": "https://www.gov.br/mds/pt-br/acesso-a-informacao/legislacao/portaria/portaria-mds-no-1-221-de-16-de-outubro-de-2026",
+      "source_excerpt": "disciplina procedimentos extraordinários relativos ao calendário de pagamentos de benefícios do Programa Bolsa Família - PBF."
+    }
+  ],
+  "photo": {
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/17.09.26_-_Presidente_Lula_faz_an%C3%BAncio_de_atualiza%C3%A7%C3%A3o_monet%C3%A1ria_do_Bolsa_Fam%C3%ADlia_%2855532727242%29.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:17.09.26_-_Presidente_Lula_faz_an%C3%BAncio_de_atualiza%C3%A7%C3%A3o_monet%C3%A1ria_do_Bolsa_Fam%C3%ADlia_(55532727242).jpg",
+    "author": "Ricardo Stuckert",
+    "credit": "Ricardo Stuckert / Wikimedia Commons, CC BY-SA 4.0",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "date_taken": "2026-09-17",
+    "description": "Fotografia documental de reunião oficial sobre atualização monetária do Bolsa Família em Brasília em setembro de 2026.",
+    "context": "archive_illustrative",
+    "context_note": "Foto de arquivo de reunião oficial em setembro; não mostra pagamentos nem beneficiários recebendo o Bolsa Família em novembro."
+  },
+  "caption": "O Bolsa Família terá calendário extraordinário em novembro de 2026. Beneficiários com NIS final 1 recebem em 16 de novembro; com final 2, em 17 de novembro; e com finais 3, 4, 5, 6, 7, 8, 9 e 0, em 18 de novembro. A antecipação está prevista na Portaria MDS nº 1.221, de 16 de outubro, publicada em 19 de outubro. A página geral do MDS ainda mostra o calendário original; a norma extraordinária é posterior. Confira também a data nos aplicativos Bolsa Família ou Caixa Tem. Fontes: Portaria MDS 1.221/2026 (19/10), Folha de S.Paulo (04/11). Nova apuração para a janela de 22h30, sem reaproveitar aprovação técnica anterior. A reportagem da ISTOÉ Dinheiro (03/11) também foi consultada na apuração. Foto de arquivo ilustrativa: reunião de 17/09/2026 sobre atualização do benefício, em Brasília; a imagem não registra os pagamentos de novembro nem mostra beneficiários recebendo valores. Foto: Ricardo Stuckert / Wikimedia Commons, CC BY-SA 4.0, com recorte editorial. #BolsaFamília #Serviços #Caderna",
+  "audience_relevance": {
+    "what_happened": "O calendário extraordinário de novembro antecipa para 18/11 o pagamento dos NIS finais 3 a 0.",
+    "why_it_matters_to_brazilians": "Milhões de famílias beneficiárias podem conferir quando o dinheiro estará disponível e evitar deslocamentos em data errada.",
+    "affected_brazilian_audience": "Famílias beneficiárias do Bolsa Família, responsáveis familiares e profissionais de assistência social.",
+    "concrete_brazil_connection": "Alteração nacional do calendário do programa de transferência de renda brasileiro.",
+    "newsworthiness_score": 91,
+    "rejected_alternatives": [
+      {
+        "topic": "energia",
+        "reason": "Itaipu: projeção econômica, sem segundo veículo independente e foto licenciada confirmados."
+      },
+      {
+        "topic": "infraestrutura",
+        "reason": "Leilão de transmissão: anúncio oficial de 30/10, sem apuração independente e foto concluídas."
+      },
+      {
+        "topic": "tecnologia",
+        "reason": "PL de IA/drones: high impact exige terceiro veículo e fotografia, não verificados."
+      },
+      {
+        "topic": "educacao",
+        "reason": "Enem já no ledger; não repetir."
+      }
+    ]
+  },
+  "headline_review": {
+    "candidates": [
+      {
+        "text": "BOLSA FAMÍLIA: NIS DE 3 A 0 RECEBE EM 18 DE NOVEMBRO",
+        "angle": "impacto",
+        "rationale": "O título informa os oito finais de NIS afetados e o dia preciso de disponibilização do benefício, com relevância direta ao orçamento familiar.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 24,
+          "especificidade": 20,
+          "clareza": 14,
+          "originalidade": 4
+        },
+        "total": 97
+      },
+      {
+        "text": "BOLSA FAMÍLIA TERÁ PAGAMENTOS EM APENAS TRÊS DIAS",
+        "angle": "numero",
+        "rationale": "A concentração em três datas é comprovada pelas matérias e pela alteração extraordinária, mas não esclarece de imediato os grupos atendidos.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 23,
+          "especificidade": 18,
+          "clareza": 15,
+          "originalidade": 3
+        },
+        "total": 94
+      },
+      {
+        "text": "ANTECIPAÇÃO MUDA DATA DO BOLSA FAMÍLIA EM NOVEMBRO",
+        "angle": "mudanca",
+        "rationale": "A mudança do calendário é verdadeira e de interesse prático, porém a redação genérica não apresenta ao leitor a data nem os finais de NIS.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 22,
+          "especificidade": 15,
+          "clareza": 15,
+          "originalidade": 3
+        },
+        "total": 90
+      }
+    ],
+    "fact_to_emphasize": "NIS finais 3 a 0 terão depósito em 18 de novembro, segundo o calendário extraordinário.",
+    "why_brazilians_care": "Beneficiários precisam conhecer a data exata de disponibilização do dinheiro.",
+    "editorial_reason": "A alternativa mais específica informa público e prazo sem prometer benefício extra."
+  },
+  "visual_review_requested": "2026-11-04-slot_10-new-render-mobile-proof"
+}
