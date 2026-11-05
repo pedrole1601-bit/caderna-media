@@ -80,7 +80,7 @@
       },
       {
         "text": "FEIRA DE CIÊNCIA GRATUITA TERMINA AMANHÃ EM CURITIBA",
-        "angle": "prazo",
+        "angle": "servico",
         "rationale": "Informa o prazo de visitação de 6 de novembro e a gratuidade, sem alegar número contestado de projetos.",
         "scores": {
           "precisao": 35,
@@ -93,7 +93,7 @@
       },
       {
         "text": "ROBÓTICA E PLANETÁRIO INTEGRAM FEIRA ABERTA EM CURITIBA",
-        "angle": "atracoes",
+        "angle": "marco",
         "rationale": "Atrações concretas confirmadas pela reportagem, mas menos urgente.",
         "scores": {
           "precisao": 35,
