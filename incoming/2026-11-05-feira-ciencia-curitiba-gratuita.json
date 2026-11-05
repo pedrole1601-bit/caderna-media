@@ -1,0 +1,112 @@
+{
+  "id": "2026-11-05-feira-ciencia-curitiba-gratuita",
+  "kind": "headline",
+  "example_only": false,
+  "theme": "cream",
+  "risk": "low",
+  "topic": "ciencia",
+  "section": "CIÊNCIA / EDUCAÇÃO",
+  "headline": "FEIRA DE CIÊNCIA GRATUITA TERMINA AMANHÃ EM CURITIBA",
+  "deck": "A FECCI recebe visitantes até sexta (6), com projetos de estudantes, oficinas, robótica e planetário no câmpus Neoville da UTFPR.",
+  "source_label": "BAND / FECCI",
+  "sources": [
+    "https://www.band.com.br/nacional/pr/feira-cientifica-em-curitiba-tera-689-projetos-e-entrada-gratuita",
+    "https://fecci.net.br/"
+  ],
+  "editorial_process": "source-anchored-double-review",
+  "verification_log": [
+    {
+      "source_url": "https://www.band.com.br/nacional/pr/feira-cientifica-em-curitiba-tera-689-projetos-e-entrada-gratuita",
+      "source_excerpt": "O evento acontecerá na Universidade Tecnológica Federal do Paraná (UTFPR), no Câmpus Neoville, na Cidade Industrial de Curitiba (CIC), com entrada gratuita e programação aberta ao público."
+    },
+    {
+      "source_url": "https://fecci.net.br/",
+      "source_excerpt": "4 a 6 de novembro de 2026\nUTFPR Sede Neoville - Curitiba"
+    }
+  ],
+  "photo": {
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/SNCT_DF_2019_%2848944706257%29.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:SNCT_DF_2019_(48944706257).jpg",
+    "author": "Neila Rocha / MCTIC",
+    "credit": "Neila Rocha / Ministério da Ciência, Tecnologia e Inovações / Wikimedia Commons, CC BY 2.0",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "date_taken": "2019-10-22",
+    "description": "Fotografia documental de estudantes visitando feira de ciência e tecnologia em Brasília, em outubro de 2019.",
+    "context": "archive_illustrative",
+    "context_note": "Foto de arquivo de feira de ciência em Brasília, em 2019; não retrata a FECCI 2026 nem o câmpus Neoville."
+  },
+  "caption": "Uma feira científica aberta ao público reúne projetos de estudantes, oficinas e atividades interativas em Curitiba. A FECCI 2026 acontece no câmpus Neoville da Universidade Tecnológica Federal do Paraná (UTFPR) até sexta-feira, 6 de novembro.\n\nA entrada é gratuita. Entre as atrações divulgadas estão atividades de robótica, planetário e apresentações culturais. Nesta quinta-feira (5), a programação inclui oficinas e atrações ao longo do dia.\n\nA quantidade de trabalhos foi atualizada pelos organizadores para 688 no site oficial, enquanto a reportagem anterior da Band citava 689. Por isso, a CADERNA não utiliza número fechado na manchete.\n\nLocal: Rua Pedro Gusso, 2601, Cidade Industrial de Curitiba. Consulte horários e orientações de visitação em fecci.net.br.\n\nFontes: Band Paraná (29/10/2026) e site oficial FECCI (consultado em 05/11/2026).\n\nFoto ilustrativa de arquivo: estudantes em feira de ciência no Distrito Federal em 2019. Não representa a FECCI 2026 nem seus participantes. Foto: Neila Rocha/MCTIC / Wikimedia Commons, CC BY 2.0. Recorte editorial.\n\n#Ciência #Curitiba #Educação #FECCI #Caderna",
+  "audience_relevance": {
+    "what_happened": "A FECCI 2026 recebe visitantes até 6 de novembro, com entrada gratuita, na UTFPR Neoville em Curitiba.",
+    "why_it_matters_to_brazilians": "Famílias, estudantes e professores de Curitiba e região podem visitar gratuitamente atividades de divulgação científica nesta quinta e sexta.",
+    "affected_brazilian_audience": "Estudantes, professores e famílias da região metropolitana de Curitiba e visitantes do Paraná.",
+    "concrete_brazil_connection": "Evento público presencial em universidade federal brasileira com entrada gratuita e prazo de visitação em curso.",
+    "newsworthiness_score": 76,
+    "rejected_alternatives": [
+      {
+        "topic": "economia",
+        "reason": "Copom e Selic já publicados no ledger; não duplicar."
+      },
+      {
+        "topic": "educacao",
+        "reason": "Enem e Futuras Cientistas já publicados no ledger."
+      },
+      {
+        "topic": "transportes",
+        "reason": "Rumor de greve de caminhoneiros exige checagem de alto impacto e atualização em tempo real, ainda sem fonte primária atual."
+      },
+      {
+        "topic": "servicos",
+        "reason": "Calendário Bolsa Família tem incoming anterior sem QA final correspondente; evitar duplicação e inconsistência documental."
+      }
+    ]
+  },
+  "headline_review": {
+    "candidates": [
+      {
+        "text": "FEIRA DE CIÊNCIA EM CURITIBA TEM ENTRADA GRATUITA",
+        "angle": "impacto",
+        "rationale": "Destaca a gratuidade confirmada, mas não informa o encerramento amanhã.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 22,
+          "especificidade": 19,
+          "clareza": 15,
+          "originalidade": 4
+        },
+        "total": 95
+      },
+      {
+        "text": "FEIRA DE CIÊNCIA GRATUITA TERMINA AMANHÃ EM CURITIBA",
+        "angle": "prazo",
+        "rationale": "Informa o prazo de visitação de 6 de novembro e a gratuidade, sem alegar número contestado de projetos.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 24,
+          "especificidade": 20,
+          "clareza": 15,
+          "originalidade": 4
+        },
+        "total": 98
+      },
+      {
+        "text": "ROBÓTICA E PLANETÁRIO INTEGRAM FEIRA ABERTA EM CURITIBA",
+        "angle": "atracoes",
+        "rationale": "Atrações concretas confirmadas pela reportagem, mas menos urgente.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 21,
+          "especificidade": 19,
+          "clareza": 14,
+          "originalidade": 4
+        },
+        "total": 93
+      }
+    ],
+    "fact_to_emphasize": "A feira científica gratuita recebe visitantes no câmpus Neoville até 6 de novembro de 2026.",
+    "why_brazilians_care": "Visitação gratuita e prazo imediato para famílias e estudantes de Curitiba e região.",
+    "editorial_reason": "A manchete vencedora apresenta benefício e prazo, omite a contagem conflitante de 688/689 trabalhos e não confunde foto de arquivo com evento atual."
+  },
+  "visual_review_requested": "2026-11-05-slot_01-mobile-proof"
+}
