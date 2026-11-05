@@ -1,0 +1,121 @@
+{
+  "status": "PASS_TECHNICAL_ONLY",
+  "slug": "2026-11-05-feira-ciencia-curitiba-gratuita",
+  "kind": "headline",
+  "theme": "cream",
+  "jpeg_count": 1,
+  "qa": [
+    {
+      "headline_size": 84,
+      "headline_lines": [
+        "FEIRA DE CIÊNCIA",
+        "GRATUITA TERMINA",
+        "AMANHÃ EM CURITIBA"
+      ],
+      "boxes": [
+        [
+          "section",
+          [
+            83,
+            202,
+            362,
+            233
+          ]
+        ],
+        [
+          "photo_context",
+          [
+            84,
+            855,
+            547,
+            876
+          ]
+        ],
+        [
+          "headline_0",
+          [
+            90,
+            934,
+            677,
+            1013
+          ]
+        ],
+        [
+          "headline_1",
+          [
+            90,
+            1052,
+            760,
+            1114
+          ]
+        ],
+        [
+          "headline_2",
+          [
+            90,
+            1170,
+            859,
+            1250
+          ]
+        ],
+        [
+          "photo_credit",
+          [
+            90,
+            1264,
+            669,
+            1281
+          ]
+        ],
+        [
+          "source",
+          [
+            90,
+            1315,
+            275,
+            1330
+          ]
+        ],
+        [
+          "footer",
+          [
+            850,
+            1315,
+            937,
+            1329
+          ]
+        ]
+      ],
+      "theme": "cream",
+      "slide_index": 0,
+      "photograph_bounds": [
+        0,
+        148,
+        1080,
+        900
+      ],
+      "photograph_fraction": 0.557037037037037,
+      "photograph_context": "archive_illustrative"
+    }
+  ],
+  "editorial_approval": false,
+  "published_to_instagram": false,
+  "source_links": [
+    "https://www.band.com.br/nacional/pr/feira-cientifica-em-curitiba-tera-689-projetos-e-entrada-gratuita",
+    "https://fecci.net.br/"
+  ],
+  "risk": "low",
+  "sha256_jpegs": {
+    "2026-11-05-feira-ciencia-curitiba-gratuita-01.jpg": "df3566a5ea7f764defd385df9d3d3668310a5828f62b69a7b0ab3db61736bbac"
+  },
+  "photograph": {
+    "source_photo_file": "2026-11-05-feira-ciencia-curitiba-gratuita-source-photo.jpg",
+    "sha256": "4121b928e7f91314741bab9fc9ac8f28fe9c0bb15c38fd8b960c51eaa419aa72",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/SNCT_DF_2019_%2848944706257%29.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:SNCT_DF_2019_(48944706257).jpg",
+    "license": "CC BY 2.0",
+    "author": "Neila Rocha / MCTIC",
+    "context": "archive_illustrative",
+    "photo_fraction": 0.557037037037037
+  }
+}
