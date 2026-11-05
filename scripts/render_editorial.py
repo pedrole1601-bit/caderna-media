@@ -249,7 +249,8 @@ def cover(story,idx,photo_image):
     reg=[]
     textbox(d,(83,202),story['section'].upper(),27,'bold',PAPER,(78,190,690,244),reg,'section')
     p=story['photo']
-    badge='FOTO REAL DE ARQUIVO · ILUSTRATIVA' if p['context']=='archive_illustrative' else 'FOTO DOCUMENTAL DO FATO'
+    badge=(p.get('cover_notice') or 'FOTO REAL DE ARQUIVO · ILUSTRATIVA') if p['context']=='archive_illustrative' else 'FOTO DOCUMENTAL DO FATO'
+    if len(badge)>70:raise ValueError('Photo cover notice does not fit')
     d.rectangle((61,842,1004,896),fill=INK)
     textbox(d,(84,855),badge,25,'bold',PAPER,(80,849,990,891),reg,'photo_context')
     d.rectangle((0,899,1080,907),fill=CORAL)
