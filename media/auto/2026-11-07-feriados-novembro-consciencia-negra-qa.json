@@ -1,0 +1,122 @@
+{
+  "status": "PASS_TECHNICAL_ONLY",
+  "slug": "2026-11-07-feriados-novembro-consciencia-negra",
+  "kind": "headline",
+  "theme": "cream",
+  "jpeg_count": 1,
+  "qa": [
+    {
+      "headline_size": 84,
+      "headline_lines": [
+        "20 DE NOVEMBRO CAI",
+        "NUMA SEXTA: É FERIADO",
+        "NACIONAL"
+      ],
+      "boxes": [
+        [
+          "section",
+          [
+            83,
+            202,
+            410,
+            233
+          ]
+        ],
+        [
+          "photo_context",
+          [
+            84,
+            855,
+            774,
+            878
+          ]
+        ],
+        [
+          "headline_0",
+          [
+            90,
+            934,
+            813,
+            996
+          ]
+        ],
+        [
+          "headline_1",
+          [
+            90,
+            1052,
+            901,
+            1131
+          ]
+        ],
+        [
+          "headline_2",
+          [
+            90,
+            1170,
+            450,
+            1232
+          ]
+        ],
+        [
+          "photo_credit",
+          [
+            90,
+            1264,
+            638,
+            1282
+          ]
+        ],
+        [
+          "source",
+          [
+            90,
+            1315,
+            343,
+            1330
+          ]
+        ],
+        [
+          "footer",
+          [
+            850,
+            1315,
+            937,
+            1329
+          ]
+        ]
+      ],
+      "theme": "cream",
+      "slide_index": 0,
+      "photograph_bounds": [
+        0,
+        148,
+        1080,
+        900
+      ],
+      "photograph_fraction": 0.557037037037037,
+      "photograph_context": "archive_illustrative"
+    }
+  ],
+  "editorial_approval": false,
+  "published_to_instagram": false,
+  "source_links": [
+    "https://noticias.uol.com.br/cotidiano/ultimas-noticias/2026/11/03/dia-20-de-novembro-e-feriado-nacional.ghtm",
+    "https://www1.folha.uol.com.br/mercado/2026/11/proximo-feriado-nacional-cai-em-um-domingo-veja-calendario-ate-o-fim-do-ano.shtml",
+    "https://www.tre-rj.jus.br/legislacao/compilada/atos-da-presidencia/2025/ato-pr-tre-rj-no-369-de-15-de-dezembro-de-2025"
+  ],
+  "risk": "low",
+  "sha256_jpegs": {
+    "2026-11-07-feriados-novembro-consciencia-negra-01.jpg": "2c2ee9eb1afb3522e5f351dfbbd6fb25fbd05d85d410ab653271a8e803c830dd"
+  },
+  "photograph": {
+    "source_photo_file": "2026-11-07-feriados-novembro-consciencia-negra-source-photo.jpg",
+    "sha256": "111b5d16994b3aba93d95d3ba1be2d10bf84ee7b59e8985f2715ba478bba710c",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Est%C3%A1tua_de_Zumbi_dos_Palmares.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Est%C3%A1tua_de_Zumbi_dos_Palmares.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Amikep",
+    "context": "archive_illustrative",
+    "photo_fraction": 0.557037037037037
+  }
+}
