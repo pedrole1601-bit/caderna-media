@@ -75,7 +75,7 @@
     "candidates": [
       {
         "text": "NATAL ABRE 17 BOLSAS DE R$ 2,5 MIL PARA PESQUISADORES",
-        "angle": "resultado",
+        "angle": "numero",
         "rationale": "Apresenta cidade, número e valor confirmado em edital e reportagem; omite prazo, que aparece na linha de apoio.",
         "scores": {
           "precisao": 35,
@@ -88,7 +88,7 @@
       },
       {
         "text": "SELEÇÃO EM NATAL TEM 17 BOLSAS; INSCRIÇÕES ATÉ DIA 12",
-        "angle": "prazo",
+        "angle": "servico",
         "rationale": "Foco na data de encerramento e quantidade; omite o valor mensal, reduzindo utilidade para quem decide se candidatar.",
         "scores": {
           "precisao": 35,
