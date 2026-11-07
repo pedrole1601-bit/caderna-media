@@ -1,0 +1,122 @@
+{
+  "status": "PASS_TECHNICAL_ONLY",
+  "slug": "2026-11-07-natal-seleciona-17-pesquisadores",
+  "kind": "headline",
+  "theme": "cream",
+  "jpeg_count": 1,
+  "qa": [
+    {
+      "headline_size": 84,
+      "headline_lines": [
+        "NATAL ABRE 17 BOLSAS DE",
+        "R$ 2,5 MIL PARA",
+        "PESQUISADORES"
+      ],
+      "boxes": [
+        [
+          "section",
+          [
+            83,
+            202,
+            466,
+            228
+          ]
+        ],
+        [
+          "photo_context",
+          [
+            84,
+            855,
+            811,
+            878
+          ]
+        ],
+        [
+          "headline_0",
+          [
+            90,
+            934,
+            961,
+            996
+          ]
+        ],
+        [
+          "headline_1",
+          [
+            90,
+            1052,
+            635,
+            1127
+          ]
+        ],
+        [
+          "headline_2",
+          [
+            90,
+            1170,
+            637,
+            1246
+          ]
+        ],
+        [
+          "photo_credit",
+          [
+            90,
+            1264,
+            655,
+            1280
+          ]
+        ],
+        [
+          "source",
+          [
+            90,
+            1315,
+            527,
+            1330
+          ]
+        ],
+        [
+          "footer",
+          [
+            850,
+            1315,
+            937,
+            1329
+          ]
+        ]
+      ],
+      "theme": "cream",
+      "slide_index": 0,
+      "photograph_bounds": [
+        0,
+        148,
+        1080,
+        900
+      ],
+      "photograph_fraction": 0.557037037037037,
+      "photograph_context": "archive_illustrative"
+    }
+  ],
+  "editorial_approval": false,
+  "published_to_instagram": false,
+  "source_links": [
+    "https://portal.natal.rn.gov.br/news/post2/46062",
+    "https://portaln10.com.br/concursos/processo-seletivo/semurb-abre-17-vagas-com-bolsas-de-r-2-500-para-profissionais-de-diversas-areas-357137/",
+    "https://www.funcitern.org.br/selecoesfuncitern/edital-n-0242026-semurbfuncitern"
+  ],
+  "risk": "low",
+  "sha256_jpegs": {
+    "2026-11-07-natal-seleciona-17-pesquisadores-01.jpg": "3fabfc4c7e367fbf8feb9d4e5b9277b3e212380268944831a567bf17475b45ab"
+  },
+  "photograph": {
+    "source_photo_file": "2026-11-07-natal-seleciona-17-pesquisadores-source-photo.jpg",
+    "sha256": "ed6f2cd17e6c98c3e927986b97e8ae6889f6b92e9260bafd808c99318856d603",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Prefeitura-Natal.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Prefeitura-Natal.jpg",
+    "license": "CC BY-SA 3.0",
+    "author": "Patrick-br",
+    "context": "archive_illustrative",
+    "photo_fraction": 0.557037037037037
+  }
+}
