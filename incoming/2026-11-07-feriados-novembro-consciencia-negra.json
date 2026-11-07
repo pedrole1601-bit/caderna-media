@@ -1,0 +1,112 @@
+{
+  "id": "2026-11-07-feriados-novembro-consciencia-negra",
+  "kind": "headline",
+  "example_only": false,
+  "theme": "cream",
+  "risk": "low",
+  "topic": "servicos",
+  "section": "SERVIÇOS / CALENDÁRIO",
+  "headline": "20 DE NOVEMBRO CAI NUMA SEXTA: É FERIADO NACIONAL",
+  "deck": "Dia de Zumbi e da Consciência Negra será feriado nacional em 20 de novembro. Funcionamento do comércio e dos serviços segue regras específicas.",
+  "source_label": "UOL / FOLHA / TRE-RJ",
+  "sources": [
+    "https://noticias.uol.com.br/cotidiano/ultimas-noticias/2026/11/03/dia-20-de-novembro-e-feriado-nacional.ghtm",
+    "https://www1.folha.uol.com.br/mercado/2026/11/proximo-feriado-nacional-cai-em-um-domingo-veja-calendario-ate-o-fim-do-ano.shtml",
+    "https://www.tre-rj.jus.br/legislacao/compilada/atos-da-presidencia/2025/ato-pr-tre-rj-no-369-de-15-de-dezembro-de-2025"
+  ],
+  "editorial_process": "source-anchored-double-review",
+  "verification_log": [
+    {
+      "source_url": "https://noticias.uol.com.br/cotidiano/ultimas-noticias/2026/11/03/dia-20-de-novembro-e-feriado-nacional.ghtm",
+      "source_excerpt": "Em 2026, o feriado de 20 de novembro cai em uma sexta-feira."
+    },
+    {
+      "source_url": "https://www1.folha.uol.com.br/mercado/2026/11/proximo-feriado-nacional-cai-em-um-domingo-veja-calendario-ate-o-fim-do-ano.shtml",
+      "source_excerpt": "Até o fim do ano, outras duas datas nacionais estão previstas: o Dia da Consciência Negra, em 20 de novembro, e o Natal, em 25 de dezembro."
+    },
+    {
+      "source_url": "https://www.tre-rj.jus.br/legislacao/compilada/atos-da-presidencia/2025/ato-pr-tre-rj-no-369-de-15-de-dezembro-de-2025",
+      "source_excerpt": "CONSIDERANDO os feriados nacionais civis estabelecidos em legislação federal"
+    }
+  ],
+  "photo": {
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Est%C3%A1tua_de_Zumbi_dos_Palmares.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Est%C3%A1tua_de_Zumbi_dos_Palmares.jpg",
+    "author": "Amikep",
+    "credit": "Amikep / Wikimedia Commons / CC BY-SA 4.0",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "date_taken": "2017-05-06",
+    "description": "Estátua de Zumbi dos Palmares no Parque Memorial Quilombo dos Palmares, Serra da Barriga, Alagoas.",
+    "context": "archive_illustrative",
+    "context_note": "FOTO DE ARQUIVO ILUSTRATIVA: monumento em Alagoas fotografado em 2017; não representa evento ocorrido em novembro de 2026.",
+    "http_validation": "Imagem original JPEG exibida por Wikimedia via link Original file; dimensão 3456x4608 e licença verificadas na página da obra.",
+    "adaptation_note": "Atribuir autor, link da obra e licença; indicar corte/edição e avaliar compartilhamento pela mesma licença para a arte derivada.",
+    "cover_notice": "ARQUIVO: ZUMBI EM ALAGOAS (2017) · FOTO ILUSTRATIVA"
+  },
+  "caption": "O Dia Nacional de Zumbi e da Consciência Negra, em 20 de novembro, será numa sexta-feira em 2026. A data é feriado nacional desde 2024, por força da Lei 14.759/2023. Para quem normalmente não trabalha aos sábados e domingos, pode haver um fim de semana prolongado. O funcionamento do comércio e de serviços e a compensação do trabalho em feriado dependem das regras aplicáveis. Foto de arquivo ilustrativa: monumento a Zumbi na Serra da Barriga (AL), fotografado em 2017 por Amikep. Wikimedia Commons, CC BY-SA 4.0; eventual corte da imagem deve ser indicado.\n\nArte com fotografia recortada e adaptada sob CC BY-SA 4.0, com atribuição e compartilhamento pela mesma licença da obra derivada. Fonte da fotografia: https://commons.wikimedia.org/wiki/File:Est%C3%A1tua_de_Zumbi_dos_Palmares.jpg | Licença: https://creativecommons.org/licenses/by-sa/4.0/\n\nFontes: UOL e Folha (03/11/2026); calendário oficial TRE-RJ. #ConsciênciaNegra #Feriado #Calendário2026 #Caderna",
+  "audience_relevance": {
+    "what_happened": "20 de novembro é feriado nacional e cai em uma sexta-feira em 2026.",
+    "why_it_matters_to_brazilians": "Permite planejar viagens, trabalho e atendimento de serviços com antecedência.",
+    "affected_brazilian_audience": "Trabalhadores, estudantes e famílias brasileiras.",
+    "concrete_brazil_connection": "Data nacional prevista pela Lei 14.759/2023.",
+    "newsworthiness_score": 84,
+    "rejected_alternatives": [
+      {
+        "topic": "agro",
+        "reason": "PNAE ainda sem fotografia auditada e sem novidade imediata."
+      },
+      {
+        "topic": "transportes",
+        "reason": "PNL 2050 é pauta antiga sem novidade de novembro."
+      }
+    ]
+  },
+  "headline_review": {
+    "candidates": [
+      {
+        "text": "20 DE NOVEMBRO CAI NUMA SEXTA: É FERIADO NACIONAL",
+        "angle": "servico",
+        "rationale": "Direto, útil e fiel ao calendário.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 24,
+          "especificidade": 19,
+          "clareza": 14,
+          "originalidade": 3
+        },
+        "total": 95
+      },
+      {
+        "text": "CONSCIÊNCIA NEGRA: FERIADO NACIONAL SERÁ NA SEXTA-FEIRA",
+        "angle": "impacto",
+        "rationale": "Bom contexto e sem promessa de folga universal.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 24,
+          "especificidade": 19,
+          "clareza": 14,
+          "originalidade": 3
+        },
+        "total": 92
+      },
+      {
+        "text": "NOVEMBRO TEM FERIADO NACIONAL NA SEXTA, DIA 20",
+        "angle": "marco",
+        "rationale": "Correto, porém menos específico.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 24,
+          "especificidade": 19,
+          "clareza": 14,
+          "originalidade": 3
+        },
+        "total": 87
+      }
+    ],
+    "fact_to_emphasize": "O Dia Nacional de Zumbi e da Consciência Negra é feriado nacional em 20/11 e cai numa sexta-feira em 2026.",
+    "why_brazilians_care": "O feriado nacional de 20 de novembro cai numa sexta-feira, útil para planejamento de trabalho, viagens e serviços; não prometer folga a todas as categorias.",
+    "editorial_reason": "Headline factual, verificável e sem sugerir folga universal."
+  },
+  "visual_review_requested": "2026-11-07-slot_04-mobile-proof"
+}
