@@ -1,0 +1,121 @@
+{
+  "id": "2026-11-07-natal-seleciona-17-pesquisadores",
+  "kind": "headline",
+  "example_only": false,
+  "theme": "cream",
+  "risk": "low",
+  "topic": "servicos",
+  "section": "SERVIÇOS / OPORTUNIDADES",
+  "headline": "NATAL ABRE 17 BOLSAS DE R$ 2,5 MIL PARA PESQUISADORES",
+  "deck": "Seleção da Semurb recebe inscrições até 12 de novembro; bolsas são mensais e exigem formação superior.",
+  "source_label": "PREFEITURA DE NATAL / PORTAL N10 / FUNCITERN",
+  "sources": [
+    "https://portal.natal.rn.gov.br/news/post2/46062",
+    "https://portaln10.com.br/concursos/processo-seletivo/semurb-abre-17-vagas-com-bolsas-de-r-2-500-para-profissionais-de-diversas-areas-357137/",
+    "https://www.funcitern.org.br/selecoesfuncitern/edital-n-0242026-semurbfuncitern"
+  ],
+  "editorial_process": "source-anchored-double-review",
+  "verification_log": [
+    {
+      "source_url": "https://portal.natal.rn.gov.br/news/post2/46062",
+      "source_excerpt": "O Edital nº 024/2026, publicado na quinta-feira (5), prevê 17 bolsas de pesquisa e extensão no valor de R$ 2.500, com duração de até 12 meses e carga horária de 30 horas semanais.",
+      "source_published_at": "2026-11-06",
+      "checked_at": "2026-11-07T12:55:31-03:00",
+      "claim": "Edital, valor, duração e carga horária"
+    },
+    {
+      "source_url": "https://portaln10.com.br/concursos/processo-seletivo/semurb-abre-17-vagas-com-bolsas-de-r-2-500-para-profissionais-de-diversas-areas-357137/",
+      "source_excerpt": "A Prefeitura de Natal abriu nesta sexta-feira (6) as inscrições para uma seleção com 17 bolsas de R$ 2.500 mensais destinadas a profissionais de diferentes áreas de formação.",
+      "source_published_at": "2026-11-06",
+      "checked_at": "2026-11-07T12:55:31-03:00",
+      "claim": "Reportagem independente sobre vagas"
+    },
+    {
+      "source_url": "https://www.funcitern.org.br/selecoesfuncitern/edital-n-0242026-semurbfuncitern",
+      "source_excerpt": "EDITAL Nº 024/2026 – SEMURB/FUNCITERN",
+      "source_published_at": "2026-11-05",
+      "checked_at": "2026-11-07T12:55:31-03:00",
+      "claim": "Página original do edital 024/2026 aberta; confrontar anexos antes de detalhar requisitos"
+    }
+  ],
+  "photo": {
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Prefeitura-Natal.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Prefeitura-Natal.jpg",
+    "author": "Patrick-br",
+    "credit": "Patrick-br / Wikimedia Commons / CC BY-SA 3.0",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "date_taken": "2004-12-15",
+    "description": "Fotografia real do Palácio Felipe Camarão, sede da Prefeitura de Natal.",
+    "context": "archive_illustrative",
+    "context_note": "FOTO DE ARQUIVO ILUSTRATIVA: sede da Prefeitura de Natal fotografada em dezembro de 2004; não mostra a seleção, a Semurb ou candidatos.",
+    "http_validation": "Link 'Original file' do Wikimedia Commons foi aberto via ferramenta web; JPEG 1600x1200 exibido em upload.wikimedia.org; etapa C deve reconfirmar HTTP e hash.",
+    "adaptation_note": "Fotografia cortada/adaptada; crédito Patrick-br, link da obra e CC BY-SA 3.0; arte derivada disponibilizada sob CC BY-SA 3.0, preservando ShareAlike.",
+    "cover_notice": "ARQUIVO: PREFEITURA DE NATAL (2004) · FOTO ILUSTRATIVA"
+  },
+  "caption": "Natal abriu inscrições para selecionar 17 pesquisadores bolsistas da Semurb, em parceria com a Funcitern. As bolsas são de R$ 2.500 por mês, com carga de 30 horas semanais e duração de até 12 meses. O prazo informado é 12 de novembro de 2026, às 23h59. A seleção envolve análise documental, curricular e entrevistas; confira requisitos e regras de vínculos no Edital 024/2026 no site da Funcitern. Foto de arquivo ilustrativa: Prefeitura de Natal em dezembro de 2004, Patrick-br / Wikimedia Commons, CC BY-SA 3.0. A fotografia não retrata o processo seletivo; qualquer corte deve ser indicado e respeitar a licença.\n\nArte com fotografia recortada/adaptada sob CC BY-SA 3.0, compartilhada pela mesma licença, com crédito Patrick-br. Obra: https://commons.wikimedia.org/wiki/File:Prefeitura-Natal.jpg | Licença: https://creativecommons.org/licenses/by-sa/3.0/. Imagem de arquivo de 2004, não registra o processo seletivo.\n\nFontes: Prefeitura de Natal (06/11/2026), Portal N10 (06/11/2026) e Edital 024/2026 da Funcitern. #Natal #Bolsas #Pesquisa #Caderna",
+  "audience_relevance": {
+    "what_happened": "Semurb/Funcitern abriu 17 bolsas de R$ 2.500 mensais.",
+    "why_it_matters_to_brazilians": "Inscrições abertas em Natal/RN para 17 bolsas mensais de R$ 2.500, com prazo de 12/11; serviço regional útil para profissionais graduados.",
+    "affected_brazilian_audience": "Profissionais graduados do RN e interessados que atendam ao edital.",
+    "concrete_brazil_connection": "Seleção municipal de Natal/RN, edital 024/2026.",
+    "newsworthiness_score": 91,
+    "rejected_alternatives": [
+      {
+        "topic": "educacao",
+        "reason": "Fames sem fotografia pertinente licenciada."
+      },
+      {
+        "topic": "cultura",
+        "reason": "Oficinas em Vila Velha mantidas como reserva; prioridade para prazo de seleção e 17 bolsas."
+      }
+    ]
+  },
+  "headline_review": {
+    "candidates": [
+      {
+        "text": "NATAL ABRE 17 BOLSAS DE R$ 2,5 MIL PARA PESQUISADORES",
+        "angle": "resultado",
+        "rationale": "Apresenta cidade, número e valor confirmado em edital e reportagem; omite prazo, que aparece na linha de apoio.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 23,
+          "especificidade": 20,
+          "clareza": 15,
+          "originalidade": 3
+        },
+        "total": 96
+      },
+      {
+        "text": "SELEÇÃO EM NATAL TEM 17 BOLSAS; INSCRIÇÕES ATÉ DIA 12",
+        "angle": "prazo",
+        "rationale": "Foco na data de encerramento e quantidade; omite o valor mensal, reduzindo utilidade para quem decide se candidatar.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 23,
+          "especificidade": 19,
+          "clareza": 14,
+          "originalidade": 2
+        },
+        "total": 93
+      },
+      {
+        "text": "PREFEITURA DE NATAL BUSCA PESQUISADORES PARA PROJETO URBANO",
+        "angle": "consequencia",
+        "rationale": "Explica finalidade ambiental e urbana do trabalho, mas não informa vagas, valor nem prazo na manchete.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 20,
+          "especificidade": 15,
+          "clareza": 14,
+          "originalidade": 3
+        },
+        "total": 87
+      }
+    ],
+    "fact_to_emphasize": "A Semurb e a Funcitern abriram 17 bolsas mensais de R$ 2.500 com inscrições até 12 de novembro de 2026.",
+    "why_brazilians_care": "Profissionais graduados em Natal e região podem disputar bolsas de pesquisa e extensão, mediante requisitos específicos do edital.",
+    "editorial_reason": "O título selecionado contém quantidade, cidade e valor comprovados; o prazo fica no subtítulo e não há promessa de contratação."
+  },
+  "visual_review_requested": "2026-11-07-slot_07-mobile-proof"
+}
