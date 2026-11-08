@@ -1,0 +1,121 @@
+{
+  "status": "PASS_TECHNICAL_ONLY",
+  "slug": "2026-11-08-gremio-final-copa-brasil-slot03",
+  "kind": "headline",
+  "theme": "ink",
+  "jpeg_count": 1,
+  "qa": [
+    {
+      "headline_size": 84,
+      "headline_lines": [
+        "GRÊMIO VAI À FINAL DA",
+        "COPA DO BRASIL APÓS",
+        "EMPATE EM BH"
+      ],
+      "boxes": [
+        [
+          "section",
+          [
+            83,
+            202,
+            444,
+            226
+          ]
+        ],
+        [
+          "photo_context",
+          [
+            84,
+            855,
+            715,
+            882
+          ]
+        ],
+        [
+          "headline_0",
+          [
+            90,
+            934,
+            891,
+            1013
+          ]
+        ],
+        [
+          "headline_1",
+          [
+            90,
+            1052,
+            830,
+            1131
+          ]
+        ],
+        [
+          "headline_2",
+          [
+            90,
+            1170,
+            581,
+            1230
+          ]
+        ],
+        [
+          "photo_credit",
+          [
+            90,
+            1264,
+            565,
+            1282
+          ]
+        ],
+        [
+          "source",
+          [
+            90,
+            1315,
+            351,
+            1334
+          ]
+        ],
+        [
+          "footer",
+          [
+            850,
+            1315,
+            937,
+            1329
+          ]
+        ]
+      ],
+      "theme": "ink",
+      "slide_index": 0,
+      "photograph_bounds": [
+        0,
+        148,
+        1080,
+        900
+      ],
+      "photograph_fraction": 0.557037037037037,
+      "photograph_context": "archive_illustrative"
+    }
+  ],
+  "editorial_approval": false,
+  "published_to_instagram": false,
+  "source_links": [
+    "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-11/gremio-avanca-final-da-copa-do-brasil-apos-empate-com-atletico-mg",
+    "https://www.uol.com.br/esporte/futebol/ultimas-noticias/2026/11/07/atletico-mg-gremio-copa-do-brasil-2026-semifinal.ghtm"
+  ],
+  "risk": "low",
+  "sha256_jpegs": {
+    "2026-11-08-gremio-final-copa-brasil-slot03-01.jpg": "e571587d35a65f2e1e868b3525609fdd48826df7f0a336900e2e77e504e78b1a"
+  },
+  "photograph": {
+    "source_photo_file": "2026-11-08-gremio-final-copa-brasil-slot03-source-photo.jpg",
+    "sha256": "d0c641eba6331ff364fb6b4132a81e2eb43a3555504a0f5b941c057c6c384a85",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Arena_do_Gr%C3%AAmio_-_Lado_de_fora.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Arena_do_Gr%C3%AAmio_-_Lado_de_fora.jpg",
+    "license": "CC0 1.0",
+    "author": "Guivargas1",
+    "context": "archive_illustrative",
+    "photo_fraction": 0.557037037037037
+  }
+}
