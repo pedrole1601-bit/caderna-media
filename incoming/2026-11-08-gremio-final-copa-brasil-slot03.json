@@ -1,0 +1,112 @@
+{
+  "id": "2026-11-08-gremio-final-copa-brasil-slot03",
+  "kind": "headline",
+  "example_only": false,
+  "theme": "ink",
+  "risk": "low",
+  "topic": "esportes",
+  "section": "ESPORTE / COPA DO BRASIL",
+  "headline": "GRÊMIO VAI À FINAL DA COPA DO BRASIL APÓS EMPATE EM BH",
+  "deck": "Após vencer a ida por 2 a 0, time gaúcho empata por 1 a 1 com o Atlético-MG e garante lugar na decisão.",
+  "source_label": "AGÊNCIA BRASIL / UOL",
+  "sources": [
+    "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-11/gremio-avanca-final-da-copa-do-brasil-apos-empate-com-atletico-mg",
+    "https://www.uol.com.br/esporte/futebol/ultimas-noticias/2026/11/07/atletico-mg-gremio-copa-do-brasil-2026-semifinal.ghtm"
+  ],
+  "editorial_process": "source-anchored-double-review",
+  "verification_log": [
+    {
+      "source_url": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-11/gremio-avanca-final-da-copa-do-brasil-apos-empate-com-atletico-mg",
+      "source_excerpt": "O Grêmio é o primeiro finalista da Copa do Brasil. Jogando em Belo Horizonte, o Tricolor Gaúcho empatou em 1 a 1 com o Atlético-MG",
+      "checked_at": "2026-11-08T10:34:00-03:00",
+      "claim": "Resultado e classificação"
+    },
+    {
+      "source_url": "https://www.uol.com.br/esporte/futebol/ultimas-noticias/2026/11/07/atletico-mg-gremio-copa-do-brasil-2026-semifinal.ghtm",
+      "source_excerpt": "O Grêmio está na final da Copa do Brasil. Na noite deste sábado (7), o time gaúcho saiu atrás do placar, mas buscou o empate por 1 a 1",
+      "checked_at": "2026-11-08T10:34:00-03:00",
+      "claim": "Corroboração independente do resultado e classificação"
+    }
+  ],
+  "photo": {
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Arena_do_Gr%C3%AAmio_-_Lado_de_fora.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Arena_do_Gr%C3%AAmio_-_Lado_de_fora.jpg",
+    "author": "Guivargas1",
+    "credit": "Guivargas1 / Wikimedia Commons / CC0 1.0",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "date_taken": "2025-10-20",
+    "description": "Fotografia documental real da fachada da Arena do Grêmio em Porto Alegre.",
+    "context": "archive_illustrative",
+    "context_note": "Foto de arquivo da fachada do estádio em Porto Alegre, 20/10/2025; NÃO documenta o jogo contra o Atlético-MG, ocorrido em 07/11/2026 na Arena MRV em Belo Horizonte.",
+    "cover_notice": "ARQUIVO: ARENA DO GRÊMIO (2025) - NÃO É O JOGO",
+    "rights_checked": true,
+    "http_validation": "Arquivo original JPEG 1280x960, 166 KB, aberto e visualizado no domínio upload.wikimedia.org; página Commons conferida com autoria Guivargas1 e licença CC0 1.0 em 08/11/2026.",
+    "adaptation_note": "Fotografia pode ser recortada com crédito voluntário ao autor. CC0 1.0 não exige ShareAlike."
+  },
+  "caption": "O Grêmio está na final da Copa do Brasil de 2026. O time gaúcho empatou por 1 a 1 com o Atlético-MG em Belo Horizonte, na noite de 7 de novembro, e avançou após vencer o confronto de ida por 2 a 0. Renan Lodi marcou para os mineiros, e Carlos Vinícius empatou para o Grêmio. A decisão está prevista para 6 de dezembro, em Brasília; o adversário ainda será definido entre Vasco e Palmeiras.\n\nFoto de arquivo ilustrativa: fachada da Arena do Grêmio em Porto Alegre, fotografada em 20/10/2025 por Guivargas1. A imagem NÃO mostra o jogo contra o Atlético-MG, disputado na Arena MRV. Fotografia CC0 1.0 (domínio público dedicado), Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Arena_do_Gr%C3%AAmio_-_Lado_de_fora.jpg. Arte e texto: CADERNA.\n\nFontes: Agência Brasil (07/11/2026), UOL (07/11/2026) e resultado oficial da CBF. #Gremio #CopaDoBrasil #Futebol #Caderna",
+  "audience_relevance": {
+    "what_happened": "Grêmio empatou em Belo Horizonte e avançou à final da Copa do Brasil de 2026.",
+    "why_it_matters_to_brazilians": "A classificação envolve uma das competições nacionais de maior audiência, com decisão marcada para 6 de dezembro de 2026.",
+    "affected_brazilian_audience": "Torcedores brasileiros e público interessado na Copa do Brasil.",
+    "concrete_brazil_connection": "Semifinal da Copa do Brasil envolvendo Atlético-MG e Grêmio no dia 7 de novembro de 2026.",
+    "newsworthiness_score": 88,
+    "rejected_alternatives": [
+      {
+        "topic": "servicos",
+        "reason": "Bolsa Família novembro apresenta cronologia conflitante ainda não resolvida."
+      },
+      {
+        "topic": "cultura",
+        "reason": "Estudo do audiovisual não concluiu checagem reforçada e licença fotográfica."
+      }
+    ]
+  },
+  "headline_review": {
+    "candidates": [
+      {
+        "text": "GRÊMIO VAI À FINAL DA COPA DO BRASIL APÓS EMPATE EM BH",
+        "angle": "marco",
+        "rationale": "Destaca a classificação à decisão e o contexto do empate em Belo Horizonte, ambos comprovados por dois veículos independentes.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 24,
+          "especificidade": 19,
+          "clareza": 15,
+          "originalidade": 3
+        },
+        "total": 96
+      },
+      {
+        "text": "CARLOS VINÍCIUS MARCA E GRÊMIO AVANÇA À FINAL DA COPA DO BRASIL",
+        "angle": "consequencia",
+        "rationale": "Valoriza o gol decisivo para o empate e a classificação, sem afirmar que o atacante foi o único responsável pelo resultado.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 23,
+          "especificidade": 18,
+          "clareza": 14,
+          "originalidade": 3
+        },
+        "total": 93
+      },
+      {
+        "text": "GRÊMIO GARANTE SUA DÉCIMA FINAL DA COPA DO BRASIL",
+        "angle": "numero",
+        "rationale": "O marco de dez decisões é confirmado pela Agência Brasil, mas explica menos a circunstância esportiva recente.",
+        "scores": {
+          "precisao": 35,
+          "interesse_publico": 21,
+          "especificidade": 17,
+          "clareza": 15,
+          "originalidade": 3
+        },
+        "total": 91
+      }
+    ],
+    "fact_to_emphasize": "O Grêmio empatou em 1 a 1 em Belo Horizonte em 07/11, após vencer o jogo de ida por 2 a 0, e classificou-se à final da Copa do Brasil.",
+    "why_brazilians_care": "A classificação envolve uma das competições nacionais de maior audiência, com decisão marcada para 6 de dezembro de 2026.",
+    "editorial_reason": "A manchete vencedora informa classificação e circunstância do empate, com precisão temporal e sem antecipar adversário ou placar da final."
+  },
+  "visual_review_requested": "2026-11-08-slot_03-mobile-proof"
+}
