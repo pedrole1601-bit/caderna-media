@@ -134,6 +134,24 @@ def require_real_photo(story):
         raise ValueError('PHOTO_CREDIT_TOO_LONG')
     return p
 
+def commons_derivatives(original):
+    """Try a Commons-generated, reasonably sized derivative before a huge original.
+
+    The caller still validates the JPEG/PNG bytes, dimensions and SHA-256.
+    A derivative does not replace the canonical Commons source_page or license.
+    """
+    parsed=urlparse(original)
+    segments=parsed.path.split('/')
+    if (parsed.scheme!='https' or parsed.hostname!='upload.wikimedia.org'
+            or len(segments)<6 or segments[1:3]!=['wikipedia','commons']
+            or segments[3]=='thumb' or not segments[-1]):
+        return [original]
+    filename=segments[-1]
+    folder='/'.join(segments[3:-1])
+    base='https://upload.wikimedia.org/wikipedia/commons/thumb/'+folder+'/'+filename
+    return [base+'/1600px-'+filename,base+'/1280px-'+filename,original]
+
+
 def acquire_photo(story,out):
     """Cache one real source photograph; fail closed if fetch or image proof fails."""
     p=require_real_photo(story)
@@ -147,17 +165,30 @@ def acquire_photo(story,out):
             if cached.get('fingerprint')==fingerprint and cached.get('sha256')==hashlib.sha256(image_file.read_bytes()).hexdigest():
                 with Image.open(image_file) as im:return im.convert('RGB').copy(),cached['sha256']
         except (ValueError,OSError,KeyError):pass
-    req=Request(p['image_url'],headers={
-        'User-Agent':'CadernaNewsroom/1.0 (https://github.com/pedrole1601-bit/caderna-media; photo licensing check)',
-        'Accept':'image/jpeg,image/png,image/webp;q=0.8'})
-    try:
-        with urlopen(req,timeout=28) as response:
-            content_type=response.headers.get('Content-Type','').split(';')[0].lower()
-            if content_type not in ('image/jpeg','image/png','image/webp'):
-                raise ValueError('PHOTO_INVALID_MIME: original source did not return a photograph')
-            raw=response.read(12_000_001)
-    except (HTTPError,URLError,TimeoutError) as exc:
-        raise ValueError('PHOTO_DOWNLOAD_UNAVAILABLE: do not publish without a real image') from exc
+    raw=None
+    issues=[]
+    for candidate_url in commons_derivatives(p['image_url']):
+        req=Request(candidate_url,headers={
+            'User-Agent':'CadernaNewsroom/1.0 (https://github.com/pedrole1601-bit/caderna-media; photo licensing check)',
+            'Accept':'image/jpeg,image/png,image/webp;q=0.8'})
+        try:
+            with urlopen(req,timeout=28) as response:
+                content_type=response.headers.get('Content-Type','').split(';')[0].lower()
+                if content_type not in ('image/jpeg','image/png','image/webp'):
+                    raise ValueError('PHOTO_INVALID_MIME: source did not return a photo')
+                candidate_raw=response.read(12_000_001)
+                if not 30000<len(candidate_raw)<=12_000_000:
+                    raise ValueError('PHOTO_INVALID_DOWNLOAD_SIZE')
+                with Image.open(io.BytesIO(candidate_raw)) as proof:
+                    if proof.format not in ('JPEG','PNG','WEBP') or proof.width<1000 or proof.height<600:
+                        raise ValueError('PHOTO_INVALID_DIMENSIONS_OR_FORMAT')
+                raw=candidate_raw
+                break
+        except (HTTPError,URLError,TimeoutError,OSError,ValueError) as exc:
+            issues.append(type(exc).__name__)
+    if raw is None:
+        raise ValueError('PHOTO_DOWNLOAD_UNAVAILABLE: all licensed Commons image sizes failed ('+
+                         ','.join(issues)+')')
     if not 30000<len(raw)<=12_000_000:raise ValueError('PHOTO_INVALID_DOWNLOAD_SIZE')
     try:
         with Image.open(io.BytesIO(raw)) as im:
